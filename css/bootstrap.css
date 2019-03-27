@@ -618,7 +618,6 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  float: left;
 }
 
 .col {
@@ -9029,47 +9028,3 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-
-body
-{
-  background-color: #f2f2f2;
-  font-family: Open Sans;
-}
-
-.main_title
-{
-  font-family: Open Sans;
-  font-size: 28px;
-  color: white;
-}
-
-.menu_main
-{
-  color: white;
-}
-
-#menu_element:hover
-{
-  color: #101010;
-  cursor: pointer;
-}
-
-a
-{
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover
-{
-  color: orange;
-  text-decoration: none;
-}
-
-#lateral_info
-{
-  padding: 3% 3%;
-  background-color: rgba(33, 91, 51, 0.8);
-  color: white;
-}
