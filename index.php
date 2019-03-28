@@ -11,7 +11,7 @@
 	<header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                    <a href="#" class="navbar-brand">Convocatorias</a>
+                    <a href="index.php" class="navbar-brand">HGCPI FIME</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -30,7 +30,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="estimulos.html" class="nav-link">
+                                <a href="estimulos.php" class="nav-link">
                                     Estimulos
                                 </a>
                             </li>

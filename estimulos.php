@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Estimulos UANL</title>
+	<title>Estímulos UANL | HGCPI</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=egde">
@@ -13,7 +13,7 @@
 	<header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                    <a href="Index.html" class="navbar-brand">Convocatorias</a>
+                    <a href="index.php" class="navbar-brand">HGCPI FIME</a>
                     <a href="#" class="navbar-brand">Estimulos UANL</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
                         <span class="navbar-toggler-icon"></span>
@@ -194,7 +194,7 @@
 
             else if(select == "articulo") //si selecciono articulo
             {
-            $('#contenidoFormulario').load('formularios/produccion_academica_articulo.php');
+            $('#contenidoFormulario').load('formularios/estimulos/produccion_academica_docencia_articulo.php');
             return true;
             }
 
