@@ -353,3 +353,22 @@
                                                                         <br>
                                                                     </form>
                                                                     </div>
+<script type="text/javascript">
+        $('.tuiker').datepicker({
+            //adecuando formato de fecha
+            dateFormat: "dd/mm/yy",
+            //primer dia sea lunes
+            firstDay: 1,
+            //Nombres de los dias
+            dayNames: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+            //Abreviatura de los dias largos
+            dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+            //Escribir los meses
+            monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            //Abreviatura de los meses
+            monthNamesShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+            onSelect: function(dateText){
+                $('#fecha').val(dateText);
+            }
+        });
+</script>
