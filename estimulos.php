@@ -154,15 +154,6 @@
                                                                 <div class="col-9">
                                                                     <h4>Gestión Académica Individualizada</h4> 
                                                                 </div>
-                                                                <div class="col-3">
-                                                                    <h5><right>Tipo de documento:</right></h5>
-                                                                    <select name="seleccion_produccion_academica" id="gestion_academica" class="custom-select">
-                                                                        <option value="seleccion">Seleccione...</option>
-                                                                        <option value="articulo">Artículo</option>
-                                                                        <option value="capitulo_libro">Capítulo del libro</option>
-                                                                        <option value="libro">Libro</option>
-                                                                    </select>   
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     <div class="col-2">
@@ -185,20 +176,22 @@
                                                     <table class="table table-success m-2">
                                                         <thead>
                                                             <tr>
-                                                                <th>Titulo del artículo</th>
-                                                                <th>ISSN</th>
-                                                                <th>Fecha de publicación</th>
-                                                                <th>Editorial</th>
-                                                                <th>Nombre de la revista</th>
+                                                                <th>Tipo de gestión</th>
+                                                                <th>Clasificación</th>
+                                                                <th>Evento</th>
+                                                                <th>Tipo de Evento</th>
+                                                                <th>Fecha inicio</th>
+                                                                <th>Fecha fin</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>Artículo de ejemplo</td>
-                                                                <td>1234-5678-91011</td>
+                                                                <td>Llenado de ejemplo</td>
+                                                                <td>Llenado de ejemplo</td>
+                                                                <td>Llenado de ejemplo</td>
+                                                                <td>Llenado de ejemplo</td>
                                                                 <td>12-03-2016</td>
-                                                                <td>Editores Mexicanos Unidos</td>
-                                                                <td>Ciencia y Tecnología</td>
+                                                                <td>12-03-2016</td>                                                            
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -288,27 +281,10 @@
         
         var select = $("#gestion_academica").val();
         
-            if (select == "seleccion") 
-            {
-            alert('Seleccione una opción.'); //si no seleciono nada
-            location.reload();
-            return false;
-            }
-
-            else if(select == "articulo") //si selecciono articulo
-            {
-            $('#ventanaFormularioGestionAcad').load('formularios/estimulos/gestion_academica_invididualizada_articulo.php');
+            
+            $('#ventanaFormularioGestionAcad').load('formularios/estimulos/gestion_academica_invididualizada.php');
             return true;
-            }
-
-            else //si la opcion no tiene formulario
-            {
-            alert('Opcion sin formulario.');
-            location.reload();
-            return false;
-            }
-
-        };
+        }
 
     </script>
 </body>

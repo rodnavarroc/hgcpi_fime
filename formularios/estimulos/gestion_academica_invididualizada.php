@@ -1,5 +1,5 @@
-  																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Artículo nuevo</h4>
+  																	                               <div class="modal-header">
+                                                                        <h4 class="modal-title">Nueva gestión</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -7,7 +7,7 @@
                                                                     <div class="modal-body">
                                                                     <form enctype="multipart/form-data" action="#" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="tipo_gest_aca">Tipo Gestión Acad:</label>
+                                                                          <label for="tipo_gest_aca">Tipo Gestión Académica:</label>
                                                                           <select id="tipo_gest_aca" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="dimension_social ">Dimensión social</option>
@@ -43,7 +43,7 @@
                                                                           </select>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                          <label for="tipo_alcance" required>Tipo Alcance:</label>
+                                                                          <label for="tipo_alcance" required>Tipo de alcance:</label>
                                                                           <select id="tipo_alcance" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                                 <option value="local">Local</option>
@@ -74,13 +74,25 @@
                                                                                 
                                                                           </select>
                                                                         </div>
-                                                                        <div class="form-group">
-                                                                          <label for="ies_re_gestion" required>IES Realiza Gestión:</label>
-                                                                          <select id="ies_re_gestion" class="form-control custom-select" required>
-                                                                            <option selected>Seleccione...</option>
-                                                                                
-                                                                          </select>
-                                                                        </div>
+                                                                        <fieldset class="form-group">
+                                                                        <div class="row">
+                                                                            <legend class="col-form-label col-8">IES realiza gestión</legend>
+                                                                                <div class="col-sm-10">
+                                                                                    <div class="form-check">
+                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                                                      <label class="form-check-label" for="exampleRadios1">
+                                                                                        Sí
+                                                                                      </label>
+                                                                                    </div>
+                                                                                    <div class="form-check">
+                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                                                      <label class="form-check-label" for="exampleRadios2">
+                                                                                        No
+                                                                                      </label>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                        </fieldset>
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>
                                                                         <br>
