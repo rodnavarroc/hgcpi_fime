@@ -55,7 +55,11 @@
                     <!--CARD#1-->
                         <div class="card border-0">
                             <div class="btn btn-dark" id="header1">
+<<<<<<< HEAD
                                 <a class="btn" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Docencia</a>
+=======
+                                <a class="btn btn-block" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Docencia</a>
+>>>>>>> 9699da2df08b2d4e964e9671d280239d31240646
                             </div>
                             <div id="collapse1" class="collapse" aria-labelledby="header1" data-parent="#accordion">
                                 <div class="card-body">
@@ -66,6 +70,7 @@
                                             </div>
                                             <div id="subcollapse1" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
                                                 <div class="card-body">
+<<<<<<< HEAD
                                                         <div class="form-group">
                                                             <div class="row">
                                                                 <div class="col-9">
@@ -97,6 +102,35 @@
 
                                                     </div>
 
+=======
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-9">
+                                                                <h4>Producción Académica Docencia</h4> 
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <h5><right>Tipo de documento:</right></h5>
+                                                                <select name="seleccion_produccion_academica" id="produccion_academica" class="custom-select">
+                                                                    <option value="seleccion">Seleccione...</option>
+                                                                    <option value="articulo">Artículo</option>
+                                                                    <option value="capitulo_libro">Capítulo del libro</option>
+                                                                    <option value="libro">Libro</option>
+                                                                </select>   
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <div class="col-2">
+                                                <!-- BOTON AGREGAR -->
+                                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
+                                                <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
+												    <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content" id="contenidoFormulario">
+                                                            </div>
+                                                        </div>       
+                                                    </div>
+                                                </div>
+>>>>>>> 9699da2df08b2d4e964e9671d280239d31240646
                                                     <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
                                                     <hr><br><center><h5>Sus trabajos</h5></center><br>
                                                     <table class="table table-success m-2">
@@ -147,9 +181,50 @@
                                             <div class="btn btn-secondary border-white" id="subheader4">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Gestión Académica Invididualizada</a>
                                             </div>
+<<<<<<< HEAD
                                             <div id="subcollapse4" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
                                                 <div class="card-body">
                                                     
+=======
+
+                                            <div id="subcollapse4" class="collapse" aria-labelledby="subheader4" data-parent="#subaccordion">
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-9">
+                                                                <h4>Gestión Académica Invididualizada</h4> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <!-- BOTON AGREGAR -->
+                                                            <button class="btn btn-primary btn-lg mt-4" data-toggle="modal" data-target="#ventanaFormulario4" onclick="validarGestionAcademicaInvidualizada()">Agregar nuevo</button><br><br>
+                                                            <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
+                                                            <div class="modal fade" id="ventanaFormulario4" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario4">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content" id="contenidoFormularioGestionAcademicaInvi"></div>
+                                                                </div>       
+                                                            </div>
+                                                        </div>
+                                                        <hr><br><center><h5>Sus trabajos</h5></center><br>
+                                                        <table class="table table-success m-2">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Fecha de termino</th>
+                                                                    <th>Evento</th>
+                                                                    <th>Tipo de participación</th>
+                                                                    <th>Tipo de alcance</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                        <br><hr><br>
+                                                   
+                                                        <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
+                                                        <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    </div>
+>>>>>>> 9699da2df08b2d4e964e9671d280239d31240646
                                                 </div>
                                             </div>
 
@@ -201,7 +276,10 @@
                 $('#fecha').val(dateText);
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9699da2df08b2d4e964e9671d280239d31240646
         function validarSeleccionProduccionAcademica() {
         
         var select = $("#produccion_academica").val();
@@ -227,7 +305,14 @@
             }
 
         };
+<<<<<<< HEAD
 
+=======
+        function validarGestionAcademicaInvidualizada(){
+            $('#contenidoFormularioGestionAcademicaInvi').load('formularios/estimulos/gestion_academica_invididualizada.php');
+            return true;
+        };
+>>>>>>> 9699da2df08b2d4e964e9671d280239d31240646
     </script>
 </body>
 </html>
