@@ -13,7 +13,7 @@
 	<header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                    <a href="index.php" class="navbar-brand">HGCPI FIME</a>
+                    <img src="img/logo.png" width="12%" style="padding-right: 1.5%;">
                     <a href="#" class="navbar-brand">Estimulos UANL</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
                         <span class="navbar-toggler-icon"></span>
@@ -49,13 +49,13 @@
                     <!--CARD#1-->
                         <div class="card border-0">
                             <div class="btn btn-dark" id="header1">
-                                <a class="btn btn-block" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Docencia</a>
+                                <a class="btn" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Docencia</a>
                             </div>
                             <div id="collapse1" class="collapse" aria-labelledby="header1" data-parent="#accordion">
                                 <div class="card-body">
                                     <div id="subaccordion">
                                         <div class="card">
-                                            <div class="btn btn-dark border-light" id="subheader1">
+                                            <div class="btn btn-secondary border-light" id="subheader1">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1" aria-expanded="true" aria-controls="subcollapse1">Producción Académica Docencia</a>
                                             </div>
                                             <div id="subcollapse1" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
@@ -66,6 +66,7 @@
                                                                     <h4>Producción Académica Docencia</h4> 
                                                                 </div>
                                                                 <div class="col-3">
+                                                                    <h5><right>Tipo de documento:</right></h5>
                                                                     <select name="seleccion_produccion_academica" id="produccion_academica" class="right">
                                                                         <option value="seleccion">Seleccione...</option>
                                                                         <option value="articulo">Artículo</option>
@@ -81,7 +82,7 @@
                                                     <div class="col-2">
 
                                                         <!-- BOTON AGREGAR -->
-                                                        <button class="btn btn-dark btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar</button>
+                                                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
 
                                                         <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
 														<div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
@@ -94,22 +95,35 @@
                                                     </div>
 
                                                     <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                                    <table class="table table-dark m-2">
+                                                    <hr><br><center><h5>Sus trabajos</h5></center><br>
+                                                    <table class="table table-success m-2">
                                                         <thead>
                                                             <tr>
-                                                                <th>Titulo del articulo</th>
+                                                                <th>Titulo del artículo</th>
                                                                 <th>ISSN</th>
                                                                 <th>Fecha de publicación</th>
                                                                 <th>Editorial</th>
                                                                 <th>Nombre de la revista</th>
                                                             </tr>
                                                         </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Artículo de ejemplo</td>
+                                                                <td>1234-5678-91011</td>
+                                                                <td>12-03-2016</td>
+                                                                <td>Editores Mexicanos Unidos</td>
+                                                                <td>Ciencia y Tecnología</td>
+                                                            </tr>
+                                                        </tbody>
                                                     </table>
-                                                    <br><br><br><br>
-                                                    
+                                                    <br><hr><br>
+                                                   
+                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
+                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                                 </div>
                                             </div>
-                                            <div class="btn btn-dark border-light" id="subheader2">
+
+                                            <div class="btn btn-secondary border-light" id="subheader2">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2" aria-expanded="true" aria-controls="subcollapse2">Capacitación y Actualización Académica</a>
                                             </div>
                                             <div id="subcollapse2" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
@@ -117,7 +131,8 @@
                                                     
                                                 </div>
                                             </div>
-                                            <div class="btn btn-dark border-light" id="subheader3">
+
+                                            <div class="btn btn-secondary border-light" id="subheader3">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse3">Capacitación y Actualización en Lenguas Extranjeras</a>
                                             </div>
                                             <div id="subcollapse3" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
@@ -125,7 +140,8 @@
                                                     
                                                 </div>
                                             </div>
-                                            <div class="btn btn-dark border-white" id="subheader4">
+
+                                            <div class="btn btn-secondary border-white" id="subheader4">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Gestión Académica Invididualizada</a>
                                             </div>
                                             <div id="subcollapse4" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
@@ -133,7 +149,8 @@
                                                     
                                                 </div>
                                             </div>
-                                            <div class="btn btn-dark border-light" id="subheader5">
+
+                                            <div class="btn btn-secondary border-light" id="subheader5">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse5" aria-expanded="true" aria-controls="subcollapse5">Impartición de Cursos a Profesores y Trabajadores de la UANL</a>
                                             </div>
                                             <div id="subcollapse5" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
@@ -141,8 +158,9 @@
                                                     
                                                 </div>
                                             </div>
-                                            <div class="btn btn-dark border-light" id="subheader6">
-                                                <a class="btn btn-block border-dark" data-toggle="collapse" data-target="#subcollapse6" aria-expanded="true" aria-controls="subcollapse6">Premios y Distinciones</a>
+
+                                            <div class="btn btn-secondary border-light" id="subheader6">
+                                                <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse6" aria-expanded="true" aria-controls="subcollapse6">Premios y Distinciones</a>
                                             </div>
                                             <div id="subcollapse6" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
                                                 <div class="card-body">
