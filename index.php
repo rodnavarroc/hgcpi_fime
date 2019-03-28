@@ -9,45 +9,36 @@
 </head>
 <body>
 	<header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
-                    <img src="img/logo.png" width="12%" style="padding-right: 1.5%;">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="menuNavegacion">
-                        <ul class="navbar-nav mr-auto">
-                            
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    PRODEP
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    SNI
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="estimulos.php" class="nav-link">
-                                    Estimulos
-                                </a>
-                            </li>
-                        </ul>
-                        <form action="" class="form-inline my-2 my lg-0">
-                            <input type="text" class="form-control mr-sm-2" type="search" placeholder="Buscar">
-                            <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
-                        </form>
-                        <ul class="nav navbar-nav navbar-right">
-        					<li><a href="#"><span class="glyphicon glyphicon-user m-3"></span>Ayuda</a></li>
-      					</ul>
-                    </div>
-                </div>
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <a class="navbar-brand" href="index.php"><img src="img/logo.png" width="120" height="40" class="d-inline-block align-top"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convocatorias</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="estimulos.php">Estímulos UANL</a>
+                          <a class="dropdown-item" href="#">PRODEP</a>
+                          <a class="dropdown-item" href="#">Sistema Nacional de Investigadores</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Datos Personales</a>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
+                      </li>
+                    </ul>
+                      <span class="navbar-text"><a class="nav-link" href="#"></a></span>
+                  </div>
             </nav>
+    </header>
 
-            <div class="col-md-12">
-                <br>
+        <div class="row-mt-4">
+            <div class="col-12">
+                <br><br><br>
                     <h4><center>Iniciar Sesión</center></h4><br>
                     <form enctype="multipart/form-data" action="#" method="POST">
 
@@ -67,8 +58,8 @@
                     </div>
                     <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Acceder"></center>
                     </form>
-                    </div>
-            </div>       
+            </div>
+      
 
             <div class="col-md-12"><br>
                 <br>
@@ -92,9 +83,8 @@
                     <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Enviar Solicitud"><br><br>
                         <p style="text-align: justify;"><small>* Su solicitud será atendida por el administrador del sistema y <b>se le notificará mediante el correo proporcionado</b> cuando su solicitud sea aprobada. <br><br><i>Este proceso puede tardar varios días. Si tiene alguna duda o problema por favor envíe un correo a <a href="#">la administración del sitio</a>, o comuníquese directamente con la Coordinación de Sistemas de la FIME.</i></small></p></center>
                     </form>
-                    </div>
-            </div> 
-        </header>
+            </div>
+        </div>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/popper.min.js"></script>

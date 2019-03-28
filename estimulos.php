@@ -11,37 +11,43 @@
 </head>
 <body>
 	<header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
-                    <img src="img/logo.png" width="12%" style="padding-right: 1.5%;">
-                    <a href="#" class="navbar-brand">Estimulos UANL</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="menuNavegacion">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    PRODEP
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    SNI
-                                </a>
-                            </li>
-                        </ul>
-                        <form action="" class="form-inline my-2 my lg-0">
-                            <input type="text" class="form-control mr-sm-2" type="search" placeholder="Buscar">
-                            <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
-                        </form>
-                        <ul class="nav navbar-nav navbar-right">
-        					<li><a href="#"><span class="glyphicon glyphicon-user m-3"></span>Salir</a></li>
-      					</ul>
-                    </div>
-                </div>
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <a class="navbar-brand" href="index.php"><img src="img/logo.png" width="120" height="40" class="d-inline-block align-top"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convocatorias</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="estimulos.php">Estímulos UANL</a>
+                          <a class="dropdown-item" href="#">PRODEP</a>
+                          <a class="dropdown-item" href="#">Sistema Nacional de Investigadores</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="#">Datos Personales</a>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
+                      </li>
+                    </ul>
+                      <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
+                  </div>
             </nav>
-        </header>
+    </header>
+
+        <div class="container">
+            <div class="row-mt-4">
+                <div class="col-12">
+                    <br><br>
+                    <h2><center>Convocatoria de Estímulos UANL</center></h2>
+                    <hr><br>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
         	<div class="row mt-4">
         		<div class="col-12">
@@ -67,14 +73,11 @@
                                                                 </div>
                                                                 <div class="col-3">
                                                                     <h5><right>Tipo de documento:</right></h5>
-                                                                    <select name="seleccion_produccion_academica" id="produccion_academica" class="right">
+                                                                    <select name="seleccion_produccion_academica" id="produccion_academica" class="custom-select">
                                                                         <option value="seleccion">Seleccione...</option>
                                                                         <option value="articulo">Artículo</option>
                                                                         <option value="capitulo_libro">Capítulo del libro</option>
                                                                         <option value="libro">Libro</option>
-                                                                        <option value="manual_operacion">Manual de operación</option>
-                                                                        <option value="material_apoyo">Material de apoyo</option>
-                                                                        <option value="material_didactico">Material didactico</option>
                                                                     </select>   
                                                                 </div>
                                                             </div>
