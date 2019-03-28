@@ -9,4 +9,6 @@ v1.1 - Creación de algoritmo para cargar formulario correspondiente en boton de
 
 v1.1 - Añadida carpeta para almacenar código fuente de formularios.
 
+v1.2 - Añadidas carpetas por convocatoria para ordenamiento de archivos de scripts y formularios.
+
 #
