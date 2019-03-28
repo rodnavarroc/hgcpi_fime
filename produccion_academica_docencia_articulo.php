@@ -12,7 +12,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="estado_act">Estado Actual</label>
-                                                                          <select id="estado_act" class="form-control" required>
+                                                                          <select id="estado_act" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="aguascalientes">Aguascalientes</option>
                                                                             <option value="Baja California">Baja California</option>
@@ -49,7 +49,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="estado_act" required>País</label>
-                                                                          <select id="estado_act" class="form-control" required>
+                                                                          <select id="estado_act" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="AF">Afganistán</option>
                                                                             <option value="AL">Albania</option>
@@ -326,16 +326,20 @@
                                                                         <div class="row">
                                                                             <legend class="col-form-label col-8">Considera para C.V. de C.A.</legend>
                                                                                 <div class="col-sm-10">
-                                                                                    <div class="form-check form-check-inline">
-                                                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                                                        <label class="form-check-label" for="inlineRadio1">Sí</label>
+                                                                                    <div class="form-check">
+                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                                                      <label class="form-check-label" for="exampleRadios1">
+                                                                                        Sí
+                                                                                      </label>
                                                                                     </div>
-                                                                                    <div class="form-check form-check-inline">
-                                                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                                                                    <div class="form-check">
+                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                                                      <label class="form-check-label" for="exampleRadios2">
+                                                                                        No
+                                                                                      </label>
+                                                                                    </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
                                                                         </fieldset>
                                                                         <div class="form-group">
                                                                           <label for="proposito">Proposito</label>
@@ -349,7 +353,7 @@
                                                                         <br>
                                                                     </form>
                                                                     </div>
-        <script type="text/javascript">
+<script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
             dateFormat: "dd/mm/yy",
@@ -367,4 +371,4 @@
                 $('#fecha').val(dateText);
             }
         });
-        </script>
+</script>
