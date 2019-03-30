@@ -11,4 +11,6 @@ v1.1 - Añadida carpeta para almacenar código fuente de formularios.
 
 v1.2 - Añadidas carpetas por convocatoria para ordenamiento de archivos de scripts y formularios.
 
+v1.2.3 Añadida interfaz de perfil que incluye estatus de convocatorias y visualización de datos personales.
+
 #
