@@ -25,10 +25,10 @@
                         </div>
                       </li>
                       <li class="nav-item">
-                      <a class="nav-link disabled" href="datos_personales.php">Datos Personales</a>
+                      <a class="nav-link disabled" href="perfil.php#datos">Datos Personales</a>
                       </li>
                       <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
+                      <a class="nav-link disabled" href="perfil.php#convocatorias" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
                       </li>
                     </ul>
                       <span class="navbar-text"><a class="nav-link" href="#"></a></span>
@@ -40,21 +40,21 @@
             <div class="col-12">
                 <br><br><br>
                     <h4><center>Iniciar Sesión</center></h4><br>
-                    <form enctype="multipart/form-data" action="#" method="POST">
+                    <form enctype="multipart/form-data" action="scripts/login.php" method="POST">
 
                     <div style="padding-right: 30%; padding-left: 30%">
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">N° de Empleado</span>
                       </div>
-                      <input type="text" class="form-control" placeholder="674512" aria-label="Usuario" aria-describedby="basic-addon1" name="usuario" required>
+                      <input id="usuario" type="text" class="form-control" placeholder="674512" aria-label="Usuario" aria-describedby="basic-addon1" name="usuario" required>
                     </div>
 
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Contraseña</span>
                       </div>
-                      <input type="password" class="form-control" placeholder="" aria-label="Usuario" aria-describedby="basic-addon1" name="pass" required>
+                      <input id="pass" type="password" class="form-control" placeholder="" aria-label="Usuario" aria-describedby="basic-addon1" name="pass" required>
                     </div>
                     <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Acceder"></center>
                     </form>

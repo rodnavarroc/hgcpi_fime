@@ -27,10 +27,10 @@
                         </div>
                       </li>
                       <li class="nav-item">
-                      <a class="nav-link" href="datos_personales.php">Datos Personales</a>
+                      <a class="nav-link" href="perfil.php#datos">Datos Personales</a>
                       </li>
                       <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
+                      <a class="nav-link" href="perfil.php#convocatorias" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
                       </li>
                     </ul>
                       <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
@@ -140,7 +140,46 @@
                                             </div>
                                             <div id="subcollapse3" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
                                                 <div class="card-body">
-                                                    
+                                                    <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-9">
+                                                                    <h4>Capacitación y Actualización en Lenguas Extranjeras</h4> 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <div class="col-2">
+
+                                                        <!-- BOTON AGREGAR -->
+                                                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario3" onclick="validarCapaActa()">Agregar nuevo</button><br><br>
+
+                                                        <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
+                                                        <div class="modal fade" id="ventanaFormulario3" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario3">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content" id="ventanaCapaActa">
+                                                                </div>
+                                                            </div>       
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
+                                                    <hr><br><center><h5>Sus lenguas e idiomas</h5></center><br>
+                                                    <table class="table table-success m-2">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Lengua o idioma</th>
+                                                                <th>Institución que otorga</th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Llenado de ejemplo</td>
+                                                                <td>Llenado de ejemplo</td>
+                                                    </table>
+                                                    <br><hr><br>
+                                                   
+                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
+                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                                                                  
                                                 </div>
                                             </div>
 
@@ -199,15 +238,6 @@
                                                    
                                                     <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
                                                     <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-                                                </div>
-                                            </div>
-
-                                            <div class="btn btn-secondary border-light" id="subheader5">
-                                                <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse5" aria-expanded="true" aria-controls="subcollapse5">Impartición de Cursos a Profesores y Trabajadores de la UANL</a>
-                                            </div>
-                                            <div id="subcollapse5" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
-                                                <div class="card-body">
-                                                    
                                                 </div>
                                             </div>
 
@@ -283,6 +313,15 @@
         
             
             $('#ventanaFormularioGestionAcad').load('formularios/estimulos/gestion_academica_invididualizada.php');
+            return true;
+        }
+
+        function validarCapaActa() {
+        
+        var select = $("#CapaActa").val();
+        
+            
+            $('#ventanaCapaActa').load('formularios/estimulos/capa_lenguas_extra.php');
             return true;
         }
 
