@@ -7,7 +7,7 @@
                                                                     <div class="modal-body">
                                                                     <form enctype="multipart/form-data" action="#" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="tipo_gest_aca">Tipo Gestión Académica:</label>
+                                                                          <label for="tipo_gest_aca">Tipo de Gestión Académica:</label>
                                                                           <select id="tipo_gest_aca" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="dimension_social ">Dimensión social</option>

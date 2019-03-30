@@ -45,4 +45,11 @@ function validarSeleccionProduccionAcademica() { //produccion academica docencia
             $('#ventanaPremiosDist').load('formularios/estimulos/docencia/premios_distinciones.php');
             return true;
         };
+
+        function validarCapacitActuali() { //capacitaciones y actualizaciones academicas
+        
+            
+            $('#ventanaCapaYActuali').load('formularios/estimulos/docencia/capa_actualizacion_academica.php');
+            return true;
+        };
 //================= DOCENCIA ==============//

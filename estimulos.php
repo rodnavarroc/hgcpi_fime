@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<title>Estímulos UANL | HGCPI</title>
 	<meta charset="UTF-8">
@@ -131,7 +131,56 @@
                                             </div>
                                             <div id="subcollapse2" class="collapse" aria-labelledby="subheader2" data-parent="#subaccordion">
                                                 <div class="card-body">
-                                                    
+                                                 <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-9">
+                                                                    <h4>Capacitación y Actualización Académica</h4> 
+                                                                </div>
+                                                                </div>
+                                                        </div>
+                                                    <div class="col-2">
+
+                                                        <!-- BOTON AGREGAR -->
+                                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario2" onclick="validarCapacitActuali()">Agregar nuevo</button><br><br>
+
+                                                        <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
+                                                        <div class="modal fade" id="ventanaFormulario2" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario2">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content" id="ventanaCapaYActuali">
+                                                                </div>
+                                                            </div>       
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
+                                                    <hr><br><center><h5>Sus capacitaciones y actualizaciones</h5></center><br>
+                                                    <table class="table table-success m-2">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Tipo</th>
+                                                                <th colspan="2">Descripción</th>
+                                                                <th>Fecha de inicio</th>
+                                                                <th>Fecha de fin</th>
+                                                                <th>Nombre de la institución</th>
+                                                                <th>No. de horas</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Tipo de ejemplo</td>
+                                                                <td colspan="2">Mejora en el grado para calificar diferentes medidas de trabajo</td>
+                                                                <td>12-03-2016</td>
+                                                                <td>13-03-2016</td>
+                                                                <td>Universidad Autonóma de Nuevo León</td>
+                                                                <td>35</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <br><hr><br>
+                                                   
+                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
+                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                                 </div>
                                             </div>
 
@@ -198,10 +247,10 @@
                                                     <div class="col-2">
 
                                                         <!-- BOTON AGREGAR -->
-                                                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario2" onclick="validarSeleccionGestionAcademica()">Agregar nuevo</button><br><br>
+                                                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario4" onclick="validarSeleccionGestionAcademica()">Agregar nuevo</button><br><br>
 
                                                         <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
-                                                        <div class="modal fade" id="ventanaFormulario2" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario2">
+                                                        <div class="modal fade" id="ventanaFormulario4" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario2">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content" id="ventanaFormularioGestionAcad">
                                                                 </div>
