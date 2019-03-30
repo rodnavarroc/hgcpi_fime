@@ -13,4 +13,6 @@ v1.2 - Añadidas carpetas por convocatoria para ordenamiento de archivos de scri
 
 v1.2.3 Añadida interfaz de perfil que incluye estatus de convocatorias y visualización de datos personales.
 
+v1.2.4 Cambios en la estructura de los formularios y scripts.
+
 #
