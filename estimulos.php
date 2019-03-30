@@ -129,7 +129,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader2">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2" aria-expanded="true" aria-controls="subcollapse2">Capacitación y Actualización Académica</a>
                                             </div>
-                                            <div id="subcollapse2" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
+                                            <div id="subcollapse2" class="collapse" aria-labelledby="subheader2" data-parent="#subaccordion">
                                                 <div class="card-body">
                                                     
                                                 </div>
@@ -138,7 +138,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader3">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse3">Capacitación y Actualización en Lenguas Extranjeras</a>
                                             </div>
-                                            <div id="subcollapse3" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
+                                            <div id="subcollapse3" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion">
                                                 <div class="card-body">
                                                     <div class="form-group">
                                                             <div class="row">
@@ -168,7 +168,7 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>Lengua o idioma</th>
-                                                                <th>Institución que otorga</th>
+                                                                <th>Institución que certifica</th>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
@@ -186,7 +186,7 @@
                                             <div class="btn btn-secondary border-white" id="subheader4">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Gestión Académica Invididualizada</a>
                                             </div>
-                                            <div id="subcollapse4" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
+                                            <div id="subcollapse4" class="collapse" aria-labelledby="subheader4" data-parent="#subaccordion">
                                                 <div class="card-body">
                                                     <div class="form-group">
                                                             <div class="row">
@@ -241,14 +241,61 @@
                                                 </div>
                                             </div>
 
-                                            <div class="btn btn-secondary border-light" id="subheader6">
-                                                <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse6" aria-expanded="true" aria-controls="subcollapse6">Premios y Distinciones</a>
+                                            <div class="btn btn-secondary border-light" id="subheader5">
+                                                <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse5" aria-expanded="true" aria-controls="subcollapse5">Premios y distinciones</a>
                                             </div>
-                                            <div id="subcollapse6" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
+                                            <div id="subcollapse5" class="collapse" aria-labelledby="subheader5" data-parent="#subaccordion">
                                                 <div class="card-body">
-                                                    
+                                                    <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-9">
+                                                                    <h4>Premios y distinciones</h4> 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <div class="col-2">
+
+                                                        <!-- BOTON AGREGAR -->
+                                                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario5" onclick="validarPremiosDist()">Agregar nuevo</button><br><br>
+
+                                                        <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
+                                                        <div class="modal fade" id="ventanaFormulario5" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario3">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content" id="ventanaPremiosDist">
+                                                                </div>
+                                                            </div>       
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
+                                                    <hr><br><center><h5>Sus premios y distinciones</h5></center><br>
+                                                    <table class="table table-success m-2">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Tipo de reconocimiento</th>
+                                                                <th>Nivel</th>
+                                                                <th>Fecha inicio</th>
+                                                                <th>Fecha fin</th>
+                                                                <th>Monto mensual</th>
+
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Llenado de ejemplo</td>
+                                                                <td>Llenado de ejemplo</td>
+                                                                <td>12-03-2016</td>
+                                                                <td>12-03-2016</td>   
+                                                                <td>Llenado de ejemplo</td>
+                                                    </table>
+                                                    <br><hr><br>
+                                                   
+                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
+                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                                                                  
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -281,49 +328,7 @@
             }
         });
 
-        function validarSeleccionProduccionAcademica() {
-        
-        var select = $("#produccion_academica").val();
-        
-            if (select == "seleccion") 
-            {
-            alert('Seleccione una opción.'); //si no seleciono nada
-            location.reload();
-            return false;
-            }
-
-            else if(select == "articulo") //si selecciono articulo
-            {
-            $('#ventanaFormularioProdAcad').load('formularios/estimulos/produccion_academica_docencia_articulo.php');
-            return true;
-            }
-
-            else //si la opcion no tiene formulario
-            {
-            alert('Opcion sin formulario.');
-            location.reload();
-            return false;
-            }
-
-        };
-
-        function validarSeleccionGestionAcademica() {
-        
-        var select = $("#gestion_academica").val();
-        
-            
-            $('#ventanaFormularioGestionAcad').load('formularios/estimulos/gestion_academica_invididualizada.php');
-            return true;
-        }
-
-        function validarCapaActa() {
-        
-        var select = $("#CapaActa").val();
-        
-            
-            $('#ventanaCapaActa').load('formularios/estimulos/capa_lenguas_extra.php');
-            return true;
-        }
+        <?php include("scripts/formularios/estimulos/validadoresFormulariosEstimulos.php");?>
 
     </script>
 </body>

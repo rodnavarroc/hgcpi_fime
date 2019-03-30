@@ -87,7 +87,7 @@
             </tr>
             <tr>
               <td>Fecha Nacimiento</td>
-              <td>Nacionalidad</td>
+              <td>CVU</td>
               <td>Sexo</td>
             </tr>
           </tbody>
