@@ -15,4 +15,6 @@ v1.2.3 Añadida interfaz de perfil que incluye estatus de convocatorias y visual
 
 v1.2.4 Cambios en la estructura de los formularios y scripts.
 
+v.1.2.5 Agregadas todas las secciones de la convocatoria Estímulos UANL.
+
 #
