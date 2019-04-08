@@ -390,7 +390,7 @@
                                               <thead>
                                                   <tr>
                                                       <th>Fecha de inicio</th>
-                                                      <th>Fecha de termino</th>
+                                                      <th>Fecha de fin</th>
                                                       <th>Titulo</th>
                                                       <th>Participación</th>
                                                       <th>Monto</th>
@@ -412,71 +412,11 @@
                                           <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                       </div>
                                   </div>
-                                                                    <div class="btn btn-secondary border-light" id="subheader_investigacion">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_investigacion" aria-expanded="true" aria-controls="subcollapse2_investigacion">Producción Académica Investigaciónn</a>
-                                  </div>
-                                                                    <div id="subcollapse2_investigacion" class="collapse" aria-labelledby="subheader2_investigacion" data-parent="#subaccordion_investigacion">
-                                      <div class="card-body">
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <div class="col-9">
-                                                      <h4>Producción Académica Investigación</h4>
-                                                  </div>
-                                                                                                    <div class="col-3">
-                                                                                                            <h5><right>Tipo de documento:</right></h5>
-                                                                                                            <select name="seleccion_produccion_academica_investigacion" id="produccion_academica_investigacion" class="custom-select">
-                                                                                                                    <option value="seleccion">Seleccione...</option>
-                                                                                                                    <option value="articulo">Artículo arbitrado</option>
-                                                                                                                    <option value="libro">Libro</option>
-                                                                                                            </select>
-                                                                                                    </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-2">
-                                              <!-- BOTON AGREGAR -->
-                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
-                                              <!-- VENTANA PARA LOS FORMULARIOS -->
-                                                                                            <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
-                                                  <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaFormularioProdAcad">
-                                                      </div>
-                                                  </div>
-                                              </div>
-
-                                          </div>
-
-                                          <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus trabajos</h5></center><br>
-                                          <table class="table table-success m-2">
-                                              <thead>
-                                                  <tr>
-                                                      <th>Fecha de publicación</th>
-                                                      <th>Editorial</th>
-                                                      <th>Nombre de la referencia</th>
-                                                      <th>Editorial</th>
-                                                      <th>Nombre de la revista</th>
-                                                  </tr>
-                                              </thead>
-                                              <tbody>
-                                                  <tr>
-                                                      <td>12-03-2016</td>
-                                                      <td>valor</td>
-                                                      <td>NEXUS</td>
-                                                      <td>Editores Mexicanos Unidos</td>
-                                                      <td>Ciencia y Tecnología</td>
-                                                  </tr>
-                                              </tbody>
-                                          </table>
-                                          <br><hr><br>
-
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-                                      </div>
+                                   
                                   </div>
                               </div>
                           </div>
                       </div>
-                  </div>
                                     <!-- TERCERA SECCIÓN TUTORÍAS -->
                                     <div class="btn btn-dark border-light" id="header3">
                       <a class="btn" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Tutorías</a>
@@ -493,57 +433,7 @@
                                           <!-- FALTA DE INFORMACIÓN DEL PDFS PENDIENTE (31/03/2019) -->
                                       </div>
                                   </div>
-                                                                    <div class="btn btn-secondary border-light" id="subheader2_investigacion">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_tutorias" aria-expanded="true" aria-controls="subcollapse2_tutorias">Asesoría</a>
-                                  </div>
-                                                                    <div id="subcollapse2_tutorias" class="collapse" aria-labelledby="subheader_tutorias" data-parent="#subaccordion_tutorias">
-                                      <div class="card-body">
-                                                                                <div class="form-group">
-                                                                                        <div class="row">
-                                                                                                <div class="col-9">
-                                                                                                        <h4>Asesoría</h4>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                        <div class="col-2">
-
-                                                                                <!-- BOTON AGREGAR -->
-                                                                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
-
-                                                                                <!-- VENTANA PARA LOS FORMULARIOS -->
-                                                                                <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
-                                                                                        <div class="modal-dialog">
-                                                                                                <div class="modal-content" id="ventanaFormularioProdAcad">
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
-                                                                        <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                                                        <hr><br><center><h5>Sus trabajos</h5></center><br>
-                                                                        <table class="table table-success m-2">
-                                                                                <thead>
-                                                                                        <tr>
-                                                                                                <th>Tipo de asesoría</th>
-                                                                                                <th>Área de conocimiento</th>
-                                                                                                <th>Nivel</th>
-                                                                                                <th>Alumnos</th>
-                                                                                        </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                        <tr>
-                                                                                                <td>Apoyo metodológico en su doctrina esp o área de conocimiento</td>
-                                                                                                <td>Informática</td>
-                                                                                                <td>Posgrado</td>
-                                                                                                <td><a href="#">Alumnos</a></td>
-                                                                                        </tr>
-                                                                                </tbody>
-                                                                        </table>
-                                                                        <br><hr><br>
-                                                                        <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                                        <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-                                      </div>
-                                  </div>
-                                                                    <div class="btn btn-secondary border-light" id="subheader2_investigacion">
+                                      <div class="btn btn-secondary border-light" id="subheader2_investigacion">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3_tutorias" aria-expanded="true" aria-controls="subcollapse3_tutorias">Dirección Invididualizada</a>
                                   </div>
                                                                     <div id="subcollapse3_tutorias" class="collapse" aria-labelledby="subheader_tutorias" data-parent="#subaccordion_tutorias">
@@ -767,28 +657,6 @@
                           </div>
                       </div>
                   </div>
-                                    <!-- SEXTA SECCIÓN PERMAMENCIA -->
-                                    <div class="btn btn-dark border-light" id="header6">
-                      <a class="btn" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">Permanencia</a>
-                  </div>
-                  <div id="collapse6" class="collapse" aria-labelledby="header6" data-parent="#accordion">
-                      <div class="card-body">
-                          <div id="subaccordion_permamencia">
-                              <div class="card">
-                                  <div class="btn btn-secondary border-light" id="subheader1_permamencia">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_permamencia" aria-expanded="true" aria-controls="subcollapse1_permamencia">Antigüedad</a>
-                                  </div>
-                                  <div id="subcollapse1_permamencia" class="collapse" aria-labelledby="subheader1_permamencia" data-parent="#subaccordion_permamencia">
-                                      <div class="card-body">
-                                                                                <!-- FALTA DE INFORMACIÓN EN EL PDF -->
-                                  </div>
-
-                                </div>
-                          </div>
-                      </div>
-                  </div>
-
-                </div>
               </div>
                 </div>
             </div>
