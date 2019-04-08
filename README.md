@@ -13,8 +13,10 @@ v1.2 - Añadidas carpetas por convocatoria para ordenamiento de archivos de scri
 
 v1.2.3 Añadida interfaz de perfil que incluye estatus de convocatorias y visualización de datos personales.
 
-v1.2.4 Cambios en la estructura de los formularios y scripts.
+v1.2.4 - Cambios en la estructura de los formularios y scripts.
 
-v.1.2.5 Agregadas todas las secciones de la convocatoria Estímulos UANL.
+v.1.2.5 - Agregadas todas las secciones de la convocatoria Estímulos UANL.
+
+v1.3 - Agregadas secciones y subsecciones de convocatorias PRODEP y SNI.
 
 #
