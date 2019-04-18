@@ -19,4 +19,6 @@ v.1.2.5 - Agregadas todas las secciones de la convocatoria Estímulos UANL.
 
 v1.3 - Agregadas secciones y subsecciones de convocatorias PRODEP y SNI.
 
+v1.4 - Finalizadas las secciones, subsecciones y formularios de convocatorias PRODEP y Estímulos UANL.
+
 #
