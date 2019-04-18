@@ -7,7 +7,7 @@
                                                                     <div class="modal-body">
                                                                     <form enctype="multipart/form-data" action="#" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="idioma">Idioma:</label>
+                                                                          <label for="idioma">Idioma</label>
                                                                           <select id="idioma" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Español">Español</option>

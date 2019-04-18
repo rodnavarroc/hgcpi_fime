@@ -23,7 +23,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="estimulos.php">Estímulos UANL</a>
                           <a class="dropdown-item" href="prodep.php">PRODEP</a>
-                          <a class="dropdown-item" href="#">Sistema Nacional de Investigadores</a>
+                          <a class="dropdown-item" href="sni.php">Sistema Nacional de Investigadores</a>
                         </div>
                       </li>
                       <li class="nav-item">
@@ -80,7 +80,7 @@
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
                                                  <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
                                                   <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaFormularioEstudios">
+                                                      <div class="modal-content" id="ventanaEstudios">
                                                       </div>
                                                   </div>
                                               </div>
@@ -252,7 +252,7 @@
                           </div>
                       </div>
                   </div>
-                                    <!-- SEGUNDA SECCIÓN INVESTIGACIÓN -->
+                                    <!-- SEGUNDA SECCIÓN docencia -->
                                     <div class="btn btn-dark border-light" id="header2">
                       <a class="btn" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Docencia</a>
                   </div>
@@ -260,15 +260,16 @@
                       <div class="card-body">
                           <div id="subaccordion_docencia">
                               <div class="card">
+                                
                                   <div class="btn btn-secondary border-light" id="subheader3">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse3">Docencia</a>
+                                     <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse3">Clases docentes</a>
                                   </div>
                                   <div id="subcollapse3" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion">
                                       <div class="card-body">
                                           <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Docencia</h4>
+                                                          <h4>Clases impartidas</h4>
                                                       </div>
                                                   </div>
                                               </div>
@@ -280,7 +281,7 @@
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
                                               <div class="modal fade" id="ventanaFormulario4" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario3">
                                                   <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaCapaActa">
+                                                      <div class="modal-content" id="ventanaDocenciaProdep">
                                                       </div>
                                                   </div>
                                               </div>
@@ -288,14 +289,14 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Docencia</h5></center><br>
+                                          <hr><br><center><h5>Clases docentes</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
                                                       <th>Materia</th>
                                                       <th>Institución</th>
                                                       <th>Dependencia</th>
-                                                      <th>Programa educatico</th>
+                                                      <th>Programa educativo</th>
                                                       <th>Nivel</th>
                                                     <!-- Fecha de inicio de estudios
                                                         Numero de alumnos
@@ -332,10 +333,10 @@
                                               <h5><right>Tipo de tutoria:</right></h5>
                                               <select name="seleccion_tipo_tutoria" id="tipo_tutoria" class="custom-select">
                                               <option value="seleccion">Seleccione...</option>
-                                              <option value="articulo">Tutoria individual</option>
-                                              <option value="libro">Grupal</option>
+                                              <option value="individual">Tutoria individual</option>
+                                              <option value="grupal">Tutoria grupal</option>
                                               </select>
-                                                                                                    </div>
+                                          </div>
 
                                                                                                     
                                                   <!--En individual va :
@@ -367,7 +368,7 @@
                                                   <div class="modal-dialog">
                                                       <div class="modal-content" id="ventanaFormularioTutoria">
                                                       </div>
-                                                  </div>
+                                                  </div>  
                                               </div>
 
                                           </div>
@@ -402,7 +403,7 @@
                                   </div>
 
                                   <div class="btn btn-secondary border-light" id="subheader2">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2" aria-expanded="true" aria-controls="subcollapse2">Dirección Individualizada</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3_docencia" aria-expanded="true" aria-controls="subcollapse2">Dirección Individualizada</a>
                                   </div>
                                   <div id="subcollapse2" class="collapse" aria-labelledby="subheader2" data-parent="#subaccordion">
                                       <div class="card-body">
@@ -421,7 +422,7 @@
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
                                               <div class="modal fade" id="ventanaFormulario6" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario5">
                                                   <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaDirecciónIndividualProdep">
+                                                      <div class="modal-content" id="ventanaDireccionIndividualProdep">
                                                       </div>
                                                   </div>
                                               </div>
@@ -1183,7 +1184,7 @@
             }
         });
 
-        <?php include("scripts/formularios/estimulos/validadoresFormulariosEstimulos.php");?>
+        <?php include("scripts/formularios/prodep/validadoresFormulariosProdep.php");?>
 
     </script>
 </body>

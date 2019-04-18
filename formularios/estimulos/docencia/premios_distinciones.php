@@ -7,7 +7,7 @@
                                                                     <div class="modal-body">
                                                                     <form enctype="multipart/form-data" action="#" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="tipo_reconocimiento">Tipo de reconocimiento:</label>
+                                                                          <label for="tipo_reconocimiento">Tipo de reconocimiento</label>
                                                                           <select id="tipo_reconocimiento" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="">Sistema Nacional de Creadores</option>
@@ -25,30 +25,17 @@
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                          <label for="nivel">Nivel:</label>
+                                                                          <label for="nivel">Nivel</label>
                                                                           <select id="nivel" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
 																		  </select>
                                                                         </div>
-
                                                                         <div class="form-group">
-                                                                            <label for="datepicker" class="control-label">Fecha inicio:</label>
-                                                                            <div class="controls">
-                                                                                <input type="text" id="fecha_inicio" class="tuiker form-control" required>
-                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
-                                                                            </div>
+                                                                          <label for="ano">Año</label>
+                                                                          <input type="text" class="form-control" id="ano" required>
                                                                         </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="datepicker" class="control-label">Fecha fin:</label>
-                                                                            <div class="controls">
-                                                                                <input type="text" id="fecha_fin" class="tuiker form-control" required>
-                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
-                                                                            </div>
-                                                                        </div>
-
                                                                          <div class="form-group">
-                                                                          <label for="monto_mensual">Monto mensual:</label>
+                                                                          <label for="monto_mensual">Monto mensual</label>
                                                                           <input type="text" class="form-control" id="monto_mensual" required>
                                                                         </div>
 

@@ -11,7 +11,7 @@
                                                                           <textarea class="form-control" id="titulo_art" rows="3" required></textarea>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                          <label for="estado_act">Estado actual</label>
+                                                                          <label for="estado_act">Estado del artículo</label>
                                                                           <select id="estado_act" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="En proceso">En proceso</option>
@@ -20,8 +20,8 @@
                                                                           </select>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                          <label for="estado_act" required>País</label>
-                                                                          <select id="estado_act" class="form-control custom-select" required>
+                                                                          <label for="pais" required>País</label>
+                                                                          <select id="pais" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="AF">Afganistán</option>
                                                                             <option value="AL">Albania</option>
@@ -87,7 +87,7 @@
                                                                             <option value="AE">Emiratos Árabes Unidos</option>
                                                                             <option value="ER">Eritrea</option>
                                                                             <option value="SI">Eslovenia</option>
-                                                                            <option value="ES" selected>España</option>
+                                                                            <option value="ES">España</option>
                                                                             <option value="US">Estados Unidos</option>
                                                                             <option value="EE">Estonia</option>
                                                                             <option value="ET">Etiopía</option>
@@ -170,7 +170,7 @@
                                                                             <option value="MU">Mauricio</option>
                                                                             <option value="MR">Mauritania</option>
                                                                             <option value="YT">Mayotte</option>
-                                                                            <option value="MX">México</option>
+                                                                            <option value="MX" selected>México</option>
                                                                             <option value="FM">Micronesia</option>
                                                                             <option value="MD">Moldavia</option>
                                                                             <option value="MC">Mónaco</option>
@@ -276,49 +276,15 @@
                                                                           </div>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                          <label for="editorial">Editorial</label>
-                                                                          <textarea class="form-control" id="editorial" rows="3" required></textarea>
-                                                                        </div>
-                                                                        <div class="form-group">
                                                                           <label for="issn">ISSN</label>
                                                                           <input type="text" class="form-control" id="issn" required>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                          <label for="volum">Volumen</label>
-                                                                          <input type="text" class="form-control" id="volum" required>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="datepicker" class="control-label">Fecha</label>
+                                                                            <label for="datepicker" class="control-label">Fecha de publicación</label>
                                                                             <div class="controls">
                                                                                 <input type="text" id="fecha" class="tuiker form-control" required>
                                                                                 <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
                                                                             </div>
-                                                                        </div>
-                                                                        <fieldset class="form-group">
-                                                                        <div class="row">
-                                                                            <legend class="col-form-label col-8">Considera para C.V. de C.A.</legend>
-                                                                                <div class="col-sm-10">
-                                                                                    <div class="form-check">
-                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                                                      <label class="form-check-label" for="exampleRadios1">
-                                                                                        Sí
-                                                                                      </label>
-                                                                                    </div>
-                                                                                    <div class="form-check">
-                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                                      <label class="form-check-label" for="exampleRadios2">
-                                                                                        No
-                                                                                      </label>
-                                                                                    </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                        </fieldset>
-                                                                        <div class="form-group">
-                                                                          <label for="proposito">Propósito</label>
-                                                                          <select id="proposito" class="form-control" required>
-                                                                            <option selected>Seleccione...</option>
-                                                                            <option value="gene_cono">Generador de conocimiento</option>
-                                                                          </select>
                                                                         </div>
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>

@@ -1,5 +1,5 @@
 //================= DOCENCIA ==============//
-function validarSeleccionProduccionAcademica() { //produccion academica docencia
+        function validarSeleccionProduccionAcademica() { //produccion academica docencia
         
         var select = $("#produccion_academica").val();
         
@@ -16,6 +16,13 @@ function validarSeleccionProduccionAcademica() { //produccion academica docencia
             return true;
             }
 
+            else if(select == "libro") //si selecciono libro
+            {
+            $('#ventanaFormularioProdAcad').load('formularios/estimulos/docencia/produccion_academica_docencia_libro.php');
+            return true;
+            }
+
+
             else //si la opcion no tiene formulario
             {
             alert('Opcion sin formulario.');
@@ -25,12 +32,17 @@ function validarSeleccionProduccionAcademica() { //produccion academica docencia
 
         };
 
-        function validarSeleccionGestionAcademica() { //gestion academica individualizada
-        
+        function validarGradosAcad() { //grados academicos
             
-            $('#ventanaFormularioGestionAcad').load('formularios/estimulos/docencia/gestion_academica_invididualizada.php');
+            $('#ventanaFormularioGradosAcad').load('formularios/estimulos/docencia/grados_academicos.php');
             return true;
         };
+
+        function validarDirIndividualizada() //direccion individualizada
+        {
+            $('#ventanaFormularioDivIndiv').load('formularios/estimulos/docencia/direccion_individualizada.php');
+            return true;
+        }
 
         function validarCapaActa() { //capacitacion actualizacion lenguas extranjeras
         
@@ -46,10 +58,61 @@ function validarSeleccionProduccionAcademica() { //produccion academica docencia
             return true;
         };
 
-        function validarCapacitActuali() { //capacitaciones y actualizaciones academicas
+//================= DOCENCIA ==============//
+
+//================= PROYECTOS DE INVESTIGACION ==============//
+
+        function validarProyInvestigacion() { //proyectos de investigacion
         
             
-            $('#ventanaCapaYActuali').load('formularios/estimulos/docencia/capa_actualizacion_academica.php');
+            $('#ventanaProyInvestigacion').load('formularios/estimulos/proyectos/proyectos_investigacion.php');
             return true;
         };
-//================= DOCENCIA ==============//
+
+//================= PROYECTOS DE INVESTIGACION ==============//
+
+//================= TUTORIAS ==============//
+
+        function validarTutoria() { //proyectos de investigacion
+        
+            
+            $('#ventanaFormularioTutoria').load('formularios/estimulos/tutorias/tutoria.php');
+            return true;
+        };
+
+        function validarServicio() { //proyectos de investigacion
+        
+            
+            $('#ventanaFormularioServicios').load('formularios/estimulos/tutorias/servicios.php');
+            return true;
+        };
+
+//================= TUTORIAS ==============//
+
+//================= CUERPOS COLEGIADOS ==============//
+
+        function validarGestionAcad() { //proyectos de investigacion
+        
+            
+            $('#ventanaFormularioGestAcad').load('formularios/estimulos/cuerpos_colegiados/gestion_academica.php');
+            return true;
+        };
+
+        function validarGestionAcadCuerposColegiados() {
+
+            $('#ventanaFormularioCuerposColeg').load('formularios/estimulos/cuerpos_colegiados/gestion_academica_cuerpos.php');
+            return true;
+        }
+
+//================= CUERPOS COLEGIADOS ==============//
+
+//================= CARGA ACADEMICA ==============//
+
+        function validarCargaAcad() {
+
+            $('#ventanaFormularioCargaAcad').load('formularios/estimulos/dedicacion/carga_academica.php');
+            return true;
+        }
+
+//================= CARGA ACADEMICA ==============//
+

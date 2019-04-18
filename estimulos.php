@@ -22,7 +22,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convocatorias</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="estimulos.php">Estímulos UANL</a>
-                          <a class="dropdown-item" href="#">PRODEP</a>
+                          <a class="dropdown-item" href="prodep.php">PRODEP</a>
                           <a class="dropdown-item" href="#">Sistema Nacional de Investigadores</a>
                         </div>
                       </li>
@@ -76,7 +76,6 @@
                                                           <select name="seleccion_produccion_academica" id="produccion_academica" class="custom-select">
                                                               <option value="seleccion">Seleccione...</option>
                                                               <option value="articulo">Artículo</option>
-                                                              <option value="capitulo_libro">Capítulo del libro</option>
                                                               <option value="libro">Libro</option>
                                                           </select>
                                                       </div>
@@ -87,7 +86,7 @@
                                               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
 
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
-                                                                                            <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
+                                                <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
                                                   <div class="modal-dialog">
                                                       <div class="modal-content" id="ventanaFormularioProdAcad">
                                                       </div>
@@ -97,7 +96,7 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus trabajos</h5></center><br>
+                                          <hr><br><center><h5>Sus artículos</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
@@ -120,32 +119,49 @@
                                           </table>
                                           <br><hr><br>
 
+                                          <center><h5>Sus libros</h5></center><br>
+                                          <table class="table table-success m-2">
+                                              <thead>
+                                                  <tr>
+                                                      <th>Titulo del libro</th>
+                                                      <th>Tipo de autor</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <td>Libro de ejemplo</td>
+                                                      <td>Autor</td>
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                          <br><hr><br>
+
                                           <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
                                           <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                       </div>
                                   </div>
 
-                                  <div class="btn btn-secondary border-light" id="subheader2">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2" aria-expanded="true" aria-controls="subcollapse2">Capacitación y Actualización Académica</a>
+                                  <div class="btn btn-secondary border-white" id="subheader2">
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2" aria-expanded="true" aria-controls="subcollapse4">Grados académicos y capacitación</a>
                                   </div>
                                   <div id="subcollapse2" class="collapse" aria-labelledby="subheader2" data-parent="#subaccordion">
                                       <div class="card-body">
-                                       <div class="form-group">
+                                          <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Capacitación y Actualización Académica</h4>
+                                                          <h4>Grados académicos y capacitación</h4>
                                                       </div>
-                                                      </div>
+                                                  </div>
                                               </div>
                                           <div class="col-2">
 
                                               <!-- BOTON AGREGAR -->
-                                          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario2" onclick="validarCapacitActuali()">Agregar nuevo</button><br><br>
+                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario2" onclick="validarGradosAcad()">Agregar nuevo</button><br><br>
 
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
                                               <div class="modal fade" id="ventanaFormulario2" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario2">
                                                   <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaCapaYActuali">
+                                                      <div class="modal-content" id="ventanaFormularioGradosAcad">
                                                       </div>
                                                   </div>
                                               </div>
@@ -153,26 +169,26 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus capacitaciones y actualizaciones</h5></center><br>
+                                          <hr><br><center><h5>Sus grados y capacitaciones</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Tipo</th>
-                                                      <th colspan="2">Descripción</th>
-                                                      <th>Fecha de inicio</th>
-                                                      <th>Fecha de fin</th>
-                                                      <th>Nombre de la institución</th>
-                                                      <th>No. de horas</th>
+                                                      <th>Tipo de capacitacion</th>
+                                                      <th>Descripción</th>
+                                                      <th>Fecha inicio</th>
+                                                      <th>Fecha fin</th>
+                                                      <th>Numero de horas</th>
+                                                      <th>Nombre de la Institucion</th>
                                                   </tr>
                                               </thead>
                                               <tbody>
                                                   <tr>
-                                                      <td>Tipo de ejemplo</td>
-                                                      <td colspan="2">Mejora en el grado para calificar diferentes medidas de trabajo</td>
+                                                      <td>Llenado de ejemplo</td>
+                                                      <td>Llenado de ejemplo</td>
                                                       <td>12-03-2016</td>
-                                                      <td>13-03-2016</td>
-                                                      <td>Universidad Autonóma de Nuevo León</td>
-                                                      <td>35</td>
+                                                      <td>12-03-2016</td>
+                                                      <td>Llenado de ejemplo</td>
+                                                      <td>UANL</td>
                                                   </tr>
                                               </tbody>
                                           </table>
@@ -184,14 +200,14 @@
                                   </div>
 
                                   <div class="btn btn-secondary border-light" id="subheader3">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse3">Capacitación y Actualización en Lenguas Extranjeras</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse3">Lenguas e idiomas</a>
                                   </div>
                                   <div id="subcollapse3" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion">
                                       <div class="card-body">
                                           <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Capacitación y Actualización en Lenguas Extranjeras</h4>
+                                                          <h4>Lenguas e idiomas</h4>
                                                       </div>
                                                   </div>
                                               </div>
@@ -232,26 +248,26 @@
                                   </div>
 
                                   <div class="btn btn-secondary border-white" id="subheader4">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Gestión Académica Invididualizada</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Dirección individualizada</a>
                                   </div>
                                   <div id="subcollapse4" class="collapse" aria-labelledby="subheader4" data-parent="#subaccordion">
                                       <div class="card-body">
                                           <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Gestión Académica Individualizada</h4>
+                                                          <h4>Dirección individualizada</h4>
                                                       </div>
                                                   </div>
                                               </div>
                                           <div class="col-2">
 
                                               <!-- BOTON AGREGAR -->
-                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario4" onclick="validarSeleccionGestionAcademica()">Agregar nuevo</button><br><br>
+                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario4" onclick="validarDirIndividualizada()">Agregar nuevo</button><br><br>
 
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
                                               <div class="modal fade" id="ventanaFormulario4" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario2">
                                                   <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaFormularioGestionAcad">
+                                                      <div class="modal-content" id="ventanaFormularioDivIndiv">
                                                       </div>
                                                   </div>
                                               </div>
@@ -259,7 +275,7 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus trabajos</h5></center><br>
+                                          <hr><br><center><h5>Sus direcciones</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
@@ -323,8 +339,7 @@
                                                   <tr>
                                                       <th>Tipo de reconocimiento</th>
                                                       <th>Nivel</th>
-                                                      <th>Fecha inicio</th>
-                                                      <th>Fecha fin</th>
+                                                      <th>Año</th>
                                                       <th>Monto mensual</th>
 
                                               </thead>
@@ -332,8 +347,7 @@
                                                   <tr>
                                                       <td>Llenado de ejemplo</td>
                                                       <td>Llenado de ejemplo</td>
-                                                      <td>12-03-2016</td>
-                                                      <td>12-03-2016</td>
+                                                      <td>2016</td>
                                                       <td>Llenado de ejemplo</td>
                                           </table>
                                           <br><hr><br>
@@ -372,12 +386,12 @@
                                           <div class="col-2">
 
                                               <!-- BOTON AGREGAR -->
-                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
+                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaProyInv" onclick="validarProyInvestigacion()">Agregar nuevo</button><br><br>
 
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
-                                                                                            <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
+                                                <div class="modal fade" id="ventanaProyInv" tabindex="-1" role="dialog" aria-labelledby="ventanaProyInv">
                                                   <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaFormularioProdAcad">
+                                                      <div class="modal-content" id="ventanaProyInvestigacion">
                                                       </div>
                                                   </div>
                                               </div>
@@ -385,7 +399,7 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus trabajos</h5></center><br>
+                                          <hr><br><center><h5>Sus proyectos</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
@@ -430,83 +444,22 @@
                                   </div>
                                   <div id="subcollapse1_tutorias" class="collapse" aria-labelledby="subheader_tutorias" data-parent="#subaccordion_tutorias">
                                       <div class="card-body">
-                                          <!-- FALTA DE INFORMACIÓN DEL PDFS PENDIENTE (31/03/2019) -->
-                                      </div>
-                                  </div>
-                                      <div class="btn btn-secondary border-light" id="subheader2_investigacion">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3_tutorias" aria-expanded="true" aria-controls="subcollapse3_tutorias">Dirección Invididualizada</a>
-                                  </div>
-                                                                    <div id="subcollapse3_tutorias" class="collapse" aria-labelledby="subheader_tutorias" data-parent="#subaccordion_tutorias">
-                                      <div class="card-body">
-                                                                                <div class="form-group">
-                                                                                        <div class="row">
-                                                                                                <div class="col-9">
-                                                                                                        <h4>Dirección Individualizada</h4>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="col-2">
-
-                                                                                <!-- BOTON AGREGAR -->
-                                                                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
-
-                                                                                <!-- VENTANA PARA LOS FORMULARIOS -->
-                                                                                <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
-                                                                                        <div class="modal-dialog">
-                                                                                                <div class="modal-content" id="ventanaFormularioProdAcad">
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-
-                                                                                </div>
-
-                                                                                <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                                                                <hr><br><center><h5>Sus trabajos</h5></center><br>
-                                                                                <table class="table table-success m-2">
-                                                                                    <thead>
-                                                                                            <tr>
-                                                                                                    <th>Fecha inicio</th>
-                                                                                                    <th>Fecha fin</th>
-                                                                                                    <th>Tipo Dirección Individualizada</th>
-                                                                                                    <th>Tipo de Proyecto Dirigido</th>
-                                                                                                </tr>
-                                                                                            </thead>
-                                                                                            <tbody>
-                                                                                                <tr>
-                                                                                                    <td>12-03-2016</td>
-                                                                                                    <td>13-03-2016</td>
-                                                                                                    <td>...</td>
-                                                                                                    <td>...</td>
-                                                                                                </tr>
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                        <br><hr><br>
-
-                                                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-                                      </div>
-                                  </div>
-                                                                    <div class="btn btn-secondary border-light" id="subheader2_investigacion">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4_tutorias" aria-expanded="true" aria-controls="subcollapse4_tutorias">Servicios prestados a la comunidad</a>
-                                  </div>
-                                                                    <div id="subcollapse4_tutorias" class="collapse" aria-labelledby="subheader_tutorias" data-parent="#subaccordion_tutorias">
-                                            <div class="card-body">
-                                                                                    <div class="form-group">
+                                          <div class="form-group">
                                                                                             <div class="row">
                                                                                                     <div class="col-9">
-                                                                                                            <h4>Producción Académica Docencia</h4>
+                                                                                                            <h4>Tutoría</h4>
                                                                                                     </div>
                                                                                             </div>
                                                                                     </div>
                                                                                 <div class="col-2">
 
                                                                                 <!-- BOTON AGREGAR -->
-                                                                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
+                                                                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaTuto" onclick="validarTutoria()">Agregar nuevo</button><br><br>
 
                                                                                 <!-- VENTANA PARA LOS FORMULARIOS -->
-                                                                                <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
+                                                                                <div class="modal fade" id="ventanaTuto" tabindex="-1" role="dialog" aria-labelledby="ventanaTuto">
                                                                                         <div class="modal-dialog">
-                                                                                                <div class="modal-content" id="ventanaFormularioProdAcad">
+                                                                                                <div class="modal-content" id="ventanaFormularioTutoria">
                                                                                                 </div>
                                                                                         </div>
                                                                                 </div>
@@ -514,7 +467,63 @@
                                                                         </div>
 
                                                                         <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                                                        <hr><br><center><h5>Sus trabajos</h5></center><br>
+                                                                        <hr><br><center><h5>Sus tutorías</h5></center><br>
+                                                                        <table class="table table-success m-2">
+                                                                                <thead>
+                                                                                        <tr>
+                                                                                                <th>Tipo Tutoria</th>
+                                                                                                <th>Nivel</th>
+                                                                                                <th>Programa Educativo</th>
+                                                                                                <th>Fecha inicio</th>
+                                                                                                <th>Fecha fin</th>
+                                                                                        </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                        <tr>
+                                                                                                <td>...</td>
+                                                                                                <td>...</td>
+                                                                                                <td>...</td>
+                                                                                                <td>24/02/2012</td>
+                                                                                                <td>28/02/2012</td>
+                                                                                        </tr>
+                                                                                </tbody>
+                                                                        </table>
+                                                                        <br><hr><br>
+
+                                                                        <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
+                                                                        <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                      </div>
+                                  </div>
+                                
+                                <div class="btn btn-secondary border-light" id="subheader2_investigacion">
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4_tutorias" aria-expanded="true" aria-controls="subcollapse4_tutorias">Servicios prestados a la comunidad</a>
+                                  </div>
+                                <div id="subcollapse4_tutorias" class="collapse" aria-labelledby="subheader_tutorias" data-parent="#subaccordion_tutorias">
+                                            <div class="card-body">
+                                                                                    <div class="form-group">
+                                                                                            <div class="row">
+                                                                                                    <div class="col-9">
+                                                                                                            <h4>Servicios prestados a la comunidad</h4>
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                    </div>
+                                                                                <div class="col-2">
+
+                                                                                <!-- BOTON AGREGAR -->
+                                                                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaServicios" onclick="validarServicio()">Agregar nuevo</button><br><br>
+
+                                                                                <!-- VENTANA PARA LOS FORMULARIOS -->
+                                                                                <div class="modal fade" id="ventanaServicios" tabindex="-1" role="dialog" aria-labelledby="ventanaServicios">
+                                                                                        <div class="modal-dialog">
+                                                                                                <div class="modal-content" id="ventanaFormularioServicios">
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+
+                                                                        </div>
+
+                                                                        <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
+                                                                        <hr><br><center><h5>Sus servicios</h5></center><br>
                                                                         <table class="table table-success m-2">
                                                                                 <thead>
                                                                                         <tr>
@@ -541,7 +550,7 @@
                           </div>
                       </div>
                   </div>
-                                    <!-- CUARTA SECCIÓN CUERPOS COLEGIALOS -->
+                                    <!-- CUARTA SECCIÓN CUERPOS COLEGIADOS -->
                                     <div class="btn btn-dark border-light" id="header4">
                       <a class="btn" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Cuerpos Colegiados</a>
                   </div>
@@ -552,6 +561,7 @@
                                   <div class="btn btn-secondary border-light" id="subheader1_cuerposcolegialos">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_cuerposcolegialos" aria-expanded="true" aria-controls="subcollapse1_cuerposcolegialos">Gestión Académica de Cuerpos Colegiados</a>
                                   </div>
+
                                   <div id="subcollapse1_cuerposcolegialos" class="collapse" aria-labelledby="subheader1_cuerposcolegialos" data-parent="#subaccordion_cuerposcolegialos">
                                       <div class="card-body">
                                               <div class="form-group">
@@ -564,12 +574,12 @@
                                           <div class="col-2">
 
                                               <!-- BOTON AGREGAR -->
-                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario" onclick="validarSeleccionProduccionAcademica()">Agregar nuevo</button><br><br>
+                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaCuerpos" onclick="validarGestionAcadCuerposColegiados()">Agregar nuevo</button><br><br>
 
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
-                                                                                            <div class="modal fade" id="ventanaFormulario" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario">
+                                                <div class="modal fade" id="ventanaCuerpos" tabindex="-1" role="dialog" aria-labelledby="ventanaCuerpos">
                                                   <div class="modal-dialog">
-                                                      <div class="modal-content" id="ventanaFormularioProdAcad">
+                                                      <div class="modal-content" id="ventanaFormularioCuerposColeg">
                                                       </div>
                                                   </div>
                                               </div>
@@ -577,14 +587,14 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus trabajos</h5></center><br>
+                                          <hr><br><center><h5>Sus gestiones</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Fecha Ult. Rep.</th>
-                                                      <th>Tipo Gestión</th>
+                                                      <th>Fecha de ultimo reporte</th>
+                                                      <th>Tipo de gestión</th>
                                                       <th>Clasificación</th>
-                                                      <th>Función Encomendada</th>
+                                                      <th>Función encomendada</th>
                                                   </tr>
                                               </thead>
                                               <tbody>
@@ -602,6 +612,63 @@
                                           <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                       </div>
                                   </div>
+
+                            <div class="btn btn-secondary border-light" id="subheader2_cuerposcolegialos">
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_cuerposcolegialos" aria-expanded="true" aria-controls="subcollapse2_cuerposcolegialos">Gestión Académica</a>
+                                  </div>
+                                <div id="subcollapse2_cuerposcolegialos" class="collapse" aria-labelledby="subheader2_cuerposcolegialos" data-parent="#subaccordion_cuerposcolegialos">
+                                      <div class="card-body">
+                                              <div class="form-group">
+                                                  <div class="row">
+                                                      <div class="col-9">
+                                                          <h4>Gestión Académica</h4>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          <div class="col-2">
+
+                                              <!-- BOTON AGREGAR -->
+                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaGestionAcad" onclick="validarGestionAcad()">Agregar nuevo</button><br><br>
+
+                                              <!-- VENTANA PARA LOS FORMULARIOS -->
+                                                <div class="modal fade" id="ventanaGestionAcad" tabindex="-1" role="dialog" aria-labelledby="ventanaGestionAcad">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content" id="ventanaFormularioGestAcad">
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                          </div>
+
+                                          <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
+                                          <hr><br><center><h5>Sus gestiones</h5></center><br>
+                                          <table class="table table-success m-2">
+                                              <thead>
+                                                  <tr>
+                                                      <th>Evento</th>
+                                                      <th>Tipo de gestión</th>
+                                                      <th>Calificación</th>
+                                                      <th>Fecha de inicio</th>
+                                                      <th>Fecha de fin</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <td>...</td>
+                                                      <td>...</td>
+                                                      <td>...</td>
+                                                      <td>12-03-2016</td>
+                                                      <td>18-03-2016</td>
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                          <br><hr><br>
+
+                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
+                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                      </div>
+                                  </div>
+
                               </div>
                           </div>
                       </div>
@@ -618,31 +685,54 @@
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_dedicacion" aria-expanded="true" aria-controls="subcollapse1_dedicacion">Carga Académica</a>
                                   </div>
                                   <div id="subcollapse1_dedicacion" class="collapse" aria-labelledby="subheader1_dedicacion" data-parent="#subaccordion_dedicacion">
-                                                                        <!-- Es la carga docente impartida por el academico -->
-                                                                            <div class="card-body">
+                                    <div class="card-body">
+
+                                        <div class="form-group">
+                                                  <div class="row">
+                                                      <div class="col-9">
+                                                          <h4>Carga Académica</h4>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                          <div class="col-2">
+
+                                              <!-- BOTON AGREGAR -->
+                                              <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaCargaAcad" onclick="validarCargaAcad()">Agregar nuevo</button><br><br>
+
+                                              <!-- VENTANA PARA LOS FORMULARIOS -->
+                                                <div class="modal fade" id="ventanaCargaAcad" tabindex="-1" role="dialog" aria-labelledby="ventanaCargaAcad">
+                                                  <div class="modal-dialog">
+                                                      <div class="modal-content" id="ventanaFormularioCargaAcad">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                        <hr><br><center><h5>Sus grupos</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Fecha inicio</th>
-                                                      <th>Fecha termnino</th>
                                                       <th>Dependencia</th>
                                                       <th>Nivel</th>
                                                       <th>Grado</th>
-                                                                                                            <th>Materia</th>
-                                                                                                            <th>No. Grupos</th>
-                                                                                                            <th>No. Hrs. Semana Mes</th>
+                                                      <th>Materia</th>
+                                                      <th>No. grupos</th>
+                                                      <th>No. horas por semana</th>
+                                                      <th>Fecha de inicio</th>
+                                                      <th>Fecha de térmnino</th>
                                                   </tr>
                                               </thead>
                                               <tbody>
                                                   <tr>
-                                                      <td>18-01-2016</td>
-                                                      <td>14-07-2016</td>
                                                       <td>FACULTAD DE CIENCIAS DE LA COMUNICACIÓN</td>
                                                       <td>SUPERIOR</td>
                                                       <td>LICENCIATURA</td>
-                                                                                                            <td>PSICOLOGÍA SOCIAL</td>
-                                                                                                            <td>2</td>
-                                                                                                            <td>6</td>
+                                                      <td>PSICOLOGÍA SOCIAL</td>
+                                                      <td>2</td>
+                                                      <td>6</td>
+                                                      <td>18-01-2016</td>
+                                                      <td>14-07-2016</td>
                                                   </tr>
                                               </tbody>
                                           </table>
