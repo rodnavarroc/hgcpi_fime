@@ -21,4 +21,6 @@ v1.3 - Agregadas secciones y subsecciones de convocatorias PRODEP y SNI.
 
 v1.4 - Finalizadas las secciones, subsecciones y formularios de convocatorias PRODEP y Estímulos UANL.
 
+v1.4.1 - Creado el algoritmo para agregar registros y para borrarlos. Agregado campo "id" a todas las tablas de la base de datos para control de tablas dinámicas. Creado el script para visualizar tablas dinámicas con los registros existentes para el usuario por convocatoria.
+
 #
