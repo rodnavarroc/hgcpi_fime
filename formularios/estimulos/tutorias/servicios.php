@@ -8,20 +8,20 @@
 	                                                                    <form enctype="multipart/form-data" action="#" method="POST">
 	                                                                    	 <div class="form-group">
 	                                                                          <label for="">Servicio prestado</label>
-	                                                                          <input type="text" class="form-control" id="servicio_prestado" required>
+	                                                                          <input type="text" class="form-control" name="servicio_prestado" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Tipo de servicio</label>
-	                                                                          <input type="text" class="form-control" id="tipo_servicio" required>
+	                                                                          <input type="text" class="form-control" name="tipo_servicio" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Institucion solicitante</label>
-	                                                                          <input type="text" class="form-control" id="institucion_solicitante" required>
+	                                                                          <input type="text" class="form-control" name="institucion_solicitante" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                            <label for="datepicker" class="control-label">Fecha de servicio</label>
 	                                                                            <div class="controls">
-	                                                                                <input type="text" id="fecha_servicio" class="tuiker form-control" required>
+	                                                                                <input type="text" name="fecha_servicio" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>

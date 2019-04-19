@@ -10,38 +10,38 @@
                                                                         
    <div class="form-group">
    <label for="descripcion" required>(Mayúsculas) <br>Alumno:</label>
-   <input type="text" class="form-control inst_certi" id="alumno_tutoria_individual_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="alumno_tutoria_individual_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
     
    <label for="descripcion" required> Nivel:</label>
-   <input type="text" class="form-control inst_certi" id="nivel_tutoria_individual_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="nivel_tutoria_individual_prodep" placeholder="" required>
    </div>                                                               
 
  <div class="form-group">
    <label for="descripcion" required>(Mayúsculas) <br> Programa educativo:</label>
-   <input type="text" class="form-control inst_certi" id="programa_tutoria_individual_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="programa_tutoria_individual_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> (31/12/9999) <br> Fecha de inicio: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_inicio_tutoria_individual_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="fecha_inicio_tutoria_individual_prodep" placeholder="" required>
    </div>                                                           
 
 <div class="form-group">
    <label for="descripcion" required> (31/12/9999) <br> Fecha de fin: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_fin_tutoria_individual_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="fecha_fin_tutoria_individual_prodep" placeholder="" required>
    </div>                                                           
 
 <div class="form-group">
    <label for="descripcion"> (Puede ir vacio) <br> Tipo de tutelaje: </label>
-   <input type="text" class="form-control inst_certi" id="tipo_tutoria_individual_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="tipo_tutoria_individual_prodep" placeholder="">
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> Estado de tutelaje: </label>
-   <input type="text" class="form-control inst_certi" id="estado_tutoria_individual_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="estado_tutoria_individual_prodep" placeholder="" required>
    </div>                                                     
 
                                                                     <br>

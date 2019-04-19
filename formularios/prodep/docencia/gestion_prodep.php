@@ -10,30 +10,30 @@
                                                                         
    <div class="form-group">
    <label for="descripcion" required>Tipo de gestion:</label>
-   <input type="text" class="form-control inst_certi" id="tipo_gestion_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="tipo_gestion_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
     
    <label for="descripcion" required> Cargo dentro de la comisión o cuerpo colegiado: </label>
-   <input type="text" class="form-control inst_certi" id="cargo_gestion_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="cargo_gestion_prodep" placeholder="" required>
    </div>                                                               
 
  <div class="form-group">
    <label for="descripcion" required>Función encomendada:</label>
-   <input type="text" class="form-control inst_certi" id="funcion_gestion_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="funcion_gestion_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> (Mayúsculas) <br> Órgano colegiado al que fue presentado: </label>
-   <input type="text" class="form-control inst_certi" id="organo_gestion_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="organo_gestion_prodep" placeholder="" required>
    </div>                                                           
 
 
 
 <div class="form-group">
   <label for="aprobado_gestion_prodep" required>Aprobado:</label>
-  <select id="aprobado_gestion_prodep" class="form-control custom-select" required>
+  <select name="aprobado_gestion_prodep" class="form-control custom-select" required>
   <option selected value="seleccione">Seleccione...</option>
   <option value="si">Si</option>
   <option value="si">No</option>
@@ -43,33 +43,33 @@
 
 <div class="form-group">
    <label for="descripcion" > (Puede ir vacio) <br> Resultados obtenidos: </label>
-   <input type="text" class="form-control inst_certi" id="resultados_gestion_prodep"placeholder="">
+   <input type="text" class="form-control inst_certi" name="resultados_gestion_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
    <label for="descripcion" > (Puede ir vacio) <br> Estado: </label>
-   <input type="text" class="form-control inst_certi" id="estado_gestion_prodep"placeholder="">
+   <input type="text" class="form-control inst_certi" name="estado_gestion_prodep"placeholder="">
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> (31/12/9999) <br> Fecha de inicio: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_inicio_gestion_prodep"placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="fecha_inicio_gestion_prodep"placeholder="" required>
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> (31/12/9999) <br> Fecha de fin: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_fin_gestion_prodep"placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="fecha_fin_gestion_prodep"placeholder="" required>
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> (31/12/9999) <br> Fecha de ultimo informe presentado: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_informe_gestion_prodep"placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="fecha_informe_gestion_prodep"placeholder="" required>
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> Horas dedicadas a la semana a la gestion: </label>
-   <input type="text" class="form-control inst_certi" id="horas_semana_gestion_prodep"placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="horas_semana_gestion_prodep"placeholder="" required>
    </div>
 
 <br>

@@ -37,8 +37,14 @@
     </header>
 
         <div class="row-mt-4">
-            <div class="col-12">
-                <br><br><br>
+            <div class="col-md-12">
+              <div class="container" style="background-color: #f2f2f2;">
+                <br><br>
+                <h2><center>Bienvenido a la plataforma HGCPI</center></h2><br>
+                <h6><center>Aquí mantendrá en orden su currículum y le proporcionaremos las herramientas necesarias <br>para que su participación en convocatorias de la UANL sea más rápida y eficiente.</center></h6>
+                <br><br>
+              </div>
+                  <br><br>
                     <h4><center>Iniciar Sesión</center></h4><br>
                     <form enctype="multipart/form-data" action="scripts/login.php" method="POST">
 
@@ -56,7 +62,7 @@
                       </div>
                       <input id="pass" type="password" class="form-control" placeholder="" aria-label="Usuario" aria-describedby="basic-addon1" name="pass" required>
                     </div>
-                    <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Acceder"></center>
+                    <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Acceder a su cuenta"></center>
                     </form>
             </div>
       
@@ -80,7 +86,7 @@
                       </div>
                       <input type="text" class="form-control" placeholder="alguien@uanl.edu.mx" aria-label="Usuario" aria-describedby="basic-addon1" name="correo" required>
                     </div>
-                    <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Enviar Solicitud"><br><br>
+                    <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Enviar solicitud de registro"><br><br>
                         <p style="text-align: justify;"><small>* Su solicitud será atendida por el administrador del sistema y <b>se le notificará mediante el correo proporcionado</b> cuando su solicitud sea aprobada. <br><br><i>Este proceso puede tardar varios días. Si tiene alguna duda o problema por favor envíe un correo a <a href="#">la administración del sitio</a>, o comuníquese directamente con la Coordinación de Sistemas de la FIME.</i></small></p></center>
                     </form>
             </div>

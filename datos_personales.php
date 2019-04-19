@@ -398,7 +398,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="exampleFormControlInput1">IES de Adscripción</label>
-				    <input type="text" class="form-control" id="codigo_postal" placeholder="12345678" required="true">
+				    <input type="text" class="form-control" id="codigo_postal" placeholder="Facultad de Ingeniería Mecánica y Eléctrica" required="true">
 				  </div>
 
 

@@ -1,3 +1,9 @@
+<?php 
+
+  $conexion=mysqli_connect('localhost','root','','hgcpi');
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="jquery-3.3.1.min.js"></script>s
 </head>
 <body>
     <header>
@@ -100,21 +107,33 @@
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
+                                                      <th>ID</th>
                                                       <th>Titulo del artículo</th>
                                                       <th>ISSN</th>
-                                                      <th>Fecha de publicación</th>
-                                                      <th>Editorial</th>
+                                                      <th>País</th>
                                                       <th>Nombre de la revista</th>
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_prod_articulos WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>Artículo de ejemplo</td>
-                                                      <td>1234-5678-91011</td>
-                                                      <td>12-03-2016</td>
-                                                      <td>Editores Mexicanos Unidos</td>
-                                                      <td>Ciencia y Tecnología</td>
+                                                    <td><?php echo $mostrar['id'] ?></td>
+                                                    <td><?php echo $mostrar['nombre_art'] ?></td>
+                                                    <td><?php echo $mostrar['issn'] ?></td>
+                                                    <td><?php echo $mostrar['pais'] ?></td>
+                                                    <td><?php echo $mostrar['nombre_revista'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning"onclick="">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroProdArt(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -136,8 +155,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                          
                                       </div>
                                   </div>
 
@@ -194,8 +212,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -241,8 +258,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
 
                                       </div>
                                   </div>
@@ -300,8 +316,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -352,8 +367,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
 
                                       </div>
                                   </div>
@@ -422,8 +436,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
                                    
@@ -608,8 +621,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -664,8 +676,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -738,8 +749,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -775,7 +785,9 @@
         });
 
         <?php include("scripts/formularios/estimulos/validadoresFormulariosEstimulos.php");?>
+        <?php include("scripts/formularios/estimulos/validadoresBorrarEstimulos.php");?>
 
     </script>
+
 </body>
 </html>

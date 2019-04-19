@@ -5,14 +5,14 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/produccion_academica_docencia_articulo.php" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="titulo_art" required>Título del artículo</label>
-                                                                          <textarea class="form-control" id="titulo_art" rows="3" required></textarea>
+                                                                          <textarea class="form-control" name="titulo_art" rows="3" required></textarea>
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="estado_act">Estado del artículo</label>
-                                                                          <select id="estado_act" class="form-control custom-select" required>
+                                                                          <select name="estado_act" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="En proceso">En proceso</option>
                                                                             <option value="Terminada">Terminado</option>
@@ -21,7 +21,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="pais" required>País</label>
-                                                                          <select id="pais" class="form-control custom-select" required>
+                                                                          <select name="pais" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="AF">Afganistán</option>
                                                                             <option value="AL">Albania</option>
@@ -261,28 +261,28 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="nom_rev">Nombre de la revista</label>
-                                                                          <textarea class="form-control" id="nom_rev" rows="3" required></textarea>
+                                                                          <textarea class="form-control" name="nom_rev" rows="3" required></textarea>
                                                                         </div>
                                                                         <div class="form-group row">
                                                                           <label for="pag_ini" class="col-sm-2 col-form-label">Página inicial</label>
                                                                           <div class="col-sm-10">
-                                                                            <input type="text" class="form-control" id="pag_ini" placeholder="0" required>
+                                                                            <input type="text" class="form-control" name="pag_ini" placeholder="0" required>
                                                                           </div>
                                                                         </div>
                                                                         <div class="form-group row">
                                                                           <label for="pag_fin" class="col-sm-2 col-form-label">Página final</label>
                                                                           <div class="col-sm-10">
-                                                                            <input type="text" class="form-control" id="pag_fin" placeholder="0" required>
+                                                                            <input type="text" class="form-control" name="pag_fin" placeholder="0" required>
                                                                           </div>
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="issn">ISSN</label>
-                                                                          <input type="text" class="form-control" id="issn" required>
+                                                                          <input type="text" class="form-control" name="issn" required>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="datepicker" class="control-label">Fecha de publicación</label>
                                                                             <div class="controls">
-                                                                                <input type="text" id="fecha" class="tuiker form-control" required>
+                                                                                <input type="text" name="fecha" class="tuiker form-control" required>
                                                                                 <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
                                                                             </div>
                                                                         </div>

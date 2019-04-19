@@ -7,34 +7,34 @@
                                                                     <div class="modal-body">
 	                                                                    <form enctype="multipart/form-data" action="#" method="POST">
 	                                                                    	 <div class="form-group">
-	                                                                          <label for="">Tipo de capacitacion</label>
-	                                                                          <input type="text" class="form-control" id="tipo_capac" required>
+	                                                                          <label for="">Tipo de capacitación</label>
+	                                                                          <input type="text" class="form-control" name="tipo_capac" required>
 	                                                                        </div>	
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Descripción</label>
-	                                                                          <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+	                                                                          <textarea class="form-control" name="descripcion" rows="3" required></textarea>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                            <label for="datepicker" class="control-label">Fecha de inicio</label>
 	                                                                            <div class="controls">
-	                                                                                <input type="text" id="fecha_inicio" class="tuiker form-control" required>
+	                                                                                <input type="text" name="fecha_inicio" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                            <label for="datepicker" class="control-label">Fecha de fin</label>
 	                                                                            <div class="controls">
-	                                                                                <input type="text" id="fecha_fin" class="tuiker form-control" required>
+	                                                                                <input type="text" name="fecha_fin" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Número de horas</label>
-	                                                                          <input type="text" class="form-control" id="num_horas" required>
+	                                                                          <input type="text" class="form-control" name="num_horas" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Nombre de la institución</label>
-	                                                                          <input type="text" class="form-control" id="nom_institucion" required>
+	                                                                          <input type="text" class="form-control" name="nom_institucion" required>
 	                                                                        </div>
 	                                                                    	<br>
 	                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>

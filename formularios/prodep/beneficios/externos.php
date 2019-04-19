@@ -10,28 +10,28 @@
                                                                         
    <div class="form-group">
    <label for="descripcion">Tipo de apoyo:</label>
-   <input type="text" class="form-control inst_certi" id="tipo_apoyo_externo_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="tipo_apoyo_externo_promep_prodep" placeholder="">
    </div>
 
 <div class="form-group">
     
    <label for="descripcion"> Nivel: </label>
-   <input type="text" class="form-control inst_certi" id="nivel_externo_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="nivel_externo_promep_prodep" placeholder="">
    </div>     
 
 <div class="form-group">
     <label for="descripcion">(12/31/9999) <br> Fecha inicial: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_inicio_externo_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="fecha_inicio_externo_promep_prodep" placeholder="">
    </div>                                                            
 
 <div class="form-group">
     <label for="descripcion">(12/31/9999) <br> Fecha final: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_fin_externo_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="fecha_fin_externo_promep_prodep" placeholder="">
    </div>         
 
  <div class="form-group">
    <label for="descripcion">Monto:</label>
-   <input type="text" class="form-control inst_certi" id="monto_externo_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="monto_externo_promep_prodep" placeholder="">
    </div>
 
   

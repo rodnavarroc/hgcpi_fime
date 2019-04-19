@@ -10,18 +10,18 @@
                                                                         
    <div class="form-group">
    <label for="descripcion" required>Programa educativo:</label>
-   <input type="text" class="form-control inst_certi" id="programa_actualizado_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="programa_actualizado_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
     
    <label for="descripcion" required>(31/12/9999) <br> Fecha: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_programa_actualizado_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="fecha_programa_actualizado_prodep" placeholder="" required>
    </div>                                                               
 
  <div class="form-group">
    <label for="descripcion" required>Tipo de actualización:</label>
-   <input type="text" class="form-control inst_certi" id="actualizacion_programa_actualizado_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="actualizacion_programa_actualizado_prodep" placeholder="" required>
    </div>
 
 

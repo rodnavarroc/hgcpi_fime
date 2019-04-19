@@ -10,23 +10,23 @@
                                                                         
    <div class="form-group">
    <label for="descripcion" required> Numero de alumnos:</label>
-   <input type="text" class="form-control inst_certi" id="no_alumno_tutoria_grupal_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="no_alumno_tutoria_grupal_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
     
    <label for="descripcion" required> Nivel:</label>
-   <input type="text" class="form-control inst_certi" id="nivel_tutoria_grupal_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="nivel_tutoria_grupal_prodep" placeholder="" required>
    </div>                                                               
 
  <div class="form-group">
    <label for="descripcion" required>(Mayúsculas) <br> Programa educativo:</label>
-   <input type="text" class="form-control inst_certi" id="programa_tutoria_grupal_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="programa_tutoria_grupal_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
    <label for="descripcion" required> (31/12/9999) <br> Fecha de inicio: </label>
-   <input type="text" class="form-control inst_certi" id="fecha_inicio_tutoria_grupal_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="fecha_inicio_tutoria_grupal_prodep" placeholder="" required>
    </div>
 
                                                                     <br>

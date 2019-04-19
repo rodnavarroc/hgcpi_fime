@@ -113,8 +113,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -175,8 +174,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -237,8 +235,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -314,8 +311,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
 
                                       </div>
                                   </div>
@@ -397,8 +393,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -459,8 +454,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -782,8 +776,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -1086,8 +1079,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
 
@@ -1150,8 +1142,7 @@
                                           </table>
                                           <br><hr><br>
 
-                                          <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                          <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+
                                       </div>
                                   </div>
                 </div>

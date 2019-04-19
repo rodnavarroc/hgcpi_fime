@@ -8,11 +8,11 @@
                                                                     	<form enctype="multipart/form-data" action="#" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="titulo_art" required>Título del libro</label>
-                                                                          <input type="text" id="titulo_art" class="tuiker form-control" required>
+                                                                          <input type="text" name="titulo_art" class="tuiker form-control" required>
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="tipo_autor" required>Tipo de autor</label>
-                                                                          <input type="text" id="tipo_autor" class="tuiker form-control" required>
+                                                                          <input type="text" name="tipo_autor" class="tuiker form-control" required>
                                                                         </div>
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>

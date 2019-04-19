@@ -10,24 +10,24 @@
                                                                         
    <div class="form-group">
    <label for="descripcion">IES de la solicitud</label>
-   <input type="text" class="form-control inst_certi" id="ies_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="ies_promep_prodep" placeholder="">
    </div>
 
 <div class="form-group">
     
    <label for="descripcion"> Solicitud: </label>
-   <input type="text" class="form-control inst_certi" id="solicitud_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="solicitud_promep_prodep" placeholder="">
    </div>     
 
 <div class="form-group">
     <label for="descripcion"> Vigencia: </label>
-   <input type="text" class="form-control inst_certi" id="vigencia_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="vigencia_promep_prodep" placeholder="">
    </div>                                                            
 
 
  <div class="form-group">
    <label for="descripcion">Estado:</label>
-   <input type="text" class="form-control inst_certi" id="estado_promep_prodep" placeholder="">
+   <input type="text" class="form-control inst_certi" name="estado_promep_prodep" placeholder="">
    </div>
 
   

@@ -8,7 +8,7 @@
                                                                     <form enctype="multipart/form-data" action="#" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="idioma">Idioma</label>
-                                                                          <select id="idioma" class="form-control custom-select" required>
+                                                                          <select name="idioma" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Español">Español</option>
                                                                             <option value="Inglés">Inglés</option>
@@ -25,7 +25,7 @@
                                                                         
                                                                           <div class="form-group">
                                                                           <label for="inst_certi" required>Institución que certifica</label>
-                                                                          <input type="text" class="form-control inst_certi" id="inst_certi" placeholder="" required>
+                                                                          <input type="text" class="form-control inst_certi" name="inst_certi" placeholder="" required>
                                                                         </div>
 
                                                                         <br>

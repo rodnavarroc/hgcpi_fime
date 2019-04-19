@@ -8,39 +8,39 @@
 	                                                                    <form enctype="multipart/form-data" action="#" method="POST">
 	                                                                    	 <div class="form-group">
 	                                                                          <label for="dependencia">Dependencia</label>
-	                                                                          <input type="text" class="form-control" id="dependencia" required>
+	                                                                          <input type="text" class="form-control" name="dependencia" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="nivel">Nivel</label>
-	                                                                          <input type="text" class="form-control" id="nivel" required>
+	                                                                          <input type="text" class="form-control" name="nivel" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="grado">Grado</label>
-	                                                                          <input type="text" class="form-control" id="grado" required>
+	                                                                          <input type="text" class="form-control" name="grado" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="materia">Materia</label>
-	                                                                          <input type="text" class="form-control" id="materia" required>
+	                                                                          <input type="text" class="form-control" name="materia" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="num_grupos">Número de grupos</label>
-	                                                                          <input type="text" class="form-control" id="num_grupos" required>
+	                                                                          <input type="text" class="form-control" name="num_grupos" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="horas_semana">Número de horas a la semana</label>
-	                                                                          <input type="text" class="form-control" id="horas_semana" required>
+	                                                                          <input type="text" class="form-control" name="horas_semana" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                            <label for="datepicker" class="control-label">Fecha de inicio</label>
 	                                                                            <div class="controls">
-	                                                                                <input type="text" id="fecha_inicio" class="tuiker form-control" required>
+	                                                                                <input type="text" name="fecha_inicio" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                            <label for="datepicker" class="control-label">Fecha de fin</label>
 	                                                                            <div class="controls">
-	                                                                                <input type="text" id="fecha_fin" class="tuiker form-control" required>
+	                                                                                <input type="text" name="fecha_fin" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>

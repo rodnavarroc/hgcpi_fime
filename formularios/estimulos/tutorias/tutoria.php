@@ -8,41 +8,41 @@
 	                                                                    <form enctype="multipart/form-data" action="#" method="POST">
 	                                                                    	 <div class="form-group">
 	                                                                          <label for="">Nivel</label>
-	                                                                          <input type="text" class="form-control" id="nivel" required>
+	                                                                          <input type="text" class="form-control" name="nivel" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Tipo de tutoría</label>
-	                                                                          <input type="text" class="form-control" id="tipo_tutoria" required>
+	                                                                          <input type="text" class="form-control" name="tipo_tutoria" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Programa educativo en el que participa</label>
-	                                                                          <input type="text" class="form-control" id="pe_que_participa" required>
+	                                                                          <input type="text" class="form-control" name="pe_que_participa" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Tipo de periodo escolar</label>
-	                                                                          <input type="text" class="form-control" id="tipo_periodo_escolar" required>
+	                                                                          <input type="text" class="form-control" name="tipo_periodo_escolar" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Periodo escolar</label>
-	                                                                          <input type="text" class="form-control" id="periodo_escolar" required>
+	                                                                          <input type="text" class="form-control" name="periodo_escolar" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                            <label for="datepicker" class="control-label">Fecha de inicio</label>
 	                                                                            <div class="controls">
-	                                                                                <input type="text" id="fecha_inicio" class="tuiker form-control" required>
+	                                                                                <input type="text" name="fecha_inicio" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                            <label for="datepicker" class="control-label">Fecha de fin</label>
 	                                                                            <div class="controls">
-	                                                                                <input type="text" id="fecha_fin" class="tuiker form-control" required>
+	                                                                                <input type="text" name="fecha_fin" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
 	                                                                          <label for="">Area del conocimiento de la tutoría</label>
-	                                                                          <input type="text" class="form-control" id="area_conocimiento_tutoria" required>
+	                                                                          <input type="text" class="form-control" name="area_conocimiento_tutoria" required>
 	                                                                        </div>
 	                                                                    	<br>
 	                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>

@@ -8,7 +8,7 @@
                                                                     <form enctype="multipart/form-data" action="#" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="tipo_reconocimiento">Tipo de reconocimiento</label>
-                                                                          <select id="tipo_reconocimiento" class="form-control custom-select" required>
+                                                                          <select name="tipo_reconocimiento" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="">Sistema Nacional de Creadores</option>
                                                                             <option value="">ESDEPED</option>
@@ -26,17 +26,17 @@
 
                                                                         <div class="form-group">
                                                                           <label for="nivel">Nivel</label>
-                                                                          <select id="nivel" class="form-control custom-select" required>
+                                                                          <select name="nivel" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
 																		  </select>
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="ano">Año</label>
-                                                                          <input type="text" class="form-control" id="ano" required>
+                                                                          <input type="text" class="form-control" name="ano" required>
                                                                         </div>
                                                                          <div class="form-group">
                                                                           <label for="monto_mensual">Monto mensual</label>
-                                                                          <input type="text" class="form-control" id="monto_mensual" required>
+                                                                          <input type="text" class="form-control" name="monto_mensual" required>
                                                                         </div>
 
                                                                         <br>

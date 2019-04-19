@@ -10,18 +10,18 @@
                                                                         
    <div class="form-group">
    <label for="descripcion" required>Linea:</label>
-   <input type="text" class="form-control inst_certi" id="linea_lgac" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="linea_lgac" placeholder="" required>
    </div>
 
 <div class="form-group">
     
    <label for="descripcion" required>(Separadas por coma) <br> Actividades que realiza: </label>
-   <input type="text" class="form-control inst_certi" id="actividades_lgac" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="actividades_lgac" placeholder="" required>
    </div>                                                               
 
  <div class="form-group">
    <label for="descripcion" required>Horas a la semana dedicadas a esta LGAC:</label>
-   <input type="text" class="form-control inst_certi" id="horas_semana_lgac" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="horas_semana_lgac" placeholder="" required>
    </div>
 
 
