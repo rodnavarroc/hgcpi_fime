@@ -23,4 +23,6 @@ v1.4 - Finalizadas las secciones, subsecciones y formularios de convocatorias PR
 
 v1.4.1 - Creado el algoritmo para agregar registros y para borrarlos. Agregado campo "id" a todas las tablas de la base de datos para control de tablas dinámicas. Creado el script para visualizar tablas dinámicas con los registros existentes para el usuario por convocatoria.
 
+v1.5.1 - Finalizadas las secciones, subsecciones y formularios de convocatoria SNI.
+
 #
