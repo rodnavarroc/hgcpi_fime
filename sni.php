@@ -373,7 +373,7 @@
                                                                 </div>
                                                                 <div class="col-3">
                                                                     <h5><right>Tipo de documento:</right></h5>
-                                                                    <select name="seleccion_produccion_academica" id="produccion_academica" class="custom-select">
+                                                                    <select name="seleccion_produccion_academica" id="produccion_cientifica" class="custom-select">
                                                                         <option value="seleccion">Seleccione...</option>
                                                                         <option value="articulo">Artículo</option>
                                                                         <option value="libro">Libro</option>
@@ -542,12 +542,12 @@
                                                                 </div>
                                                                 <div class="col-3">
                                                                     <h5><right>Tipo de documento:</right></h5>
-                                                                    <select name="seleccion_produccion_academica" id="produccion_academica" class="custom-select">
+                                                                    <select name="seleccion_produccion_academica" id="produccion_tecnologica" class="custom-select">
                                                                         <option value="seleccion">Seleccione...</option>
                                                                         <option value="desarrollo_tecnologico">Desarrollos tecnológicos</option>
                                                                         <option value="innovacion">Innovación</option>
                                                                         <option value="desarrollo_software">Desarrollo de software</option>
-                                                                        <option value="reporte">Patentes</option>
+                                                                        <option value="patente">Patentes</option>
                                                                     </select>   
                                                                 </div>
                                                             </div>
@@ -867,7 +867,7 @@
                                                         <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
                                                         <div class="modal fade" id="ventanaFormulario52" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario52">
                                                             <div class="modal-dialog">
-                                                                <div class="modal-content" id="ventanaFormularioLenguaIdioma">
+                                                                <div class="modal-content" id="ventanaFormularioDivulgacion">
                                                                 </div>
                                                             </div>       
                                                         </div>
@@ -1396,7 +1396,7 @@
             }
         });
 
-        <?php include("scripts/formularios/estimulos/validadoresFormulariosEstimulos.php");?>
+        <?php include("scripts/formularios/sni/validadoresFormulariosSni.php");?>
 
     </script>
 </body>

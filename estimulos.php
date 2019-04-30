@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script src="jquery-3.3.1.min.js"></script>s
+    <script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <header>
@@ -107,7 +107,6 @@
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>ID</th>
                                                       <th>Titulo del artículo</th>
                                                       <th>ISSN</th>
                                                       <th>País</th>
@@ -118,17 +117,15 @@
                                                   <?php 
                                                   $sql="SELECT * FROM detalle_usuario_prod_articulos WHERE usuario_idusuario='1815906'";
                                                   $result=mysqli_query($conexion,$sql);
-
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?>
                                                   <tr>
-                                                    <td><?php echo $mostrar['id'] ?></td>
                                                     <td><?php echo $mostrar['nombre_art'] ?></td>
                                                     <td><?php echo $mostrar['issn'] ?></td>
                                                     <td><?php echo $mostrar['pais'] ?></td>
                                                     <td><?php echo $mostrar['nombre_revista'] ?></td>
                                                     <!-- BOTONES EDITAR Y BORRAR -->
-                                                    <td><center><button class="btn btn-warning"onclick="">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario" onclick="editarRegistroProdArt(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
                                                     <td><center><button class="btn btn-danger" onclick="borrarRegistroProdArt(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
                                                 <?php 
@@ -785,7 +782,10 @@
         });
 
         <?php include("scripts/formularios/estimulos/validadoresFormulariosEstimulos.php");?>
+        
         <?php include("scripts/formularios/estimulos/validadoresBorrarEstimulos.php");?>
+
+        <?php include("scripts/formularios/estimulos/validadoresEditarEstimulos.php");?>
 
     </script>
 

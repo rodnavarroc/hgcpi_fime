@@ -9,7 +9,7 @@ function borrarRegistroProdArt(id)
                 type: "POST",
                 url: "scripts/formularios/estimulos/borrar/produccion_academica_docencia_articulo.php",
                 data:cadena,
-                success:function(r){alert("Registro borrado con éxito."); location.reload();}
+                success:function(r){alert("Registro eliminado existosamente."); location.reload();}
               }
             );
         }
