@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/produccion_academica_docencia_articulo.php" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_articulo.php" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="titulo_art" required>Título del artículo</label>
                                                                           <textarea class="form-control" name="titulo_art" rows="3" required></textarea>

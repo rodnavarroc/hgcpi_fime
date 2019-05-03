@@ -5,10 +5,10 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    	<form enctype="multipart/form-data" action="#" method="POST">
+                                                                    	<form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_libro.php" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="titulo_art" required>Título del libro</label>
-                                                                          <input type="text" name="titulo_art" class="tuiker form-control" required>
+                                                                          <input type="text" name="titulo_libro" class="tuiker form-control" required>
                                                                         </div>
                                                                         <div class="form-group">
                                                                           <label for="tipo_autor" required>Tipo de autor</label>

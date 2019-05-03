@@ -30,7 +30,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="estimulos.php">Estímulos UANL</a>
                           <a class="dropdown-item" href="prodep.php">PRODEP</a>
-                          <a class="dropdown-item" href="#">Sistema Nacional de Investigadores</a>
+                          <a class="dropdown-item" href="sni.php">Sistema Nacional de Investigadores</a>
                         </div>
                       </li>
                       <li class="nav-item">
@@ -144,10 +144,21 @@
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_produccion_libros WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>Libro de ejemplo</td>
-                                                      <td>Autor</td>
+                                                    <td><?php echo $mostrar['titulo'] ?></td>
+                                                    <td><?php echo $mostrar['tipo_participacion'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario" onclick="">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
