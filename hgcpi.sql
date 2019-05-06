@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-05-2019 a las 18:38:39
+-- Tiempo de generación: 07-05-2019 a las 00:46:05
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 5.6.32
 
@@ -226,6 +226,25 @@ CREATE TABLE `detalle_usuario_beneficios_promep` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `detalle_usuario_carga_academica`
+--
+
+CREATE TABLE `detalle_usuario_carga_academica` (
+  `dependencia` int(11) DEFAULT NULL,
+  `nivel` varchar(45) DEFAULT NULL,
+  `grado` varchar(45) DEFAULT NULL,
+  `materia` varchar(45) DEFAULT NULL,
+  `num_grupos` varchar(45) DEFAULT NULL,
+  `num_horas_semana` varchar(45) DEFAULT NULL,
+  `fecha_inicio` date DEFAULT NULL,
+  `fecha_fin` date DEFAULT NULL,
+  `usuario_idusuario` int(11) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `detalle_usuario_cuerpo_academico`
 --
 
@@ -415,16 +434,16 @@ CREATE TABLE `detalle_usuario_docencia` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `detalle_usuario_documentos de trabajo`
+-- Estructura de tabla para la tabla `detalle_usuario_documentos_de_trabajo`
 --
 
-CREATE TABLE `detalle_usuario_documentos de trabajo` (
+CREATE TABLE `detalle_usuario_documentos_de_trabajo` (
   `titulo_documento` varchar(45) NOT NULL,
   `titulo_obra` varchar(45) DEFAULT NULL,
   `titulo_publicacion` varchar(45) DEFAULT NULL,
   `de_pagina` varchar(45) DEFAULT NULL,
   `a_pagina` varchar(45) DEFAULT NULL,
-  `ano_publicacion` date DEFAULT NULL,
+  `ano_publicacion` varchar(45) DEFAULT NULL,
   `pais` varchar(45) DEFAULT NULL,
   `palabras_clave` varchar(45) DEFAULT NULL,
   `area_conocimiento_doc` varchar(45) DEFAULT NULL,
@@ -517,6 +536,8 @@ CREATE TABLE `detalle_usuario_experiencia_laboral` (
   `institucion` varchar(45) DEFAULT NULL,
   `dependencia` varchar(45) DEFAULT NULL,
   `unidad_academica` varchar(45) DEFAULT NULL,
+  `tipo_nombramiento` varchar(45) DEFAULT NULL,
+  `asociado_a` varchar(45) DEFAULT NULL,
   `fecha_inicio` date DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL,
   `logros` varchar(45) DEFAULT NULL,
@@ -551,6 +572,29 @@ CREATE TABLE `detalle_usuario_gestion_academica` (
   `fecha_fin` date DEFAULT NULL,
   `fecha_ultimo_informe` date DEFAULT NULL,
   `horas_dedicadas_semana` varchar(45) DEFAULT NULL,
+  `estado_gestion` varchar(45) DEFAULT NULL,
+  `ies_realiza_gestion` varchar(45) DEFAULT NULL,
+  `usuario_idusuario` int(11) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `detalle_usuario_gestion_cuerpos_colegiados`
+--
+
+CREATE TABLE `detalle_usuario_gestion_cuerpos_colegiados` (
+  `tipo_gestion` varchar(45) DEFAULT NULL,
+  `clasificacion` varchar(45) DEFAULT NULL,
+  `funcion_encomendada` varchar(45) DEFAULT NULL,
+  `organo_colegiado` varchar(45) DEFAULT NULL,
+  `fecha_inicio` date DEFAULT NULL,
+  `fecha_fin` date DEFAULT NULL,
+  `fecha_ultimo_reporte` date DEFAULT NULL,
+  `aprobado` varchar(45) DEFAULT NULL,
+  `horas_semana` varchar(45) DEFAULT NULL,
+  `resultado_obtenido` varchar(45) DEFAULT NULL,
   `estado_gestion` varchar(45) DEFAULT NULL,
   `ies_realiza_gestion` varchar(45) DEFAULT NULL,
   `usuario_idusuario` int(11) NOT NULL,
@@ -700,7 +744,7 @@ CREATE TABLE `detalle_usuario_memorias` (
   `congreso_donde_se_presento` varchar(45) DEFAULT NULL,
   `de_pagina` varchar(45) DEFAULT NULL,
   `a_pagina` varchar(45) DEFAULT NULL,
-  `ano_publicacion` date DEFAULT NULL,
+  `ano_publicacion` varchar(45) DEFAULT NULL,
   `pais` varchar(45) DEFAULT NULL,
   `estado` varchar(45) DEFAULT NULL,
   `ciudad` varchar(45) DEFAULT NULL,
@@ -846,6 +890,7 @@ CREATE TABLE `detalle_usuario_produccion_libros` (
   `subdisciplina_libro` varchar(45) DEFAULT NULL,
   `considerar_curriculum` varchar(45) DEFAULT NULL,
   `miembros` varchar(45) DEFAULT NULL,
+  `autores` varchar(45) DEFAULT NULL,
   `lgacs` varchar(45) DEFAULT NULL,
   `researcher_id_autor` varchar(45) DEFAULT NULL,
   `arxiv_id_autor` varchar(45) DEFAULT NULL,
@@ -881,6 +926,7 @@ CREATE TABLE `detalle_usuario_prod_articulos` (
   `fondo` varchar(45) DEFAULT NULL,
   `considerar_curriculum` varchar(45) DEFAULT NULL,
   `miembros` varchar(45) DEFAULT NULL,
+  `autores` varchar(45) DEFAULT NULL,
   `lgacs` varchar(45) DEFAULT NULL,
   `researcher_id_autor` varchar(45) DEFAULT NULL,
   `arxiv_id_autor` varchar(45) DEFAULT NULL,
@@ -889,6 +935,13 @@ CREATE TABLE `detalle_usuario_prod_articulos` (
   `usuario_idusuario` int(11) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `detalle_usuario_prod_articulos`
+--
+
+INSERT INTO `detalle_usuario_prod_articulos` (`proposito`, `issn`, `nombre_art`, `estado_art`, `pais`, `nombre_revista`, `numero_revista`, `editorial`, `volumen_revista`, `ano_edicion`, `ano_publicacion`, `pagina_inicial`, `pagina_final`, `palabras_clave`, `apoyo_conacyt`, `fondo`, `considerar_curriculum`, `miembros`, `autores`, `lgacs`, `researcher_id_autor`, `arxiv_id_autor`, `pubmed_id_autor`, `open_id_autor`, `usuario_idusuario`, `id`) VALUES
+(NULL, '1', '11', NULL, 'MX', '1', NULL, NULL, NULL, NULL, NULL, '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -1130,6 +1183,12 @@ ALTER TABLE `detalle_usuario_beneficios_promep`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `detalle_usuario_carga_academica`
+--
+ALTER TABLE `detalle_usuario_carga_academica`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `detalle_usuario_cuerpo_academico`
 --
 ALTER TABLE `detalle_usuario_cuerpo_academico`
@@ -1178,9 +1237,9 @@ ALTER TABLE `detalle_usuario_docencia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `detalle_usuario_documentos de trabajo`
+-- Indices de la tabla `detalle_usuario_documentos_de_trabajo`
 --
-ALTER TABLE `detalle_usuario_documentos de trabajo`
+ALTER TABLE `detalle_usuario_documentos_de_trabajo`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1211,6 +1270,12 @@ ALTER TABLE `detalle_usuario_experiencia_laboral`
 -- Indices de la tabla `detalle_usuario_gestion_academica`
 --
 ALTER TABLE `detalle_usuario_gestion_academica`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `detalle_usuario_gestion_cuerpos_colegiados`
+--
+ALTER TABLE `detalle_usuario_gestion_cuerpos_colegiados`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1362,6 +1427,12 @@ ALTER TABLE `detalle_usuario_beneficios_promep`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `detalle_usuario_carga_academica`
+--
+ALTER TABLE `detalle_usuario_carga_academica`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `detalle_usuario_cuerpo_academico`
 --
 ALTER TABLE `detalle_usuario_cuerpo_academico`
@@ -1410,9 +1481,9 @@ ALTER TABLE `detalle_usuario_docencia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `detalle_usuario_documentos de trabajo`
+-- AUTO_INCREMENT de la tabla `detalle_usuario_documentos_de_trabajo`
 --
-ALTER TABLE `detalle_usuario_documentos de trabajo`
+ALTER TABLE `detalle_usuario_documentos_de_trabajo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -1443,6 +1514,12 @@ ALTER TABLE `detalle_usuario_experiencia_laboral`
 -- AUTO_INCREMENT de la tabla `detalle_usuario_gestion_academica`
 --
 ALTER TABLE `detalle_usuario_gestion_academica`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `detalle_usuario_gestion_cuerpos_colegiados`
+--
+ALTER TABLE `detalle_usuario_gestion_cuerpos_colegiados`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -1515,7 +1592,7 @@ ALTER TABLE `detalle_usuario_produccion_libros`
 -- AUTO_INCREMENT de la tabla `detalle_usuario_prod_articulos`
 --
 ALTER TABLE `detalle_usuario_prod_articulos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_usuario_prod_proyectos_academicos`
