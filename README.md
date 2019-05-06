@@ -25,13 +25,11 @@ v1.4.1 - Creado el algoritmo para agregar registros y para borrarlos. Agregado c
 
 v1.5.1 - Finalizadas las secciones, subsecciones y formularios de convocatoria SNI.
 
-//====//
 v4.2 de la Base de Datos (hgcpi.sql)
 
 - Corregido el tipo de dato para campos donde solo pide AÑO
 - Corregido nombre de tabla "detalle_usuario_documentos_de_trabajo" (para SNI)
 - Agregados campos "tipo_nombramiento" y "asociado_a" a datos laborales (para PRODEP)
 - Agregado campo de "autores" a produccion de libros y articulos (para PRODEP)
-//===//
 
 #
