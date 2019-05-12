@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/premios_distinciones_sql/premios_distinciones_sql.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="tipo_reconocimiento" required>Tipo de distinción o reconocimiento:</label>
@@ -28,6 +28,11 @@
                                                                     </div>
 
                                                                     <div class="form-group">
+                                                                          <label for="inst_otorga_no_considera" required>Institución otorgante no considerada:</label>
+                                                                          <input type="text" class="form-control inst_otorga_no_considera" name="inst_otorga_no_considera" placeholder="" required>
+                                                                    </div>
+
+                                                                    <div class="form-group">
                                                                           <label for="tip_inst_prem_dist">Tipo de institución:</label>
                                                                           <select name="tip_inst_prem_dist" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
@@ -46,6 +51,19 @@
                                                                             <option value="Privada">Privada</option>
                                                                            
                                                                              </select>
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                            <label for="datepicker" class="control-label">Fecha:</label>
+                                                                            <div class="controls">
+                                                                                <input type="text" name="fecha" class="tuiker form-control" required>
+                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
+                                                                            </div>
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                          <label for="motivo_premio" required>Motivo:</label>
+                                                                          <input type="text" class="form-control motivo_premio" name="motivo_premio" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">
@@ -357,6 +375,11 @@
                                                                              </select>
                                                                         </div>
 
+                                                                        <div class="form-group">
+                                                                          <label for="monto_mensual" required>Monto mensual:</label>
+                                                                          <input type="text" class="form-control monto_mensual" name="monto_mensual" placeholder="" required>
+                                                                    </div>
+
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>
                                                                         <br>
@@ -365,7 +388,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

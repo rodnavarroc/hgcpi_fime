@@ -30,20 +30,33 @@ $consulta = "SELECT cantidad_de_ingresos FROM usuario WHERE idusuario='$user' AN
 if ($resultado = $mysqli->query($consulta)) {
 
 $row_cnt = $resultado->num_rows;
-if($row_cnt == 0) {echo 'El usuario no existe.'; header('Location: ../index.php'); exit;}
+if($row_cnt == 0) {echo '<script type="text/javascript"> alert("Usuario no existe."); </script>';}
  
  while ($fila = $resultado->fetch_row()) {
         if($fila[0] == 0)
         {
-            header('Location: ../datos_personales.php');
+            header("Location: ../datos_personales.php?user=$user");
         }
         else
         {
-            header('Location: ../estimulos.php');
+            $consulta = "SELECT tipo_usuario FROM usuario WHERE idusuario='$user' AND clave='$passw'";
+            if ($resultado = $mysqli->query($consulta)) {
+                
+                $row_cnt = $resultado->num_rows;
+                 while ($fila = $resultado->fetch_row()) {
+                 if($fila[0] == "admin") 
+                 {
+                    header('Location: ../admin.php');
+                 }
+                 else
+                 {
+                    header('Location: ../perfil.php');
+                 }
+                 }
+            }
         }
     }
      $resultado->close();
 }
 $mysqli->close();
 ?>
-

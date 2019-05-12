@@ -1,11 +1,11 @@
 																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Nueva divulgación</h4>
+                                                                      <h4 class="modal-title">Nueva divulgación</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/comunicacion_publica_sql/divulgacion_sql.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="tit_trabajo" required>Título del trabajo:</label>
@@ -474,7 +474,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

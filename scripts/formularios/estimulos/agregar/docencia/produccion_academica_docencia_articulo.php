@@ -22,7 +22,7 @@ $consulta = "INSERT INTO detalle_usuario_prod_articulos /* tabla de destino */
 VALUES ('$issn','$nombre_art','$pais','$nombre_revista','$pag_ini','$pag_fin','$idusuario')"; /* valores a insertar en los campos de destino */
 
 if ($resultado = $mysqli->query($consulta)) {
-    header("Location: ../../../../estimulos.php"); //regresar a la convocatoria actual
+    header("Location: ../../../../../estimulos.php"); //regresar a la convocatoria actual
 }
 else
 {

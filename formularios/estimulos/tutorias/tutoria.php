@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-	                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+	                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/tutorias/produccion_academica_tutorias_tutorias.php" method="POST">
 	                                                                    	 <div class="form-group">
 	                                                                          <label for="">Nivel</label>
 	                                                                          <input type="text" class="form-control" name="nivel" required>
@@ -52,7 +52,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

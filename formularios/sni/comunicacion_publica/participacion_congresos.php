@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/comunicacion_publica_sql/participacion_congresos_sql.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="nom_congre" required>Nombre del congreso:</label>
@@ -358,6 +358,8 @@
                                                                             <input type="text" class="form-control subdisciplina_cong" name="subdisciplina_cong" placeholder="" required>
                                                                     </div>
 
+
+
                                                                     <div class="form-group">
                                                                           <label for="pertenece_sni">¿Pertenece a SNI?:</label>
                                                                           <select name="pertenece_sni" class="form-control custom-select" required>
@@ -365,6 +367,11 @@
                                                                             <option value="Sí">Sí</option>
                                                                             <option value="No">No</option>
                                                                              </select>
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                            <label for="prod_genera_colab" required>Producto generado:</label>
+                                                                            <input type="text" class="form-control prod_genera_colab" name="prod_genera_colab" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">
@@ -416,7 +423,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

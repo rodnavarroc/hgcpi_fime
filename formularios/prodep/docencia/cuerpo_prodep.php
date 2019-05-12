@@ -5,7 +5,7 @@
     </button>
  </div>
     <div class="modal-body">
-    <form enctype="multipart/form-data" action="#" method="POST">
+    <form enctype="multipart/form-data" action="scripts/formularios/prodep/agregar/docencia/cuerpo_prodep.php" method="POST">
                                                                       
                                                                         
    <div class="form-group">

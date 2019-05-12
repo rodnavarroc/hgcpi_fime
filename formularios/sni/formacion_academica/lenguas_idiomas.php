@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/formacion_academica/lenguas_idiomas.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="idioma">Idioma:</label>
@@ -27,9 +27,9 @@
                                                                           <label for="grad_domin">Grado de dominio:</label>
                                                                           <select name="grad_domin" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="Español">Principiante</option>
-                                                                            <option value="Inglés">Intermedio</option>
-                                                                            <option value="Francés">Avanzado</option>
+                                                                            <option value="Principiante">Principiante</option>
+                                                                            <option value="Intermedio">Intermedio</option>
+                                                                            <option value="Avanzado">Avanzado</option>
                                                                           </select>
                                                                         </div>
 
@@ -37,9 +37,9 @@
                                                                           <label for="niv_domin">Nivel de dominio:</label>
                                                                           <select name="niv_domin" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="Español">Principiante</option>
-                                                                            <option value="Inglés">Intermedio</option>
-                                                                            <option value="Francés">Avanzado</option>
+                                                                            <option value="Principiante">Principiante</option>
+                                                                            <option value="Intermedio">Intermedio</option>
+                                                                            <option value="Avanzado">Avanzado</option>
                                                                           </select>
                                                                         </div>
 
@@ -47,9 +47,9 @@
                                                                           <label for="niv_conf">Nivel conferido:</label>
                                                                           <select name="niv_conf" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="Español">Principiante</option>
-                                                                            <option value="Inglés">Intermedio</option>
-                                                                            <option value="Francés">Avanzado</option>
+                                                                            <option value="Principiante">Principiante</option>
+                                                                            <option value="Intermedio">Intermedio</option>
+                                                                            <option value="Avanzado">Avanzado</option>
                                                                           </select>
                                                                         </div>
 
@@ -57,9 +57,9 @@
                                                                           <label for="niv_lect">Nivel de lectura:</label>
                                                                           <select name="niv_lect" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="Español">Principiante</option>
-                                                                            <option value="Inglés">Intermedio</option>
-                                                                            <option value="Francés">Avanzado</option>
+                                                                            <option value="Principiante">Principiante</option>
+                                                                            <option value="Intermedio">Intermedio</option>
+                                                                            <option value="Avanzado">Avanzado</option>
                                                                           </select>
                                                                         </div>
 
@@ -70,12 +70,9 @@
 
 
                                                                     <div class="form-group">
-                                                                          <label for="doc_prob" required>Documento probatorio:</label>
-                                                                          <form name="formulario" method="post" action="http://pagina.com/send.php"
-                                                                                  enctype="multipart/form-data"> 
-                                                                              <input type="file" name="adjunto" class="form-control doc_prob" name="doc_prob" placeholder="" required accept=".pdf">
-                                                                            </form>
-                                                                        </div>
+                                                                            <label for="doc_prob" required>Documento probatorio:</label>
+                                                                            <input type="file" name="adjunto" class="form-control doc_prob" name="doc_prob" placeholder="" accept=".pdf">
+                                                                    </div>
 
                                                                     <div class="form-group">
                                                                           <label for="puntos">Puntos / porcentaje:</label>

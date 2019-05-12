@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/produccion/produccion_cientifica/capitulo.php" method="POST">
 
 
 
@@ -15,8 +15,8 @@
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="titulo_cap" required>Título:</label>
-                                                                          <input type="text" class="form-control titulo_cap" name="titulo_cap" placeholder="" required>
+                                                                          <label for="titulo_cap" required>Título del libro:</label>
+                                                                          <input type="text" class="form-control titulo_cap" name="titulo_lib" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">

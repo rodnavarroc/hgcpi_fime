@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_capa_lenguas_extra.php" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="idioma">Idioma</label>
                                                                           <select name="idioma" class="form-control custom-select" required>

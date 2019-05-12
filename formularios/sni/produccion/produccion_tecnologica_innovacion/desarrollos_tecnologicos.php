@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/produccion/produccion_tecnologica_innovacion/desarrollos_tecnologicos.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="nom_des" required>Nombre del desarrollo:</label>
@@ -19,10 +19,7 @@
 
                                                                     <div class="form-group">
                                                                           <label for="doc_resp" required>Documento de respaldo:</label>
-                                                                          <form name="formulario" method="post" action="http://pagina.com/send.php"
-                                                                                  enctype="multipart/form-data"> 
-                                                                              <input type="file" name="adjunto" class="form-control doc_resp" name="doc_resp" placeholder="" required accept=".pdf">
-                                                                            </form>
+                                                                              <input type="file" name="adjunto" class="form-control doc_resp"placeholder="" accept=".pdf">
                                                                     </div>
 
                                                                     <div class="form-group">

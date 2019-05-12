@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/produccion/produccion_tecnologica_innovacion/innovacion.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="tip_innova_oslo" required>Tipo de innovación OSLO:</label>
@@ -18,18 +18,18 @@
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="tip_innova" required>Aplicación de la innovación:</label>
-                                                                          <input type="text" class="form-control tip_innova" name="tip_innova" placeholder="" required>
+                                                                          <label for="apli_innova" required>Aplicación de la innovación:</label>
+                                                                          <input type="text" class="form-control apli_innova" name="apli_innova" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="tip_innova" required>Potencial de cobertura:</label>
-                                                                          <input type="text" class="form-control tip_innova" name="tip_innova" placeholder="" required>
+                                                                          <label for="pot_cobertura" required>Potencial de cobertura:</label>
+                                                                          <input type="text" class="form-control pot_cobertura" name="pot_cobertura" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="tip_innova" required>Mecanismo de protección de propiedad intelectual:</label>
-                                                                          <input type="text" class="form-control tip_innova" name="tip_innova" placeholder="" required>
+                                                                          <label for="mecanismo_protec" required>Mecanismo de protección de propiedad intelectual:</label>
+                                                                          <input type="text" class="form-control mecanismo_protec" name="mecanismo_protec" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">

@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/formacion_academica/grados_academicos_y_capacitacion.php" method="POST">
                                                                     <div class="form-group">
                                                                           <label for="titulo" required>Título:</label>
                                                                           <input type="text" class="form-control titulo" name="titulo" placeholder="" required>

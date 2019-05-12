@@ -1,3 +1,15 @@
+//================= COLABORADORES ==============//
+
+function validarColabProdArt(){ //grados academicos y capacitacion
+        
+            
+            $('#ventanaFormularioProdCient').load('formularios/sni/colaboradores/colaboradores_articulo.php');
+            return true;
+        };
+
+
+//================= COLABORADORES ==============//
+
 //================= FORMACION ACADEMICA ==============//
 function validarSNIGradAcadCapac(){ //grados academicos y capacitacion
         

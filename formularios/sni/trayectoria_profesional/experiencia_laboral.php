@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/trayectoria_profesional/experiencia_laboral.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="empleo_act">¿Es su empleo actual?:</label>

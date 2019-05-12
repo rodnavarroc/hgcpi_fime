@@ -79,7 +79,12 @@
             $('#ventanaFormularioTutoria').load('formularios/estimulos/tutorias/tutoria.php');
             return true;
         };
-
+        function validarDireccionInvi() { //proyectos de investigacion
+        
+            
+            $('#ventanaFormularioDireccion').load('formularios/estimulos/tutorias/direccion_individualizada.php');
+            return true;
+        };
         function validarServicio() { //proyectos de investigacion
         
             

@@ -27,9 +27,6 @@
                       <li class="nav-item">
                       <a class="nav-link disabled" href="perfil.php#datos">Datos Personales</a>
                       </li>
-                      <li class="nav-item">
-                      <a class="nav-link disabled" href="perfil.php#convocatorias" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
-                      </li>
                     </ul>
                       <span class="navbar-text"><a class="nav-link" href="#"></a></span>
                   </div>
@@ -70,25 +67,17 @@
             <div class="col-md-12"><br>
                 <br>
                     <h4><center>Solicitud de Registro</center></h4><br>
-                    <form enctype="multipart/form-data" action="#" method="POST">
 
                     <div style="padding-right: 30%; padding-left: 30%">
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">N° de Empleado</span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="674512" aria-label="Usuario" aria-describedby="basic-addon1" name="usuario" required>
-                    </div>
-
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="alguien@uanl.edu.mx" aria-label="Usuario" aria-describedby="basic-addon1" name="correo" required>
-                    </div>
-                    <center><input class="btn btn-primary my-2 my-sm-0" type="submit" name="login_btn" value="Enviar solicitud de registro"><br><br>
-                        <p style="text-align: justify;"><small>* Su solicitud será atendida por el administrador del sistema y <b>se le notificará mediante el correo proporcionado</b> cuando su solicitud sea aprobada. <br><br><i>Este proceso puede tardar varios días. Si tiene alguna duda o problema por favor envíe un correo a <a href="#">la administración del sitio</a>, o comuníquese directamente con la Coordinación de Sistemas de la FIME.</i></small></p></center>
-                    </form>
+                    <p style="text-align: justify;">Si desea registrar una cuenta de docente/investigador en la plataforma HGCPI por favor envíe un correo electrónico a <a href="mailto:hgcpi_fime@gmail.com">hgcpi_fime@gmail.com</a> con los siguientes datos: <br>
+                      <ul>
+                        <li><b>Asunto:</b> Solicitud de Registro HGCPI</li>
+                        <li>Correo institucional <b><i>(@uanl.edu.mx)</i></b></li>
+                        <li>Número de empleado UANL</li>
+                      </ul>
+                      <br>
+                    Será contactado en un plazo de 24 a 48 horas para informarle sobre los datos (usuario y contraseña) de su nueva cuenta en el sistema HGCPI. Para cualquier duda o aclaración al respecto de la plataforma utilice como medio de contacto el correo electrónico mencionado anteriormente.
+                    </p></center>
             </div>
         </div>
 

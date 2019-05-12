@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/formacion_capital_humano_sql/tesis_diplomados_sql.php" method="POST">
 
                                                                     
                                                                     <div class="form-group">
@@ -779,6 +779,11 @@
                                                                             </select>
                                                                         </div>
 
+                                                                        <div class="form-group">
+                                                                          <label for="area_diplo" required>Área de conocimiento del diplomado:</label>
+                                                                          <input type="text" class="form-control area_diplo" name="area_diplo" placeholder="" required>
+                                                                         </div>
+
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>
                                                                         <br>
@@ -787,7 +792,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

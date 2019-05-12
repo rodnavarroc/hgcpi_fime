@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/produccion/produccion_cientifica/documento.php" method="POST">
                                                                     
 
                                                                     <div class="form-group">
@@ -348,22 +348,22 @@
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="area_doc" required>Área de la memoria:</label>
+                                                                          <label for="area_doc" required>Área del documento:</label>
                                                                           <input type="text" class="form-control area_doc" name="area_doc" placeholder="" required>
                                                                          </div>
 
                                                                         <div class="form-group">
-                                                                            <label for="campo_doc" required>Campo de la memoria:</label>
+                                                                            <label for="campo_doc" required>Campo del documento:</label>
                                                                             <input type="text" class="form-control campo_doc" name="campo_doc" placeholder="" required>
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                            <label for="disciplina_doc" required>Disciplina de la memoria:</label>
+                                                                            <label for="disciplina_doc" required>Disciplina del documento:</label>
                                                                             <input type="text" class="form-control disciplina_doc" name="disciplina_doc" placeholder="" required>
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                            <label for="subdisciplina_doc" required>Subdisciplina de la memoria:</label>
+                                                                            <label for="subdisciplina_doc" required>Subdisciplina del documento:</label>
                                                                             <input type="text" class="form-control subdisciplina_doc" name="subdisciplina_doc" placeholder="" required>
                                                                         </div>
 
@@ -396,7 +396,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

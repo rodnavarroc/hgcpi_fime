@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/produccion/produccion_cientifica/libro.php" method="POST">
                                                                     <div class="form-group">
                                                                           <label for="isbn_lib" required>ISBN:</label>
                                                                           <input type="text" class="form-control isbn_lib" name="isbn_lib" placeholder="" required>
@@ -258,7 +258,7 @@
                                                                              </select>
                                                                      </div>
 
-                                                                     <div class="form-group">
+                                                                     <!--<div class="form-group">
                                                                           <label for="idioma_lib">Idioma:</label>
                                                                           <select name="idioma_lib" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
@@ -272,7 +272,7 @@
                                                                             <option value="Ruso">Ruso</option>
                                                                             <option value="Italiano">Italiano</option>
                                                                            </select>
-                                                                    </div>
+                                                                    </div>-->
 
                                                                     <div class="form-group">
                                                                           <label for="ano_publi_lib">Año de publicación:</label>

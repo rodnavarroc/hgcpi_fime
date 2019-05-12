@@ -1,3 +1,9 @@
+<?php 
+
+  $conexion=mysqli_connect('localhost','root','','hgcpi');
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +34,6 @@
                       </li>
                       <li class="nav-item">
                       <a class="nav-link" href="perfil.php#datos">Datos Personales</a>
-                      </li>
-                      <li class="nav-item">
-                      <a class="nav-link" href="perfil.php#convocatorias" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
                       </li>
                     </ul>
                       <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
@@ -79,7 +82,7 @@
                                                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario11" onclick="validarSNIGradAcadCapac()">Agregar nuevo</button><br><br>
 
                                                         <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
-                            <div class="modal fade" id="ventanaFormulario11" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario11">
+                                                    <div class="modal fade" id="ventanaFormulario11" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario11">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content" id="ventanaFormularioGradAcadCapac">
                                                                 </div>
@@ -95,25 +98,34 @@
                                                             <tr>
                                                                 <th>Título</th>
                                                                 <th>Estatus</th>
-                                                                <th>Institución otorgante</th>
                                                                 <th>Fecha de inicio de estudios</th>
                                                                 <th>Fecha de fin de estudios</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Ejemplo de título</td>
-                                                                <td>Completado</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>02/03/2002</td>
-                                                                <td>02/03/2002</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_grados_acad WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['titulo'] ?></td>
+                                                                <td><?php echo $mostrar['estatus'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario11" onclick="editarRegistroGradAcad(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroGradAcad(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
                                                 </div>
                                             </div>
 
@@ -153,25 +165,32 @@
                                                                 <th>Nivel de dominio</th>
                                                                 <th>Nivel conferido</th>
                                                                 <th>Nivel de lectura</th>
-                                                                <th>Vigencia de</th>
-                                                                <th>Vigencia a</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Francés</td>
-                                                                <td>Avanzado</td>
-                                                                <td>Intermedio</td>
-                                                                <td>Avanzado</td>
-                                                                <td>02/03/2017</td>
-                                                                <td>03/03/2018</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_lenguas_e_idiomas WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['idioma'] ?></td>
+                                                                <td><?php echo $mostrar['grado_de_dominio'] ?></td>
+                                                                <td><?php echo $mostrar['nivel_conferido'] ?></td>
+                                                                <td><?php echo $mostrar['nivel_lectura'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario12" onclick="editarRegistroLenguasIdiomas(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroLenguasIdiomas(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
 
                                                   
                                               </div>
@@ -228,17 +247,28 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>12-03-2016</td>                                                            
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_experiencia_laboral WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['puesto'] ?></td>
+                                                                <td><?php echo $mostrar['institucion'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario21" onclick="editarRegistroExpLabo(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroExperienciaLaboral(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
                                                 </div>
                                             </div>
 
@@ -280,16 +310,29 @@
                                                                 <th>Fecha de fin</th>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>24/05/2018</td>
-                                                                <td>23/06/2018</td>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_estancias_investigacion WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['nombre_estancia'] ?></td>
+                                                                <td><?php echo $mostrar['nombre_institucion'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario22" onclick="editarRegistroEstancias(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroEstancias(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </tbody>
                                                     </table>
                                                     <br><hr><br>
                                                    
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
 
                                             </div>
                                         </div>
@@ -333,17 +376,30 @@
                                                                 <th>Fecha de fin</th>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Ingeniero en Tecnología de Software</td>
-                                                                <td>Física 4</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>24/05/2018</td>
-                                                                <td>23/06/2018</td>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_docencia WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['nombre_programa_educativo'] ?></td>
+                                                                <td><?php echo $mostrar['nombre_curso'] ?></td>
+                                                                <td><?php echo $mostrar['nombre_institucion_ies'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario23" onclick="editarRegistroDocencia(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroDocencia(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </tbody>
                                                     </table>
                                                     <br><hr><br>
                                                    
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
 
                                             </div>
                                         </div>
@@ -408,18 +464,31 @@
                                                             <tr>
                                                                 <th>ISSN</th>
                                                                 <th>Nombre del artículo</th>
-                                                                <th>Año de publicación</th>
+                                                                <th></th>
+                                                                <th></th>
+                                                                <th><i><center>Colaboradores</center></i></th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>0798-2259</td>
-                                                                <td>Investigación de la presión atmósferica</td>
-                                                                <td>2002</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_prod_articulos WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['issn'] ?></td>
+                                                                <td><?php echo $mostrar['nombre_art'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario31" onclick="editarRegistroArticulo(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroProdArticulo(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                                <td><center><button class="btn btn-secondary" data-toggle="modal" data-target="#ventanaFormulario31" onclick="validarColabProdArt()">Agregar/Ver</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
-                                                    <br><hr><br>
+                                                    <br>
 
                                                     <!--TABLA LIBROS -->
                                                     <hr><br><center><h5>Sus libros</h5></center><br>
@@ -432,14 +501,25 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>0-7645-2641-3</td>
-                                                                <td>Programación en páginas web</td>
-                                                                <td>2012</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_produccion_libros WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['isbn'] ?></td>
+                                                                <td><?php echo $mostrar['titulo'] ?></td>
+                                                                <td><?php echo $mostrar['ano_publicacion'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario31" onclick="editarRegistroLibro(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroProdLibro(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
-                                                    </table>
-                                                    <br><hr><br>
+                                                    </table><br>
 
                                                     <!--TABLA CAPITULOS -->
                                                     <hr><br><center><h5>Sus capítulos de libro</h5></center><br>
@@ -453,15 +533,26 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>0-7635-2541-5</td>
-                                                                <td>Redes neurológicas</td>
-                                                                <td>1996</td>
-                                                                <td>Funcionamiento de redes</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_produccion_capitulos WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['isbn'] ?></td>
+                                                                <td><?php echo $mostrar['titulo'] ?></td>
+                                                                <td><?php echo $mostrar['ano_edicion'] ?></td>
+                                                                <td><?php echo $mostrar['titulo_capitulo'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario31" onclick="editarRegistroCapLibro(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroProdCapitulo(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
-                                                    </table>
-                                                    <br><hr><br>
+                                                    </table><br>
 
                                                     <!--TABLA REPORTES -->
                                                     <hr><br><center><h5>Sus reportes técnicos</h5></center><br>
@@ -473,13 +564,24 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>25/06/2005</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_reportes_tecnicos WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['institucion'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_publicacion'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario31" onclick="editarRegistroReporte(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroProdReportes(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
-                                                    </table>
-                                                    <br><hr><br>
+                                                    </table><br>
 
                                                     <!--TABLA MEMORIAS -->
                                                     <hr><br><center><h5>Sus memorias</h5></center><br>
@@ -493,15 +595,26 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Memoria de ejemplo</td>
-                                                                <td>Titulo de ejmplo</td>
-                                                                <td>titulo de ejemplo</td>
-                                                                <td>2005</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_memorias WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['titulo'] ?></td>
+                                                                <td><?php echo $mostrar['titulo_de_obra'] ?></td>
+                                                                <td><?php echo $mostrar['titulo_publicacion'] ?></td>
+                                                                <td><?php echo $mostrar['ano_publicacion'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario31" onclick="editarRegistroMemoria(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroProdMemorias(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
-                                                    </table>
-                                                    <br><hr><br>
+                                                    </table><br>
 
                                                     <!--TABLA DOCUMENTOS DE TRABAJO -->
                                                     <hr><br><center><h5>Sus documentos de trabajo</h5></center><br>
@@ -515,18 +628,29 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Título de ejemplo</td>
-                                                                <td>Título de ejemplo</td>
-                                                                <td>Título de ejemplo</td>
-                                                                <td>2006</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_documentos_de_trabajo WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['titulo_documento'] ?></td>
+                                                                <td><?php echo $mostrar['titulo_obra'] ?></td>
+                                                                <td><?php echo $mostrar['titulo_publicacion'] ?></td>
+                                                                <td><?php echo $mostrar['ano_publicacion'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario31" onclick="editarRegistroDocumento(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroProdDocumentosTrabajo(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
                                                 </div>
                                             </div>
 
@@ -557,7 +681,7 @@
                                                         <!-- BOTON AGREGAR -->
                                                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario32" onclick="validarSNISeleccionProduccionTecnologica()">Agregar nuevo</button><br><br>
 
-                                                        <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION ACADEMICA DOCENCIA -->
+                                                        <!-- VENTANA PARA LOS FORMULARIOS DE LA SECCION PRODUCCION TECNOLOGICA -->
                                                         <div class="modal fade" id="ventanaFormulario32" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario32">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content" id="ventanaFormularioProdTec">
@@ -578,13 +702,25 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Ejemplo del desarrollo</td>
-                                                                <td>Ejemplo del tipo de desarrollo</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_desarollos_tecnologicos WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['nombre_desarrollo'] ?></td>
+                                                                <td><?php echo $mostrar['tipo_desarrollo'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario32" onclick="editarRegistroDesaTec(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroDesaTec(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
-                                                    <br><hr><br>
+                                                    <br>
 
                                                     <!--TABLA INNOVACION -->
                                                     <hr><br><center><h5>Sus innovaciones</h5></center><br>
@@ -597,14 +733,26 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Ejemplo de tipo</td>
-                                                                <td>Ejemplo de tipo</td>
-                                                                <td>15000</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_innovacion WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['innovacion_oslo'] ?></td>
+                                                                <td><?php echo $mostrar['tipo_innovacion'] ?></td>
+                                                                <td><?php echo $mostrar['monto_venta_anuales'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario32" onclick="editarRegistroInnovacion(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroInnovacion(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
-                                                    <br><hr><br>
+                                                    <br>
 
                                                     <!--TABLA DESARROLLO SOFTWARE -->
                                                     <hr><br><center><h5>Sus desarrollos de software</h5></center><br>
@@ -619,16 +767,28 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>LogicAid</td>
-                                                                <td>120</td>
-                                                                <td>25/05/1996</td>
-                                                                <td>26/05/1996</td>
-                                                                <td>15000</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_desarrollo_software WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['titulo'] ?></td>
+                                                                <td><?php echo $mostrar['horas_hombre'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                                <td><?php echo $mostrar['costo'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario32" onclick="editarRegistroSoftware(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroSoftware(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
-                                                    <br><hr><br>
+                                                    <br>
 
                                                     <!--TABLA PATENTES -->
                                                     <hr><br><center><h5>Sus patentes</h5></center><br>
@@ -637,23 +797,34 @@
                                                             <tr>
                                                                 <th>Nombre o título</th>
                                                                 <th>Tipo de patente</th>
-                                                                <td>Estado de la patente</td>
-                                                                <td>Fecha de solicitud</td>
+                                                                <th>Estado de la patente</th>
+                                                                <th>Fecha de solicitud</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Ejemplo del nombre de la patente</td>
-                                                                <td>Ejemplo del tipo de patente</td>
-                                                                <td>Pendiente</td>
-                                                                <td>25/03/2019</td>
-                                                            </tr>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_patentes WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['nombre'] ?></td>
+                                                                <td><?php echo $mostrar['tipo_patente'] ?></td>
+                                                                <td><?php echo $mostrar['estado'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_solicitud'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario32" onclick="editarRegistroPatente(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroPatentes(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
                                                 </div>
                                             </div>
 
@@ -695,16 +866,29 @@
                                                                 <th>Institución</th>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>24/05/2018</td>
-                                                                <td>23/06/2018</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
+                                                            <?php 
+                                                              $sql="SELECT * FROM detalle_usuario_prod_proyectos_academicos WHERE usuario_idusuario='1815906'";
+                                                              $result=mysqli_query($conexion,$sql);
+                                                              $contador = 0;
+                                                              while($mostrar=mysqli_fetch_array($result)){
+                                                               ?>
+                                                              <tr>
+                                                                <td><?php echo $mostrar['nombre_proyecto'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                                <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                                <td><?php echo $mostrar['institucion'] ?></td>
+                                                                <!-- BOTONES EDITAR Y BORRAR -->
+                                                                <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario33" onclick="editarRegistroProdProyectos(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                                <td><center><button class="btn btn-danger" onclick="borrarRegistroProdProyectos(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
+                                                              </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </tbody>
                                                     </table>
                                                     <br><hr><br>
                                                    
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                    
                                                                                                   
                                                 </div>
                                             </div>
@@ -764,19 +948,27 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>Nacional</td>
-                                                                <td>02/03/2002</td>
-                                                                <td>02/03/2002</td>
-                                                                <td>40</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_tesis_diplomados WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['institucion'] ?></td>
+                                                                    <td><?php echo $mostrar['tipo_institucion'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_aprobacion_tesis'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_obtencion_grado'] ?></td>
+                                                                    <td><?php echo $mostrar['horas_diplomado'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario41" onclick="editarRegistroTesisDiplomados(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroTesisDiplomados(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
-
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                                 </div>
                                           </div>
                                      </div>
@@ -832,18 +1024,28 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>LLenado de ejemplo</td>
-                                                                <td>LLenado de ejemplo</td>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>02/03/2002</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_participacion_congresos WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['nombre_congreso'] ?></td>
+                                                                    <td><?php echo $mostrar['titulo_trabajo'] ?></td>
+                                                                    <td><?php echo $mostrar['tipo_participacion'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario51" onclick="editarRegistroParticipacionCongresos(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroParticipacionCongresos(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
+                                                
                                                 </div>
                                             </div>
 
@@ -886,19 +1088,26 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>03/03/2018</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_divulgacion WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr> 
+                                                                    <td><?php echo $mostrar['divulgacion_titulo'] ?></td>
+                                                                    <td><?php echo $mostrar['tipo_participacion'] ?></td>
+                                                                    <td><?php echo $mostrar['institucion_organizadora'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario52" onclick="editarRegistroDivulgacion(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroDivulgacion(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
-
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-
                                                   
                                               </div>
                                           </div>
@@ -953,16 +1162,25 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>LLenado de ejemplo</td>
-                                                                <td>02/03/2002</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_redes_tematicas_conacyt WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['red_tematica_conacyt'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_ingreso'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario61" onclick="editarRegistroRedesConacyt(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroRedesConacyt(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                                 </div>
                                             </div>
 
@@ -1005,18 +1223,27 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>03/03/2018</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>32</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_redes_investigacion WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['nombre_red'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_ingreso'] ?></td>
+                                                                    <td><?php echo $mostrar['institucion_responsable_red'] ?></td>
+                                                                    <td><?php echo $mostrar['total_integrantes'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario62" onclick="editarRegistroRedInvestigacion(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroRedesInvestigacion(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                               </div>
                                              </div>
 
@@ -1059,18 +1286,27 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>LLenado de ejemplo</td>
-                                                                <td>02/03/2002</td>
-                                                                <td>02/03/2002</td>
-                                                                <td>12</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_grupos_investigacion WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['nombre_grupo'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_creacion'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_ingreso'] ?></td>
+                                                                    <td><?php echo $mostrar['total_investigadores'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario63" onclick="editarRegistroGrupoInvestigacion(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroGrupoinvestigacion(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                                 </div>
                                             </div>
                                       </div>
@@ -1126,18 +1362,27 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>LLenado de ejemplo</td>
-                                                                <td>12/05/2005</td>
-                                                                <td>13/05/2005</td>
-                                                                <td>14/05/2005</td>
-                                                              </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_evaluaciones_conacyt WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['nombre_del_fondo'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_asignacion'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_aceptacion'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_evaluacion'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario71" onclick="editarRegistroEvaluacionConacyt(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroEvaluacionConacyt(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                                 </div>
                                             </div>
 
@@ -1180,20 +1425,28 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>LLenado de ejemplo</td>
-                                                                <td>02/03/2002</td>
-                                                                <td>02/03/2002</td>
-                                                                <td>LLenado de ejemplo</td>
-                                                             </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_evaluaciones_no_conacyt WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['nombre_institucion'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                                    <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                                    <td><?php echo $mostrar['nombre_producto_evaluado'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario72" onclick="editarRegistroEvaluacionNoConacyt(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroEvaluacionNoConacyt(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-
-                                                  
+                                                    
                                               </div>
                                           </div>
                                      </div>
@@ -1247,17 +1500,26 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>2002</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_distinciones_conacyt WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['nombre_dist'] ?></td>
+                                                                    <td><?php echo $mostrar['ano'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario81" onclick="editarRegistroDistincionesConacyt(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroDistincionesConacyt(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-                                                </div>
+                                                   </div>
                                             </div>
 
                                             <div class="btn btn-secondary border-light" id="subheader82">
@@ -1298,18 +1560,27 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>2002</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_distinciones_no_conacyt WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['nombre_dist'] ?></td>
+                                                                    <td><?php echo $mostrar['institucion_otorga'] ?></td>
+                                                                    <td><?php echo $mostrar['ano'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario82" onclick="editarRegistroDistincionesNoConacyt(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroDistincionesNoConacyt(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-                                              </div>
+                                                 </div>
                                              </div>
 
                                             <div class="btn btn-secondary border-light" id="subheader83">
@@ -1351,19 +1622,28 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>LLenado de ejemplo</td>
-                                                                <td>Llenado de ejemplo</td>
-                                                                <td>Universidad Autónoma de Nuevo León</td>
-                                                                <td>2012</td>
-                                                            </tr>
+                                                            <?php 
+                                                                  $sql="SELECT * FROM detalle_usuario_premios_y_distinciones WHERE usuario_idusuario='1815906'";
+                                                                  $result=mysqli_query($conexion,$sql);
+                                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                                   ?>
+                                                                  <tr>
+                                                                    <td><?php echo $mostrar['tipo_distincion'] ?></td>
+                                                                    <td><?php echo $mostrar['nombre_distincion'] ?></td>
+                                                                    <td><?php echo $mostrar['institucion_que_otorga'] ?></td>
+                                                                    <td><?php echo $mostrar['ano'] ?></td>
+                                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario83" onclick="editarRegistroPremiosDistinciones(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroPremiosDistinciones(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                                  </tr>
+                                                                <?php 
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                     </table>
                                                     <br><hr><br>
 
-                                                    <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                    <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
-                                                </div>
+                                                  </div>
                                             </div>
                                       </div>
                                 </div>
@@ -1380,7 +1660,7 @@
     <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias
@@ -1397,6 +1677,10 @@
         });
 
         <?php include("scripts/formularios/sni/validadoresFormulariosSni.php");?>
+
+        <?php include("scripts/formularios/sni/validadoresEditarSni.php");?>
+
+        <?php include("scripts/formularios/sni/validadoresBorrarSni.php");?>
 
     </script>
 </body>

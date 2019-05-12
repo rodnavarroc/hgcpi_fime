@@ -18,7 +18,7 @@ $consulta = "INSERT INTO detalle_usuario_produccion_libros /* tabla de destino *
 VALUES ('$titulo','$tipo_participacion','$idusuario')"; /* valores a insertar en los campos de destino */
 
 if ($resultado = $mysqli->query($consulta)) {
-    header("Location: ../../../../estimulos.php"); //regresar a la convocatoria actual
+    header("Location: ../../../../../estimulos.php"); //regresar a la convocatoria actual
 }
 else
 {

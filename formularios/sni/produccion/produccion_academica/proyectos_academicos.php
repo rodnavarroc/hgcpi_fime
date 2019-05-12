@@ -1,11 +1,11 @@
 																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Nuevo capítulo</h4>
+                                                                        <h4 class="modal-title">Nuevo proyecto</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/produccion/produccion_academica/proyectos_academicos.php" method="POST">
 
 
                                                                     <div class="form-group">
@@ -68,7 +68,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

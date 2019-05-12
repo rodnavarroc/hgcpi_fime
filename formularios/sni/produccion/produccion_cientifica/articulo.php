@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/produccion/produccion_cientifica/articulo.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="issn" required>ISSN del artículo:</label>
@@ -457,7 +457,7 @@
                                                                             <input type="text" class="form-control comision_art" name="comision_art" placeholder="" required>
                                                                         </div>
 
-                                                                        <hr>
+                                                                        <!--<hr>
                                                                         INVESTIGADORES COLABORADORES <br>
                                                                         <em>(Los siguientes datos van en mayúsculas y si existe más de uno separarlos con una coma ",").</em>
                                                                        
@@ -529,8 +529,7 @@
                                                                         <div class="form-group">
                                                                             <label for="idopen_colab_art" required>Open ID:</label>
                                                                             <input type="text" class="form-control idopen_colab_art" name="idopen_colab_art" placeholder="" required>
-                                                                        </div>
-
+                                                                        </div>-->
 
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>

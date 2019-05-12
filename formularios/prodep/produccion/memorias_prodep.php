@@ -5,7 +5,7 @@
     </button>
  </div>
     <div class="modal-body">
-    <form enctype="multipart/form-data" action="#" method="POST">
+    <form enctype="multipart/form-data" action="scripts/formularios/prodep/agregar/produccion/memorias_prodep.php" method="POST">
                                                                       
                                                                         
    <div class="form-group">
@@ -20,8 +20,8 @@
    </div>     
 
 <div class="form-group">
-    <label for="descripcion" required> Nombre del congreso donde se presento: </label>
-   <input type="text" class="form-control inst_certi" name="congreso_memorias_prodep" placeholder="" required>
+    <label for="descripcion" > Nombre del congreso donde se presento: </label>
+   <input type="text" class="form-control inst_certi" name="congreso_memorias_prodep" placeholder="" >
    </div>                                                            
 
 
@@ -36,8 +36,8 @@
    </div>
 
  <div class="form-group">
-   <label for="descripcion" required>Ciudad:</label>
-   <input type="text" class="form-control inst_certi" name="ciudad_memorias_prodep" placeholder="" required>
+   <label for="descripcion" >Ciudad:</label>
+   <input type="text" class="form-control inst_certi" name="ciudad_memorias_prodep" placeholder="" >
    </div>
 
 
@@ -47,24 +47,21 @@
    </div>       
 
    <div class="form-group">
-   <label for="descripcion" required> De la pagina: </label>
-   <input type="text" class="form-control inst_certi" name="de_memorias_prodep" placeholder="" required>
+   <label for="descripcion" > De la pagina: </label>
+   <input type="text" class="form-control inst_certi" name="de_memorias_prodep" placeholder="" >
    </div>  
 
      <div class="form-group">
-   <label for="descripcion" required> A la pagina: </label>
-   <input type="text" class="form-control inst_certi" name="A_memorias_prodep" placeholder="" required>
+   <label for="descripcion" > A la pagina: </label>
+   <input type="text" class="form-control inst_certi" name="a_memorias_prodep" placeholder="" >
    </div>  
 
 
     <div class="form-group">
-   <label for="descripcion" required> Archivo PDF: </label>
+   <label for="descripcion" > Archivo PDF: </label>
    <form name="PDF_memorias_prodep" method="post" action="http://pagina.com/send.php" enctype="multipart/form-data" rowspan="2">
-    <input type="file" name="PDF_adjunto" class="form-control PDF_adjunto_memorias_prodep" name="archivo_memorias_prodep placeholder"" required accept=".pdf">
+    <input type="file" name="PDF_adjunto" class="form-control PDF_adjunto_memorias_prodep" name="archivo_memorias_prodep placeholder""  accept=".pdf">
    </div>  
-
-
-
 
    <div class="form-group">
    <label for="descripcion" required>Estado Actual:</label>
@@ -88,13 +85,13 @@
 
 <div class="form-group">
    <label for="descripcion" > (En caso de no haber escribir 0) <br> Miembros: </label>
-   <input type="text" class="form-control inst_certi" name="miembros_memoriass_prodep"placeholder="">
+   <input type="text" class="form-control inst_certi" name="miembros_memorias_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
    <label for="descripcion" >  (En caso de no haber escribir 0) <br> LGACs: </label>
-   <input type="text" class="form-control inst_certi" name="LGAC_memoriass_prodep"placeholder="">
+   <input type="text" class="form-control inst_certi" name="LGAC_memorias_prodep"placeholder="">
    </div>
 
 <br>
@@ -102,3 +99,23 @@
 <br>
 </form>
 </div>
+
+<script type="text/javascript">
+        $('.tuiker').datepicker({
+            //adecuando formato de fecha
+            dateFormat: "yy/mm/dd",
+            //primer dia sea lunes
+            firstDay: 1,
+            //Nombres de los dias
+            dayNames: ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
+            //Abreviatura de los dias largos
+            dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+            //Escribir los meses
+            monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            //Abreviatura de los meses
+            monthNamesShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+            onSelect: function(dateText){
+                $('#fecha').val(dateText);
+            }
+        });
+</script>

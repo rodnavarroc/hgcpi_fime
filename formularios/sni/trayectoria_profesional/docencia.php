@@ -5,12 +5,12 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/trayectoria_profesional/docencia.php" method="POST">
 
 
                                                                     <div class="form-group">
                                                                           <label for="inst_otor" required>Nombre del programa educativo:</label>
-                                                                          <input type="text" class="form-control inst_otor" name="inst_otor" placeholder="" required>
+                                                                          <input type="text" class="form-control inst_otor" name="nom_prog_educ" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">
@@ -426,7 +426,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

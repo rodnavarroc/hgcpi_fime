@@ -5,17 +5,13 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/sni/agregar/vinculacion_sql/grupos_investigacion_sql.php" method="POST">
 
                                                                     <div class="form-group">
                                                                           <label for="nom_grupo" required>Nombre del grupo:</label>
                                                                           <input type="text" class="form-control nom_grupo" name="nom_grupo" placeholder="" required>
                                                                     </div>
 
-                                                                    <div class="form-group">
-                                                                          <label for="nom_red" required>Nombre de red:</label>
-                                                                          <input type="text" class="form-control nom_red" name="nom_red" placeholder="" required>
-                                                                    </div>
 
                                                                     <div class="form-group">
                                                                             <label for="datepicker" class="control-label">Fecha de creación:</label>
@@ -162,6 +158,11 @@
                                                                     </div>
 
                                                                     <div class="form-group">
+                                                                            <label for="produc_gene" required>Producto generado:</label>
+                                                                            <input type="text" class="form-control produc_gene" name="produc_gene" placeholder="" required>
+                                                                    </div>
+
+                                                                    <div class="form-group">
                                                                             <label for="hrs_colab" required>Tiempo en horas de colaboración:</label>
                                                                             <input type="text" class="form-control hrs_colab" name="hrs_colab" placeholder="" required>
                                                                     </div>
@@ -210,7 +211,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

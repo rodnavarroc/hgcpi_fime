@@ -36,9 +36,6 @@
                       <li class="nav-item">
                       <a class="nav-link" href="perfil.php#datos">Datos Personales</a>
                       </li>
-                      <li class="nav-item">
-                      <a class="nav-link" href="perfil.php#convocatorias" tabindex="-1" aria-disabled="true">Imprimir Convocatorias</a>
-                      </li>
                     </ul>
                       <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
                   </div>
@@ -153,8 +150,8 @@
                                                     <td><?php echo $mostrar['titulo'] ?></td>
                                                     <td><?php echo $mostrar['tipo_participacion'] ?></td>
                                                     <!-- BOTONES EDITAR Y BORRAR -->
-                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario" onclick="">Editar</button></center></td>
-                                                    <td><center><button class="btn btn-danger" onclick="">Eliminar</button></center></td>
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario" onclick="editarRegistroProdLibro(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroProdLibro(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
                                                 <?php 
                                                 }
@@ -208,14 +205,25 @@
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_grados_acad WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>12-03-2016</td>
-                                                      <td>12-03-2016</td>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>UANL</td>
+                                                    <td><?php echo $mostrar['tipo_capacitacion'] ?></td>
+                                                    <td><?php echo $mostrar['descripcion'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                    <td><?php echo $mostrar['numero_de_horas'] ?></td>
+                                                    <td><?php echo $mostrar['nombre_institucion'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario2" onclick="editarRegistroGradosCapa(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroGradosCapa(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -260,9 +268,22 @@
                                                       <th>Institución que certifica</th>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_lenguas_e_idiomas WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>Llenado de ejemplo</td>
+                                                    <td><?php echo $mostrar['idioma'] ?></td>
+                                                    <td><?php echo $mostrar['institucion_que_otorga'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario3" onclick="editarRegistroLenguas(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroLenguas(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                  </tr>
+                                                <?php 
+                                                }
+                                                ?>
+                                              </tbody>
                                           </table>
                                           <br><hr><br>
 
@@ -272,14 +293,14 @@
                                   </div>
 
                                   <div class="btn btn-secondary border-white" id="subheader4">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Dirección individualizada</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Gestion Académica Individualizada</a>
                                   </div>
                                   <div id="subcollapse4" class="collapse" aria-labelledby="subheader4" data-parent="#subaccordion">
                                       <div class="card-body">
                                           <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Dirección individualizada</h4>
+                                                          <h4>Gestion Académica Individualizada</h4>
                                                       </div>
                                                   </div>
                                               </div>
@@ -289,7 +310,7 @@
                                               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario4" onclick="validarDirIndividualizada()">Agregar nuevo</button><br><br>
 
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
-                                              <div class="modal fade" id="ventanaFormulario4" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario2">
+                                              <div class="modal fade" id="ventanaFormulario4" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario4">
                                                   <div class="modal-dialog">
                                                       <div class="modal-content" id="ventanaFormularioDivIndiv">
                                                       </div>
@@ -303,23 +324,30 @@
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Tipo de gestión</th>
-                                                      <th>Clasificación</th>
+                                                      <th>Fecha de termino</th>
                                                       <th>Evento</th>
-                                                      <th>Tipo de Evento</th>
-                                                      <th>Fecha inicio</th>
-                                                      <th>Fecha fin</th>
+                                                      <th>Tipo de participación</th>
+                                                      <th>Alcance</th>
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <<?php 
+                                                  $sql="SELECT * FROM detalle_usuario_direccion_individualizada WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>12-03-2016</td>
-                                                      <td>12-03-2016</td>
+                                                    <td><?php echo $mostrar['fecha_de_fin'] ?></td>
+                                                    <td><?php echo $mostrar['institucion_que_otorga'] ?></td>
+                                                    <td><?php echo $mostrar['idioma'] ?></td>
+                                                    <td><?php echo $mostrar['institucion_que_otorga'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario4" onclick="editarRegistroDireccionInvi(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroDireccionInvi(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -346,7 +374,7 @@
                                               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario5" onclick="validarPremiosDist()">Agregar nuevo</button><br><br>
 
                                               <!-- VENTANA PARA LOS FORMULARIOS -->
-                                              <div class="modal fade" id="ventanaFormulario5" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario3">
+                                              <div class="modal fade" id="ventanaFormulario5" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario5">
                                                   <div class="modal-dialog">
                                                       <div class="modal-content" id="ventanaPremiosDist">
                                                       </div>
@@ -367,11 +395,24 @@
 
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_premios_y_distinciones WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>Llenado de ejemplo</td>
-                                                      <td>2016</td>
-                                                      <td>Llenado de ejemplo</td>
+                                                    <td><?php echo $mostrar['tipo_distincion'] ?></td>
+                                                    <td><?php echo $mostrar['nivel'] ?></td>
+                                                    <td><?php echo $mostrar['ano'] ?></td>
+                                                    <td><?php echo $mostrar['monto_mensual'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario5" onclick="editarRegistroPremios(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroPremios(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                  </tr>
+                                                <?php 
+                                                }
+                                                ?>
+                                              </tbody>
                                           </table>
                                           <br><hr><br>
 
@@ -433,13 +474,24 @@
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_proyectos_investigacion WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>12-03-2016</td>
-                                                      <td>13-03-2016</td>
-                                                      <td>Ciencia y Tecnología</td>
-                                                      <td>CEMEX</td>
-                                                      <td>199.85</td>
+                                                    <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                    <td><?php echo $mostrar['titulo'] ?></td>
+                                                    <td><?php echo $mostrar['tipo_participacion'] ?></td>
+                                                    <td><?php echo $mostrar['monto_apoyo'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaProyInv" onclick="editarRegistroProInv(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroProInv(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -500,22 +552,90 @@
                                                                                         </tr>
                                                                                 </thead>
                                                                                 <tbody>
-                                                                                        <tr>
-                                                                                                <td>...</td>
-                                                                                                <td>...</td>
-                                                                                                <td>...</td>
-                                                                                                <td>24/02/2012</td>
-                                                                                                <td>28/02/2012</td>
-                                                                                        </tr>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_tutoria WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
+                                                  <tr>
+                                                    <td><?php echo $mostrar['tipo_tutoria'] ?></td>
+                                                    <td><?php echo $mostrar['nivel_academico'] ?></td>
+                                                    <td><?php echo $mostrar['programa_educativo'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_de_inicio'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_de_fin'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaTuto" onclick="editarRegistroTutorias(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroTutorias(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                  </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                                                                 </tbody>
                                                                         </table>
                                                                         <br><hr><br>
-
-                                                                        <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                                        <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                       </div>
                                   </div>
-                                
+                                <div class="btn btn-secondary border-light" id="subheader3_tutorias">
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3_tutorias" aria-expanded="true" aria-controls="subcollapse3_tutorias">Dirección individualizada</a>
+                                  </div>
+                                  <div id="subcollapse3_tutorias" class="collapse" aria-labelledby="subheader3_tutorias" data-parent="#subaccordion_tutorias">
+                                            <div class="card-body">
+                                                                                    <div class="form-group">
+                                                                                            <div class="row">
+                                                                                                    <div class="col-9">
+                                                                                                            <h4>Dirección individualizada</h4>
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                    </div>
+                                                                                <div class="col-2">
+
+                                                                                <!-- BOTON AGREGAR -->
+                                                                                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaDireccion" onclick="validarDireccionInvi()">Agregar nuevo</button><br><br>
+
+                                                                                <!-- VENTANA PARA LOS FORMULARIOS -->
+                                                                                <div class="modal fade" id="ventanaDireccion" tabindex="-1" role="dialog" aria-labelledby="ventanaDireccion">
+                                                                                        <div class="modal-dialog">
+                                                                                                <div class="modal-content" id="ventanaFormularioDireccion">
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+
+                                                                        </div>
+
+                                                                        <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
+                                                                        <hr><br><center><h5>Sus servicios</h5></center><br>
+                                                                        <table class="table table-success m-2">
+                                                                                <thead>
+                                                                                  <tr>
+                                                                                    <th>Fecha inicio</th>
+                                                                                    <th>Fecha fin</th>
+                                                                                    <th>Tipo Dirección Individualizada</th>
+                                                                                    <th>Titulo de Proyecto Dirigido</th>
+                                                                                  </tr>
+                                                                                </thead>
+                                                                              <tbody>
+                                                                                        <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_direccion_individualizada WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
+                                                  <tr>
+                                                    <td><?php echo $mostrar['fecha_de_inicio'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_de_fin'] ?></td>
+                                                    <td><?php echo $mostrar['tipo_de_direccion'] ?></td>
+                                                    <td><?php echo $mostrar['titulo_proyecto_dirigido'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaDireccion" onclick="editarRegistroDireccionInvi(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroDireccionInvi(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                  </tr>
+                                                <?php 
+                                                }
+                                                ?>
+                                                                                </tbody>
+                                                                        </table>
+                                                                        <br><hr><br>
+                                      </div>
+                                  </div>
                                 <div class="btn btn-secondary border-light" id="subheader2_investigacion">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4_tutorias" aria-expanded="true" aria-controls="subcollapse4_tutorias">Servicios prestados a la comunidad</a>
                                   </div>
@@ -554,17 +674,25 @@
                                                                                         </tr>
                                                                                 </thead>
                                                                                 <tbody>
-                                                                                        <tr>
-                                                                                                <td>12-03-2016</td>
-                                                                                                <td>...</td>
-                                                                                                <td>...</td>
-                                                                                        </tr>
+                                                                                        <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_servicios_prestados WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
+                                                  <tr>
+                                                    <td><?php echo $mostrar['fecha_servicio'] ?></td>
+                                                    <td><?php echo $mostrar['tipo_servicio'] ?></td>
+                                                    <td><?php echo $mostrar['servicio_prestado'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaServicios" onclick="editarRegistroServicios(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroServicios(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
+                                                  </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                                                                 </tbody>
                                                                         </table>
                                                                         <br><hr><br>
-
-                                                                        <center><a href=""><img src="img/editar.png" width="5%;"></a><p>Editar registro</p></center>
-                                                                        <center><a href=""><img src="img/borrar.png" width="7.5%;"></a><p>Borrar registro</p></center>
                                       </div>
                                   </div>
                               </div>
@@ -619,12 +747,23 @@
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_gestion_cuerpos_colegiados WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>12-03-2016</td>
-                                                      <td>...</td>
-                                                      <td>...</td>
-                                                      <td>...</td>
+                                                    <td><?php echo $mostrar['fecha_ultimo_reporte'] ?></td>
+                                                    <td><?php echo $mostrar['tipo_gestion'] ?></td>
+                                                    <td><?php echo $mostrar['clasificacion'] ?></td>
+                                                    <td><?php echo $mostrar['funcion_encomendada'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaCuerpos" onclick="editarRegistroCuerposCole(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroCuerposCole(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -673,13 +812,24 @@
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_gestion_academica WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>...</td>
-                                                      <td>...</td>
-                                                      <td>...</td>
-                                                      <td>12-03-2016</td>
-                                                      <td>18-03-2016</td>
+                                                    <td><?php echo $mostrar['evento'] ?></td>
+                                                    <td><?php echo $mostrar['tipo_gestion'] ?></td>
+                                                    <td><?php echo $mostrar['calificacion'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaGestionAcad" onclick="editarRegistroGestionAcad(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroGestionAcad((<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -743,16 +893,27 @@
                                                   </tr>
                                               </thead>
                                               <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_carga_academica WHERE usuario_idusuario='1815906'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?>
                                                   <tr>
-                                                      <td>FACULTAD DE CIENCIAS DE LA COMUNICACIÓN</td>
-                                                      <td>SUPERIOR</td>
-                                                      <td>LICENCIATURA</td>
-                                                      <td>PSICOLOGÍA SOCIAL</td>
-                                                      <td>2</td>
-                                                      <td>6</td>
-                                                      <td>18-01-2016</td>
-                                                      <td>14-07-2016</td>
+                                                    <td><?php echo $mostrar['dependencia'] ?></td>
+                                                    <td><?php echo $mostrar['nivel'] ?></td>
+                                                    <td><?php echo $mostrar['grado'] ?></td>
+                                                    <td><?php echo $mostrar['materia'] ?></td>
+                                                    <td><?php echo $mostrar['num_grupos'] ?></td>
+                                                    <td><?php echo $mostrar['num_horas_semana'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_inicio'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_fin'] ?></td>
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaCargaAcad" onclick="editarRegistroCargaAcad(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarRegistroCargaAcad(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
+                                                <?php 
+                                                }
+                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -776,7 +937,7 @@
     <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

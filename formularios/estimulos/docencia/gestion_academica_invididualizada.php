@@ -5,7 +5,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="#" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_gestion_academica_invididualizada.php" method="POST">
                                                                         <div class="form-group">
                                                                           <label for="tipo_gest_aca">Tipo de Gestión Académica:</label>
                                                                           <select id="tipo_gest_aca" class="form-control custom-select" required>

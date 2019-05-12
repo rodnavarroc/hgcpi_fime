@@ -1,3 +1,17 @@
+<?php 
+
+  $conexion=mysqli_connect('localhost','root','','hgcpi');
+
+  $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
+
+  /* comprobar la conexión */
+  if (mysqli_connect_errno()) {
+      printf("Falló la conexión: %s\n", mysqli_connect_error());
+      exit();
+  }
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +40,7 @@
                       </li>
                       <li class="nav-item">
                       <a class="nav-link " href="perfil.php#datos">Datos Personales</a>
-                      </li>
-                      <li class="nav-item">
-                      <a class="nav-link" href="perfil.php#convocatorias" tabindex="-1" aria-disabled="false">Imprimir Convocatorias</a>
-                      </li>
-                    </ul>
+                      </li></ul>
                       <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
                   </div>
             </nav>
@@ -47,23 +57,44 @@
           <h5><b>Estatus de convocatorias al momento</b></h5></center><br>
           <table class="table table-bordered">
             <tbody>
+
+               <?php
+                  $sql="SELECT * FROM convocatorias WHERE nombre='PRODEP'";
+                  $result=mysqli_query($mysqli,$sql);
+                  $mostrar=mysqli_fetch_array($result);
+              ?>
+
               <tr>
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">PRODEP</a></td>
-                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="darkred">INACTIVA / En revisión</font></b></a></td>
-                <td class="bg-danger"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
-                <td class="bg-danger"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
+                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b></a></td>
+                <td class="bg-success"><a href="estimulos.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
+                <td class="bg-secondary"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
+
+              <?php
+                  $sql="SELECT * FROM convocatorias WHERE nombre='SNI'";
+                  $result=mysqli_query($mysqli,$sql);
+                  $mostrar=mysqli_fetch_array($result);
+              ?>
+
               <tr>
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">Sistema Nacional de Investigadores</a></td>
-                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="darkred">INACTIVA hasta 21 Mayo 2019</font></b></a></td>
-                <td class="bg-danger"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
-                <td class="bg-danger"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
+                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b></a></td>
+                <td class="bg-success"><a href="sni.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
+                <td class="bg-secondary"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
+
+              <?php
+                  $sql="SELECT * FROM convocatorias WHERE nombre='Estimulos'";
+                  $result=mysqli_query($mysqli,$sql);
+                  $mostrar=mysqli_fetch_array($result);
+              ?>
+
               <tr>
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">Estímulos UANL</a></td>
-                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="green">ACTIVA hasta 2 Mayo 2019</font></b></a></td>
+                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b></a></td>
                 <td class="bg-success"><a href="estimulos.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
-                <td class="bg-success"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
+                <td class="bg-secondary"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
             </tbody>
           </table><br>
@@ -74,22 +105,32 @@
             
             <h5><b>Datos generales del afiliado</b></h5>
             <table class="table">
-          <tbody class="">
+          <tbody>
+            <?php 
+            $sql="SELECT * FROM usuario WHERE idusuario='1815906'";
+            $result=mysqli_query($conexion,$sql);
+            $contador = 0;
+            while($mostrar=mysqli_fetch_array($result)){
+             ?>
             <tr>
-              <td>Nombre</td>
-              <td>Primer Apellido</td>
-              <td>Segundo Apellido</td>
+              <tr>
+              <td>Nombre: <?php echo $mostrar['nombre'] ?></td>
+              <td>Primer Apellido: <?php echo $mostrar['ap_paterno'] ?></td>
+              <td>Segundo Apellido: <?php echo $mostrar['ap_materno'] ?></td>
             </tr>
             <tr>
-              <td>RFC</td>
-              <td>ORCID</td>
-              <td>CURP</td>
+              <td>RFC: <?php echo $mostrar['rfc'] ?></td>
+              <td>ORCID: <?php echo $mostrar['orcid'] ?></td>
+              <td>CURP: <?php echo $mostrar['curp'] ?></td>
             </tr>
             <tr>
-              <td>Fecha Nacimiento</td>
-              <td>CVU</td>
-              <td>Sexo</td>
+              <td>Fecha Nacimiento: <?php echo $mostrar['fecha_nacimiento'] ?></td>
+              <td>CVU: <?php echo $mostrar['numero_cvu'] ?></td>
+              <td>Sexo: <?php echo $mostrar['sexo'] ?></td>
             </tr>
+              <?php
+              }
+            ?>
           </tbody>
         </table>
 
@@ -98,33 +139,42 @@
          <h5><b>Domicilio y contacto personal</b></h5>
             <table class="table">
           <tbody class="">
+            <?php 
+            $sql="SELECT * FROM usuario WHERE idusuario='1815906'";
+            $result=mysqli_query($conexion,$sql);
+            $contador = 0;
+            while($mostrar=mysqli_fetch_array($result)){
+             ?>
             <tr>
-              <td>País de nacimiento</td>
-              <td>Ciudad de nacimiento</td>
-              <td>Estado civil</td>
+              <td>País de nacimiento: <?php echo $mostrar['pais_residencia'] ?></td>
+              <td>Ciudad de nacimiento: <?php echo $mostrar['ciudad_nacimiento'] ?></td>
+              <td>Estado civil: <?php echo $mostrar['estado_civil'] ?></td>
             </tr>
             <tr>
-              <td>Teléfono</td>
-              <td>Teléfono móvil particular</td>
-              <td>Correo electrónico personal</td>
+              <td>Teléfono: <?php echo $mostrar['telefono_particular'] ?></td>
+              <td>Teléfono móvil particular: <?php echo $mostrar['telefono_movil'] ?></td>
+              <td>Correo electrónico personal: <?php echo $mostrar['correo_electronico_personal'] ?></td>
             </tr>
             <tr>
-              <td>Calle de residencia</td>
-              <td>Número</td>
-              <td>Colonia</td>
+              <td>Calle de residencia: <?php echo $mostrar['calle_dom'] ?></td>
+              <td>Número: <?php echo $mostrar['numero_exterior_dom'] ?></td>
+              <td>Colonia: <?php echo $mostrar['colonia_residencia'] ?></td>
             </tr>
             <tr>
-              <td>Ciudad de residencia</td>
-              <td>Estado de residencia</td>
-              <td>País de residencia</td>
+              <td>Ciudad de residencia: <?php echo $mostrar['ciudad_residencia'] ?></td>
+              <td>Estado de residencia: <?php echo $mostrar['estado_residencia'] ?></td>
+              <td>País de residencia: <?php echo $mostrar['pais_residencia'] ?></td>
             </tr>
+            <?php
+              }
+            ?>
           </tbody>
         </table> 
         <br><hr><br>
         </div>
 
         <div class="container">
-         <h6><center>Si desea hacer un cambio en sus datos personales, por favor póngase en contacto con <a href="#">la administración de la plataforma</a>.</center></h6><br>
+         <h6><center>Si desea hacer un cambio en sus datos personales, por favor póngase en contacto con <a href="mailto:hgcpi_fime@gmail.com">la administración de la plataforma</a>.</center></h6><br>
 
         </div>
 

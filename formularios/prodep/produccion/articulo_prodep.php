@@ -5,7 +5,7 @@
     </button>
  </div>
     <div class="modal-body">
-    <form enctype="multipart/form-data" action="#" method="POST">
+    <form enctype="multipart/form-data" action="scripts/formularios/prodep/agregar/produccion/articulo_prodep.php" method="POST">
                                                                       
                                                                         
    <div class="form-group">
@@ -56,7 +56,7 @@
 
    <div class="form-group">
    <label for="descripcion" required> Propósito: </label>
-   <input type="text" class="form-control inst_certi" name="proósito_articulo_prodep" placeholder="" required>
+   <input type="text" class="form-control inst_certi" name="proposito_articulo_prodep" placeholder="" required>
    </div>  
 
 <div class="form-group">
@@ -85,3 +85,23 @@
 <br>
 </form>
 </div>
+
+<script type="text/javascript">
+        $('.tuiker').datepicker({
+            //adecuando formato de fecha
+            dateFormat: "yy/mm/dd",
+            //primer dia sea lunes
+            firstDay: 1,
+            //Nombres de los dias
+            dayNames: ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
+            //Abreviatura de los dias largos
+            dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+            //Escribir los meses
+            monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            //Abreviatura de los meses
+            monthNamesShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+            onSelect: function(dateText){
+                $('#fecha').val(dateText);
+            }
+        });
+</script>
