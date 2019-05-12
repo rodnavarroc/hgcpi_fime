@@ -21,7 +21,11 @@ v1.3 - Agregadas secciones y subsecciones de convocatorias PRODEP y SNI.
 
 v1.4 - Finalizadas las secciones, subsecciones y formularios de convocatorias PRODEP y Estímulos UANL.
 
-v1.4.1 - Creado el algoritmo para agregar registros y para borrarlos. Agregado campo "id" a todas las tablas de la base de datos para control de tablas dinámicas. Creado el script para visualizar tablas dinámicas con los registros existentes para el usuario por convocatoria.
+v1.4.1 
+
+- Creado el algoritmo para agregar registros y para borrarlos. 
+- Agregado campo "id" a todas las tablas de la base de datos para control de tablas dinámicas. 
+- Creado el script para visualizar tablas dinámicas con los registros existentes para el usuario por convocatoria.
 
 v1.5.1 - Finalizadas las secciones, subsecciones y formularios de convocatoria SNI.
 
@@ -31,5 +35,12 @@ v4.2 de la Base de Datos (hgcpi.sql)
 - Corregido nombre de tabla "detalle_usuario_documentos_de_trabajo" (para SNI)
 - Agregados campos "tipo_nombramiento" y "asociado_a" a datos laborales (para PRODEP)
 - Agregado campo de "autores" a produccion de libros y articulos (para PRODEP)
+
+v1.6
+
+- Creados scripts para botones agregar, editar y borrar de todas las convocatorias.
+- Creado panel de administrador y tipo de usuario administrador
+- Modificado perfil de usuario
+- Modificada sección de solicitud de registro
 
 #
