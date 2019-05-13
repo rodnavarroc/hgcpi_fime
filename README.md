@@ -43,4 +43,6 @@ v1.6
 - Modificado perfil de usuario
 - Modificada sección de solicitud de registro
 
+v1.6.1 Cambiadas todas las variables estáticas por variables de PHP SESSION.
+
 #
