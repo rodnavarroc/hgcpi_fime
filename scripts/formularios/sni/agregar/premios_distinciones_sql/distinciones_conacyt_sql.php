@@ -11,7 +11,8 @@ if (mysqli_connect_errno()) {
 /* RECIBIR LAS VARIABLES DESDE EL FORMULARIO */ 
 $nom_fondo = $_POST["nom_fondo"];
 $ano_distinciones = $_POST["ano_distinciones"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_distinciones_conacyt /* tabla de destino */
 (nombre_dist,ano,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

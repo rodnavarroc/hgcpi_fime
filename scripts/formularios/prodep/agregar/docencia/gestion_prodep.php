@@ -20,7 +20,8 @@ $fecha_fin = $_POST["fecha_fin_ges"];
 $fecha_ultimo_informe = $_POST["fecha_ultimo_informe_ges"];
 $horas_dedicadas_semana = $_POST["horas_semana_gestion_prodep"];
 $estado_gestion = $_POST["estado_gestion_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_gestion_academica /* tabla de destino */
 (tipo_gestion,cargo_comision,funcion_encomendada,organo_colegiado,resultados_obtenidos,aprobado,fecha_inicio,fecha_fin,fecha_ultimo_informe,horas_dedicadas_semana,estado_gestion,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

@@ -23,7 +23,8 @@ $area_grupo = $_POST["area_grupo"];
 $campo_grupo = $_POST["campo_grupo"];
 $disciplina_grupo = $_POST["disciplina_grupo"];
 $subdisciplina_grupo = $_POST["subdisciplina_grupo"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_grupos_investigacion /* tabla de destino */
 (nombre_grupo,fecha_creacion,fecha_ingreso,nombre_lider,primer_apellido_lider,segundo_apellido_lider,institucion_adscripcion_lider,total_investigadores,impacto,colaboracion,area_conocimiento_grupo,campo_grupo,disciplina_grupo,subdisciplina_grupo,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

@@ -22,7 +22,9 @@ $fecha_inicio = $_POST["fecha_inicio"];
 $fecha_fin = $_POST["fecha_fin"];
 $organo = $_POST["organo_presentado"];
 $funcion_en = $_POST["funcion"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
+
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_gestion_cuerpos_colegiados 

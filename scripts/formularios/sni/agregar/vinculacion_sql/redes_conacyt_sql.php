@@ -15,7 +15,8 @@ $tit_trab = $_POST["tit_trab"];
 $pais_congre = $_POST["pais_congre"];
 $fecha = $_POST["fecha"];
 $palab_clave = $_POST["palab_clave"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_redes_tematicas_conacyt /* tabla de destino */
 (red_tematica_conacyt,fecha_ingreso,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

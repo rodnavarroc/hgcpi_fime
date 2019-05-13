@@ -12,7 +12,9 @@ if (mysqli_connect_errno()) {
 $ident = $_GET['ident'];
 $insti = $_POST["inst_certi"];
 $idioma = $_POST["idioma"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
+
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_lenguas_e_idiomas 

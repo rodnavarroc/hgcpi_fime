@@ -29,7 +29,8 @@ $autores_colaboradores = $_POST["autores_memorias_prodep"];
 
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_memorias 

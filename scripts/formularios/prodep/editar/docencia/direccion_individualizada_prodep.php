@@ -23,7 +23,8 @@ $considerar_curriculum = $_POST["curriculum_direccion_prodep"];
 $miembros = $_POST["miembros_direccion_prodep"];
 $lgacs = $_POST["LGAC_direccion_prodep"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_direccion_individualizada 

@@ -26,7 +26,8 @@ $lgacs = $_POST["LGAC_memorias_prodep"];
 $autores_colaboradores = $_POST["autores_memorias_prodep"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $consulta = "INSERT INTO detalle_usuario_memorias /* tabla de destino */

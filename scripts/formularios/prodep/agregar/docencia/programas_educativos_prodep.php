@@ -12,7 +12,8 @@ if (mysqli_connect_errno()) {
 $nombre_pe = $_POST["programa_actualizado_prodep"];
 $fecha_implementacion_cambio = $_POST["fecha_cambio"];
 $en_que_consiste_actualizacion = $_POST["actualizacion_programa_actualizado_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_actualizacion_pe /* tabla de destino */
 (nombre_pe,fecha_implementacion_cambio,en_que_consiste_actualizacion,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

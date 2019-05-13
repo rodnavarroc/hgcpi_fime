@@ -1,5 +1,21 @@
 <?php 
+  
   $conexion=mysqli_connect('localhost','root','','hgcpi');
+
+  /*scripts de sesion*/
+
+  session_start();
+
+  if(!isset($_SESSION['usuario'])) { header("Location: index.php"); }
+  
+  $usuario = $_SESSION['usuario'];
+
+  $sql="SELECT * FROM usuario WHERE idusuario='$usuario'";
+  $result=mysqli_query($conexion,$sql);
+  $mostrar=mysqli_fetch_array($result);
+
+  /*scripts de sesion*/
+
  ?>
 
 <!DOCTYPE html>
@@ -34,7 +50,7 @@
                       <a class="nav-link" href="perfil.php#datos">Datos Personales</a>
                       </li>
                     </ul>
-                      <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
+                      <span class="navbar-text"><a class="nav-link" href="perfil.php"><?php echo $mostrar['nombre']." ".$mostrar['ap_paterno']." ".$mostrar['ap_materno']; ?></a></span>
                   </div>
             </nav>
     </header>
@@ -104,7 +120,7 @@
                                               </thead>
                                               <tbody>
                                                   <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_grados_acad WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_grados_acad WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -175,7 +191,7 @@
                                               </thead>
                                               <tbody>
                                                   <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_experiencia_laboral WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_experiencia_laboral WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -246,7 +262,7 @@
                                               </thead>
                                               <tbody>
                                                   <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_premios_y_distinciones WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_premios_y_distinciones WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -335,7 +351,7 @@
                                               </thead>
                                               <tbody>
                                                  <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_docencia WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_docencia WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -412,7 +428,7 @@
                                               </thead>
                                               <tbody>
                                                    <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_tutoria WHERE usuario_idusuario='1815906' AND tipo_tutoria='grupal'";
+                                                  $sql="SELECT * FROM detalle_usuario_tutoria WHERE usuario_idusuario='$usuario' AND tipo_tutoria='grupal'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -445,7 +461,7 @@
                                               </thead>
                                               <tbody>
                                                   <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_tutoria WHERE usuario_idusuario='1815906' AND tipo_tutoria='individual'";
+                                                  $sql="SELECT * FROM detalle_usuario_tutoria WHERE usuario_idusuario='$usuario' AND tipo_tutoria='individual'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -520,7 +536,7 @@
                                              <tbody>
                                                   
                                                   <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_direccion_individualizada WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_direccion_individualizada WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -602,7 +618,7 @@
                                               </thead>
                                               <tbody>
                                                    <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_gestion_academica WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_gestion_academica WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -670,7 +686,7 @@
                                               </thead>
                                               <tbody>
                                                   <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_lgac WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_lgac WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -737,7 +753,7 @@
                                                   </tr>
                                               </thead>
                                                <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_cuerpo_academico WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_cuerpo_academico WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -812,7 +828,7 @@
                                                       -->
 
                                                        <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_actualizacion_pe WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_actualizacion_pe WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -907,7 +923,7 @@
                                               <tbody>
                                                   <tr>
                                                       <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_prod_articulos WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_prod_articulos WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -994,7 +1010,7 @@
                                               </thead>
                                               <tbody>
                                                  <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_produccion_libros WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_produccion_libros WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -1077,7 +1093,7 @@
                                               <tbody>
                                                   <tr>
                                                      <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_memorias WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_memorias WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -1159,7 +1175,7 @@
                                               </thead>
                                               <tbody>
                                                    <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_proyectos_investigacion WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_proyectos_investigacion WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -1261,7 +1277,7 @@
                                               </thead>
                                               <tbody>
                                                   <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_beneficios_promep WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_beneficios_promep WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?> <!--ies_solicitud,solicitud,vigencia,estado-->
@@ -1344,7 +1360,7 @@
                                               </thead>
                                               <tbody>
                                                    <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_beneficios_externos_promep WHERE usuario_idusuario='1815906'";
+                                                  $sql="SELECT * FROM detalle_usuario_beneficios_externos_promep WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
                                                    ?>

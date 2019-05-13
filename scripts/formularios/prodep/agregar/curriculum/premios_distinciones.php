@@ -14,7 +14,8 @@ $institucion_que_otorga = $_POST["institucion_premio"];
 $motivo = $_POST["motivo_premio"];
 $institucion_otorgante_no_considerada = $_POST["institucion_no_catalogo_premio"];
 $fecha = $_POST["fecha_premio"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_premios_y_distinciones /* tabla de destino /  Motivo, fecha, institucion otorgante no */
 (nombre_distincion,institucion_que_otorga,motivo,institucion_otorgante_no_considerada,fecha,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

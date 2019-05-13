@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
 /* comprobar la conexión */
@@ -13,7 +13,7 @@ $tipo_recon = $_POST["tipo_reconocimiento"];
 $nivelo = $_POST["nivel"];
 $anos = $_POST["ano"];
 $monto_men = $_POST["monto_mensual"];
-$idusuario = "1815906";
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_premios_y_distinciones /* tabla de destino */
 (tipo_distincion,nivel,ano,monto_mensual,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

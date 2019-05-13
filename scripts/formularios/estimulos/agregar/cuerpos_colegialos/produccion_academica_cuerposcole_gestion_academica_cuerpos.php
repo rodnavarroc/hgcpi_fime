@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
 /* comprobar la conexión */
@@ -21,7 +21,7 @@ $fecha_inicio = $_POST["fecha_inicio"];
 $fecha_fin = $_POST["fecha_fin"];
 $organo = $_POST["organo_presentado"];
 $funcion_en = $_POST["funcion"];
-$idusuario = "1815906";
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_gestion_cuerpos_colegiados /* tabla de destino */
 (tipo_gestion,clasificacion,funcion_encomendada,organo_colegiado,fecha_inicio,fecha_fin,fecha_ultimo_reporte,aprobado,horas_semana,resultado_obtenido,estado_gestion,ies_realiza_gestion,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
 /* comprobar la conexión */
@@ -15,7 +15,7 @@ $pais = $_POST["pais"];
 $nombre_revista = $_POST["nom_rev"];
 $pag_ini = $_POST["pag_ini"];
 $pag_fin = $_POST["pag_fin"];
-$idusuario = "1815906";
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_prod_articulos /* tabla de destino */
 (issn,nombre_art,pais,nombre_revista,pagina_inicial,pagina_final,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

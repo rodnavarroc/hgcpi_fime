@@ -34,7 +34,8 @@ $sec_ocde = $_POST["sec_ocde"];
 $div_ocde = $_POST["div_ocde"];
 $grupo_ocde = $_POST["grupo_ocde"];
 $clase_ocde = $_POST["clase_ocde"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_divulgacion SET divulgacion_titulo='$tit_trabajo',tipo_participacion='$tip_part',tipo_evento='$tip_evento',institucion_organizadora='$inst_organi',dirigido_a='$dirig_a',fecha='$fecha',pais='$pais_div',tipo_de_medio='$tip_med',palabras_clave='$palab_clave',notas_periodisticas='$not_periodis',producto_obtenido='$prod_obten',area_conocimiento_divulgacion='$area_div',campo_divulgacion='$campo_div',disciplina_divulgacion='$disciplina_div',subdisciplina_divulgacion = '$subdisciplina_div',sector_industrial_scian='$sec_scian',subrama_scian='$subrama_scian',subsector_scian='$subsec_scian',rama_scian='$rama_scian',clase_scian='$clase_scian',sector_industrial_ocde='$sec_ocde',division_ocde='$div_ocde',grupo_ocde='$grupo_ocde',clase_ocde='$clase_ocde' WHERE id='$ident' AND usuario_idusuario='$idusuario'";

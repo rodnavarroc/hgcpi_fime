@@ -17,8 +17,8 @@ $fecha_de_inicio = $_POST["fecha_ini_tutoria_individual"];
 $fecha_de_fin = $_POST["fecha_fin_tutoria_individual"];
 $tipo_de_tutelaje = $_POST["tipo_tutoria_individual_prodep"];
 $estado_tutoria = $_POST["estado_tutoria_individual_prodep"];
-
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $consulta = "INSERT INTO detalle_usuario_tutoria /* tabla de destino */

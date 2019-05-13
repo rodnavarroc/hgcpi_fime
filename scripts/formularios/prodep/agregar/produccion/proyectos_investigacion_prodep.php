@@ -37,7 +37,8 @@ $fecha_inicio = $_POST["fecha_inicio"];
 $fecha_fin = $_POST["fecha_fin"];
 $tipo_patrocinador = $_POST["tipo_patrocinador_proyecto_investigacion_prodep"];
 $investigadores_participantes = $_POST["investigadores_proyecto_investigacion_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_proyectos_investigacion /* tabla de destino */
 (titulo,nombre_patrocinador,nombre_alumnos_participantes,actividades_realizadas,considerar_curriculum,miembros,lgacs,fecha_inicio,fecha_fin,tipo_patrocinador,investigadores_participantes,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

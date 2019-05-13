@@ -27,7 +27,8 @@ $idthomson_cap = $_POST["idthomson_cap"];
 $idarxiv_cap = $_POST["idarxiv_cap"];
 $idpubmed_cap = $_POST["idpubmed_cap"];
 $idopen_cap = $_POST["idopen_cap"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_produccion_capitulos /* tabla de destino */
 (

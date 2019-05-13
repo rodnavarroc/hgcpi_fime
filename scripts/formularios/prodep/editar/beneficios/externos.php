@@ -17,8 +17,8 @@ $fecha_inicio = $_POST["fecha_inicio_externo_promep_prodep"];
 $fecha_fin = $_POST["fecha_fin_externo_promep_prodep"];
 $monto = $_POST["monto_externo_promep_prodep"];
 
-$idusuario = "1815906";
-
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $sql="UPDATE detalle_usuario_beneficios_externos_promep 
 SET 

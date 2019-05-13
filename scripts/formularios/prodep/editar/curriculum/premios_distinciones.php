@@ -17,7 +17,8 @@ $motivo = $_POST["motivo_premio"];
 $institucion_otorgante_no_considerada = $_POST["institucion_no_catalogo_premio"];
 $fecha = $_POST["fecha_premio"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_premios_y_distinciones 

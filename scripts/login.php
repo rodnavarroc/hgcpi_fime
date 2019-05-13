@@ -1,5 +1,4 @@
 <?php
-session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi");
 
 /* comprobar la conexión */
@@ -7,6 +6,8 @@ if (mysqli_connect_errno()) {
     printf("Falló la conexión: %s\n", mysqli_connect_error());
     exit();
 }
+
+session_start();
 
 $user = $_POST['usuario'];
 $passw = $_POST['pass'];
@@ -40,16 +41,18 @@ if($row_cnt == 0) {echo '<script type="text/javascript"> alert("Usuario no exist
         else
         {
             $consulta = "SELECT tipo_usuario FROM usuario WHERE idusuario='$user' AND clave='$passw'";
-            if ($resultado = $mysqli->query($consulta)) {
+            if ($resultado = $mysqli->query($consulta)) {               
                 
                 $row_cnt = $resultado->num_rows;
                  while ($fila = $resultado->fetch_row()) {
                  if($fila[0] == "admin") 
                  {
+                    $_SESSION['usuario'] = $user; 
                     header('Location: ../admin.php');
                  }
                  else
                  {
+                    $_SESSION['usuario'] = $user; 
                     header('Location: ../perfil.php');
                  }
                  }

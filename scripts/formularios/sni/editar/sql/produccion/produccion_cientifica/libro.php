@@ -34,7 +34,8 @@ $idarxiv_lib = $_POST["idarxiv_lib"];
 $idpubmed_lib = $_POST["idpubmed_lib"];
 $idopen_lib = $_POST["idopen_lib"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_produccion_libros SET 

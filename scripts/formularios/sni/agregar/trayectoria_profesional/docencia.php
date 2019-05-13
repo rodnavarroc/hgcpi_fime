@@ -19,7 +19,8 @@ $clasificacion = $_POST["clasificacion"];
 $horas_tot = $_POST["horas_tot"];
 $fecha_inicio = $_POST["fecha_inicio"];
 $fecha_fin = $_POST["fecha_fin"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_docencia /* tabla de destino */
 (

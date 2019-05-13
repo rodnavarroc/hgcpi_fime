@@ -17,7 +17,8 @@ $fecha_obtencion_titulo = $_POST["fecha_titulo"];
 $nombre_institucion = $_POST["institucion_otorgante"];
 $pais_institucion = $_POST["pais_estudios"];
 $disciplina = $_POST["area"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_grados_acad /* tabla de destino */
 (nivel_estudios,titulo,fecha_inicio,fecha_fin,fecha_obtencion_titulo,nombre_institucion,pais_institucion,disciplina,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

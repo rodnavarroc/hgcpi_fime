@@ -12,7 +12,9 @@ if (mysqli_connect_errno()) {
 $ident = $_GET['ident'];
 $titulo = $_POST["titulo_libro"];
 $tipo = $_POST["tipo_autor"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
+
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_produccion_libros 

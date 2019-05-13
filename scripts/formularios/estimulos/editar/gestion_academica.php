@@ -20,7 +20,9 @@ $participacion = $_POST["tipo_participacion"];
 $alcance = $_POST["tipo_alcance"];
 $ies = $_POST["ies_realiza_gestion"];
 $estado = $_POST["estado_gestion"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
+
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_gestion_academica 

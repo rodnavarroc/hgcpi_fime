@@ -32,7 +32,8 @@ $monto_anual = $_POST["monto_anual"];
 $volumen_anual = $_POST["volumen_anual"];
 $empleados_directos_anual = $_POST["empleados_directos_anual"];
 $empleados_indirectos_anual = $_POST["empleados_indirectos_anual"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_innovacion /* tabla de destino */
 (

@@ -13,7 +13,8 @@ $ies_solicitud = $_POST["ies_promep_prodep"];
 $solicitud = $_POST["solicitud_promep_prodep"];
 $vigencia = $_POST["vigencia_promep_prodep"];
 $estado = $_POST["estado_promep_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_beneficios_promep /* tabla de destino */
 (ies_solicitud,solicitud,vigencia,estado,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

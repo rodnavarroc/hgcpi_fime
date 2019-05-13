@@ -22,7 +22,8 @@ $area_red_invest = $_POST["area_red_invest"];
 $campo_red_invest = $_POST["campo_red_invest"];
 $disciplina_red_invest = $_POST["disciplina_red_invest"];
 $subdisciplina_red_invest = $_POST["subdisciplina_red_invest"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_redes_investigacion SET nombre_red='$nom_red',fecha_creacion='$fecha_creacion',fecha_ingreso='$fecha_ingreso',nombre_responsable_red='$nom_respo_red',primer_apellido_responsable_red='$prim_ap_respo_red',segundo_apellido_responsable_red='$seg_ap_respo_red',institucion_responsable_red='$inst_respo_red',total_integrantes='$tot_integra',area_conocimiento_red='$area_red_invest',campo_red='$campo_red_invest',disciplina_red='$disciplina_red_invest',subdisciplina_red='$subdisciplina_red_invest' WHERE id='$ident' AND usuario_idusuario='$idusuario'";

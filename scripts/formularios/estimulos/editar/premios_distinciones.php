@@ -14,7 +14,8 @@ $tipo_recon = $_POST["tipo_reconocimiento"];
 $nivelo = $_POST["nivel"];
 $anos = $_POST["ano"];
 $monto_men = $_POST["monto_mensual"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_premios_y_distinciones 

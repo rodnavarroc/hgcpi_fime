@@ -10,6 +10,20 @@
       exit();
   }
 
+  /*scripts de sesion*/
+
+  session_start();
+
+  if(!isset($_SESSION['usuario'])) { header("Location: index.php"); }
+  
+  $usuario = $_SESSION['usuario'];
+
+  $sql="SELECT * FROM usuario WHERE idusuario='$usuario'";
+  $result=mysqli_query($conexion,$sql);
+  $mostrar=mysqli_fetch_array($result);
+
+  /*scripts de sesion*/
+
  ?>
 
 <!DOCTYPE html>
@@ -40,8 +54,9 @@
                       </li>
                       <li class="nav-item">
                       <a class="nav-link " href="perfil.php#datos">Datos Personales</a>
-                      </li></ul>
-                      <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
+                      </li>
+                      </ul>
+                      <span class="navbar-text"><a class="nav-link" href="perfil.php"><?php echo $mostrar['nombre']." ".$mostrar['ap_paterno']." ".$mostrar['ap_materno']; ?></a></span>
                   </div>
             </nav>
     </header>
@@ -49,12 +64,12 @@
         <div class="row-mt-4">
           <br><hr>
           <center><h4>Perfil Personal del Usuario</h4></center><br>
-          <center><h5 style="font-weight: normal; font-size: 26px;"><b>Mayra Deyanira Flores Guerrero</b></h5></center>
-          <center><h5 style="font-weight: normal; font-size: 18px;"><i>Facultad de Ingeniería Mecánica y Eléctrica</i></h5></center>
+          <center><h5 style="font-weight: normal; font-size: 26px;"><b><?php echo $mostrar['nombre']." ".$mostrar['ap_paterno']." ".$mostrar['ap_materno']; ?></b></h5></center>
+          <center><h5 style="font-weight: normal; font-size: 18px;"><i><?php echo $mostrar['ies_adscripcion']?></i></h5></center>
         <br><hr><br>
 
         <div class="container" id="convocatorias">
-          <h5><b>Estatus de convocatorias al momento</b></h5></center><br>
+          <h5><b>Estatus de convocatorias al momento</b></h5><br>
           <table class="table table-bordered">
             <tbody>
 
@@ -66,7 +81,7 @@
 
               <tr>
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">PRODEP</a></td>
-                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b></a></td>
+                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b> | <i>Cierra: <?php echo $mostrar['fecha_cierre']?></i></a></td>
                 <td class="bg-success"><a href="estimulos.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
                 <td class="bg-secondary"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
@@ -79,7 +94,7 @@
 
               <tr>
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">Sistema Nacional de Investigadores</a></td>
-                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b></a></td>
+                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b> | <i>Cierra: <?php echo $mostrar['fecha_cierre']?></a></td>
                 <td class="bg-success"><a href="sni.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
                 <td class="bg-secondary"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
@@ -92,13 +107,34 @@
 
               <tr>
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">Estímulos UANL</a></td>
-                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b></a></td>
+                <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b> | <i>Cierra: <?php echo $mostrar['fecha_cierre']?></a></td>
                 <td class="bg-success"><a href="estimulos.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
                 <td class="bg-secondary"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
             </tbody>
           </table><br>
           <h6><center>El estatus de las convocatorias puede cambiar <b>en cualquier momento</b> cercano a la apertura o cierre de las mismas.</center>
+        </div>
+
+        <?php
+          $sql="SELECT * FROM usuario WHERE idusuario='$usuario'";
+          $result=mysqli_query($mysqli,$sql);
+          $mostrar=mysqli_fetch_array($result);
+        ?>
+
+        <div class="container">
+          <?php
+          if($mostrar['tipo_usuario'] == "admin")
+          {
+          ?>
+          <br><br>
+          <center><a href="admin.php" style="padding: 10px 15px; background-color: #dc3545; color: white; font-size: 16px; text-decoration: none; border-radius: 6px">Ingresar al Panel Administrativo</a></center>
+          <?php
+          }
+          ?>
+          <br><br>
+          <center><a href="scripts/logout.php" style="padding: 10px 15px; background-color: darkorange; color: white; font-size: 16px; text-decoration: none; border-radius: 6px">Cerrar Sesión</a></center>
+
         </div>
 
         <div class="container" id="datos"><br><br>

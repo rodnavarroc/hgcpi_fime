@@ -29,7 +29,8 @@ $disciplina_des = $_POST["disciplina_des"];
 $subdisciplina_des = $_POST["subdisciplina_des"];
 $gen_valor = $_POST["gen_valor"];
 $form_recur = $_POST["form_recur"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_desarollos_tecnologicos /* tabla de destino */
 (

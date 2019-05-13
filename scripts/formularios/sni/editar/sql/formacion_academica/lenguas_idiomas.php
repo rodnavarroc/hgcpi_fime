@@ -22,7 +22,8 @@ $vig_inicio = $_POST["vig_inicio"];
 $vig_fin = $_POST["vig_fin"];
 $fecha_evaluacion = $_POST["fecha_evaluacion"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_lenguas_e_idiomas SET 

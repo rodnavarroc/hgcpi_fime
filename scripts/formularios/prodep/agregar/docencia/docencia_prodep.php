@@ -19,7 +19,8 @@ $duracion_semanas = $_POST["duracion_semanas_docencia_prodep"];
 $horas_asesoria_mes = $_POST["horas_docencia_mes_prodep"];
 $horas_semanales_curso = $_POST["horas_docencia_semanal_prodep"];
 $fecha_inicio = $_POST["fecha_inicio_estudios_docencia"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_docencia /* tabla de destino */
 (dependencia,nombre_programa_educativo,nombre_curso,nivel,nombre_institucion_ies,numero_alumnos,duracion_semanas,horas_asesoria_mes,horas_semanales_curso,fecha_inicio,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

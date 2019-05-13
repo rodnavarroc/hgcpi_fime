@@ -25,7 +25,8 @@ $idthomson_reptec = $_POST["idthomson_reptec"];
 $idarxiv_reptec = $_POST["idarxiv_reptec"];
 $idpubmed_reptec = $_POST["idpubmed_reptec"];
 $idopen_reptec = $_POST["idopen_reptec"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_reportes_tecnicos /* tabla de destino */
 (

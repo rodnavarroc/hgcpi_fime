@@ -17,7 +17,8 @@ $fecha_implementacion_cambio = $_POST["fecha_cambio"];
 $en_que_consiste_actualizacion = $_POST["actualizacion_programa_actualizado_prodep"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_actualizacion_pe 

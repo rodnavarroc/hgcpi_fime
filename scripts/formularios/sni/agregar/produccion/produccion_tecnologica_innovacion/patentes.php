@@ -22,7 +22,8 @@ $explo_indus = $_POST["explo_indus"];
 $ano_publi = $_POST["ano_publi"];
 $pais = $_POST["pais"];
 $ano_edicion = $_POST["ano_edicion"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_patentes /* tabla de destino */
 (

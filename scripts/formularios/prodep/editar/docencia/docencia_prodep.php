@@ -23,7 +23,8 @@ $horas_asesoria_mes = $_POST["horas_docencia_mes_prodep"];
 $horas_semanales_curso = $_POST["horas_docencia_semanal_prodep"];
 $fecha_inicio = $_POST["fecha_inicio_estudios_docencia"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_docencia 

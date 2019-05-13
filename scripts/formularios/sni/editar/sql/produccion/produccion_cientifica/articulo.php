@@ -30,7 +30,8 @@ $idpubmed_art = $_POST["idpubmed_art"];
 $idopen_art = $_POST["idopen_art"];
 $comision_art = $_POST["comision_art"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_prod_articulos SET 

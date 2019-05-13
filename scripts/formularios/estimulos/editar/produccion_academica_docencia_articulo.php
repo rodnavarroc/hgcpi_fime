@@ -16,7 +16,9 @@ $pais = $_POST["pais"];
 $nombre_revista = $_POST["nom_rev"];
 $pag_ini = $_POST["pag_ini"];
 $pag_fin = $_POST["pag_fin"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
+
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_prod_articulos SET issn='$issn',nombre_art='$nombre_art',pais='$pais',nombre_revista='$nombre_revista',pagina_inicial='$pag_ini',pagina_final='$pag_fin' WHERE id='$ident' AND usuario_idusuario='$idusuario'";

@@ -29,7 +29,8 @@ $form_recur = $_POST["form_recur"];
 $ayuda_innova = $_POST["ayuda_innova"];
 $logros = $_POST["logros"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_desarrollo_software SET 

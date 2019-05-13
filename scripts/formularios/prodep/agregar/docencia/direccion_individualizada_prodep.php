@@ -19,7 +19,8 @@ $ies_realiza_gestion = $_POST["dependencia_docencia_prodep"];
 $considerar_curriculum = $_POST["curriculum_direccion_prodep"];
 $miembros = $_POST["miembros_direccion_prodep"];
 $lgacs = $_POST["LGAC_direccion_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_direccion_individualizada /* tabla de destino */
 (titulo_proyecto_dirigido,estado_de_direccion,fecha_de_inicio,fecha_de_fin,grado_academico,numero_estudiantes,ies_realiza_gestion,considerar_curriculum,miembros,lgacs,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

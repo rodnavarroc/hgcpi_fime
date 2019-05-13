@@ -14,7 +14,8 @@ $nivel = $_POST["nivel_externo_promep_prodep"];
 $fecha_inicio = $_POST["fecha_inicio_externo_promep_prodep"];
 $fecha_fin = $_POST["fecha_fin_externo_promep_prodep"];
 $monto = $_POST["monto_externo_promep_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_beneficios_externos_promep /* tabla de destino */
 (tipo_apoyo,nivel,fecha_inicio,fecha_fin,monto,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

@@ -12,7 +12,8 @@ if (mysqli_connect_errno()) {
 $linea = $_POST["linea_lgac"];
 $actividades_que_realiza = $_POST["actividades_lgac"];
 $horas_semana_dedicadas = $_POST["horas_semana_lgac"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_lgac /* tabla de destino */
 (linea,actividades_que_realiza,horas_semana_dedicadas,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

@@ -36,7 +36,8 @@ $volumen_anual = $_POST["volumen_anual"];
 $empleados_directos_anual = $_POST["empleados_directos_anual"];
 $empleados_indirectos_anual = $_POST["empleados_indirectos_anual"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_innovacion SET 

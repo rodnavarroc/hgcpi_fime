@@ -10,6 +10,22 @@ if (mysqli_connect_errno()) {
 
 $conexion=mysqli_connect('localhost','root','','hgcpi');
 
+  /*scripts de sesion*/
+
+  session_start();
+
+  if(!isset($_SESSION['usuario'])) { header("Location: index.php"); }
+  
+  $usuario = $_SESSION['usuario'];
+
+  $sql="SELECT * FROM usuario WHERE idusuario='$usuario'";
+  $result=mysqli_query($conexion,$sql);
+  $mostrar=mysqli_fetch_array($result);
+
+  if($mostrar['tipo_usuario'] != "admin") { echo 'Error. Usted no es administrador de la plataforma. <a href="index.php">Regresar.</a>'; exit; }
+
+  /*scripts de sesion*/
+
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +60,7 @@ $conexion=mysqli_connect('localhost','root','','hgcpi');
                       <a class="nav-link" href="perfil.php">Datos Personales</a>
                       </li>
                     </ul>
-                      <span class="navbar-text"><a class="nav-link" href="#">Dra. Mayra Deyanira Flores Guerrero</a></span>
+                      <span class="navbar-text"><a class="nav-link" href="perfil.php"><?php echo $mostrar['nombre']." ".$mostrar['ap_paterno']." ".$mostrar['ap_materno']; ?></a></span>
                   </div>
             </nav>
     </header>
@@ -148,41 +164,85 @@ $conexion=mysqli_connect('localhost','root','','hgcpi');
           </table>
           <br><br>
 
-          <h5><center>Usuarios registrados</center></h5><hr><br>
-          
-          <table class="table table-secondary">
-          <thead>
-              <tr>
-                  <th><center>Nombre</center></th>
-                  <th><center>Número de empleado</center></th>
-              </tr>
-          </thead>
-          <?php 
-              $sql="SELECT * FROM usuario";
-              $result=mysqli_query($conexion,$sql);
-              while($mostrar=mysqli_fetch_array($result)){
-               ?>
-              <tr>
-                <td><center><?php 
+          <div class="container">
+            <div class="row">
+            <div class="col">
+              <h5><center>Usuarios registrados</center></h5><hr><br>
+              
+              <table class="table table-secondary">
+              <thead>
+                  <tr>
+                      <th><center>Nombre</center></th>
+                      <th><center>Número de empleado</center></th>
+                  </tr>
+              </thead>
+              <?php 
+                  $sql="SELECT * FROM usuario";
+                  $result=mysqli_query($conexion,$sql);
+                  while($mostrar=mysqli_fetch_array($result)){
+                   ?>
+                  <tr>
+                    <td><center><?php 
 
-                if(isset($mostrar['nombre']))
-                {
-                  echo $mostrar['nombre'];
-                  echo " ";
-                  echo $mostrar['ap_paterno'];
-                } 
-                else
-                {
-                  echo '<font style="color: slategray;">Indefinido</font>';
+                    if(isset($mostrar['nombre']))
+                    {
+                      echo $mostrar['nombre'];
+                      echo " ";
+                      echo $mostrar['ap_paterno'];
+                    } 
+                    else
+                    {
+                      echo '<font style="color: slategray;">Indefinido</font>';
+                    }
+                    ?></center></td>
+
+                    <td><center><?php echo $mostrar['idusuario'] ?></center></td>
+                  </tr>
+                <?php
                 }
-                ?></center></td>
+              ?>
+            </table>
+          </div>
 
-                <td><center><?php echo $mostrar['idusuario'] ?></center></td>
-              </tr>
-            <?php
-            }
-          ?>
-        </table>
+          <div class="col">
+
+          <h5><center>Administradores Registrados</center></h5><hr><br>
+            <table class="table table-danger">
+              <thead>
+                  <tr>
+                      <th><center>Nombre</center></th>
+                      <th><center>Número de empleado</center></th>
+                  </tr>
+              </thead>
+              <?php 
+                  $sql="SELECT * FROM usuario WHERE tipo_usuario = 'admin'";
+                  $result=mysqli_query($conexion,$sql);
+                  while($mostrar=mysqli_fetch_array($result)){
+                   ?>
+                  <tr>
+                    <td><center><?php 
+
+                    if(isset($mostrar['nombre']))
+                    {
+                      echo $mostrar['nombre'];
+                      echo " ";
+                      echo $mostrar['ap_paterno'];
+                    } 
+                    else
+                    {
+                      echo '<font style="color: slategray;">Indefinido</font>';
+                    }
+                    ?></center></td>
+
+                    <td><center><?php echo $mostrar['idusuario'] ?></center></td>
+                  </tr>
+                <?php
+                }
+              ?>
+            </table>
+          </div>
+        </div>
+      </div>
          
           </div>
           <br><br>

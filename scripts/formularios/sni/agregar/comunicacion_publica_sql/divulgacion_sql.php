@@ -33,7 +33,8 @@ $sec_ocde = $_POST["sec_ocde"];
 $div_ocde = $_POST["div_ocde"];
 $grupo_ocde = $_POST["grupo_ocde"];
 $clase_ocde = $_POST["clase_ocde"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_divulgacion /* tabla de destino */
 (divulgacion_titulo,tipo_participacion,tipo_evento,institucion_organizadora,dirigido_a,fecha,pais,tipo_de_medio,palabras_clave,notas_periodisticas,producto_obtenido,area_conocimiento_divulgacion,campo_divulgacion,disciplina_divulgacion,subdisciplina_divulgacion,sector_industrial_scian,subrama_scian,subsector_scian,rama_scian,clase_scian,sector_industrial_ocde,division_ocde,grupo_ocde,clase_ocde,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

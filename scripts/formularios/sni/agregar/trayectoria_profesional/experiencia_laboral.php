@@ -18,7 +18,8 @@ $area = $_POST["area"];
 $campo = $_POST["campo"];
 $disciplina = $_POST["disciplina"];
 $subdisciplina = $_POST["subdisciplina"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_experiencia_laboral /* tabla de destino */
 (

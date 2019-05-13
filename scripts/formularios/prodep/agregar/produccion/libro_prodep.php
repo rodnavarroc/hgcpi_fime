@@ -24,7 +24,8 @@ $considerar_curriculum = $_POST["cuerpo_libro_prodep"];
 $autores = $_POST["autores_libro_prodep"];
 $miembros = $_POST["miembros_libros_prodep"];
 $lgacs = $_POST["LGAC_libros_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_produccion_libros /* tabla de destino */
 (proposito,isbn,titulo,tipo_participacion,estado_actual,pais,ano_publicacion,editorial,edicion,total_ejemplares,considerar_curriculum,miembros,autores,lgacs,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

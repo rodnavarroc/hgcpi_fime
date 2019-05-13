@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
 /* comprobar la conexión */
@@ -19,7 +19,7 @@ $estado = $_POST["estado_direccion"];
 $cv = $_POST["considera_cv_ca"];
 $nivel = $_POST["nivel_acad"];
 $grado = $_POST["grado_acad"];
-$idusuario = "1815906";
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_direccion_individualizada /* tabla de destino */
 (tipo_de_direccion,titulo_proyecto_dirigido,estado_de_direccion,fecha_de_inicio,fecha_de_fin,nivel_academico,considera_cv_ca,numero_estudiantes,ies_realiza_gestion,grado_academico,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

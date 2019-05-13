@@ -21,7 +21,8 @@ $fecha_inicio = $_POST["inicio_contrato"];
 $fecha_fin = $_POST["fin_contrato"];
 $cronologia = $_POST["cronologia"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_experiencia_laboral 

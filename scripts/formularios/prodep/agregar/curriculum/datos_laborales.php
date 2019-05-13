@@ -18,7 +18,8 @@ $asociado_a = $_POST["asociado"];
 $fecha_inicio = $_POST["inicio_contrato"];
 $fecha_fin = $_POST["fin_contrato"];
 $cronologia = $_POST["cronologia"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_experiencia_laboral /* tabla de destino */
 (empleo_actual,institucion,dependencia,unidad_academica,tipo_nombramiento,asociado_a,fecha_inicio,fecha_fin,cronologia,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

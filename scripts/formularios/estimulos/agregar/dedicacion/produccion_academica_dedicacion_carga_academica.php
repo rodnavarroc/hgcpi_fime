@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
 /* comprobar la conexión */
@@ -17,7 +17,7 @@ $numgrupos = $_POST["num_grupos"];
 $horas_semana = $_POST["horas_semana"];
 $fecha_inicio = $_POST["fecha_inicio"];
 $fecha_fin = $_POST["fecha_fin"];
-$idusuario = "1815906";
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_carga_academica /* tabla de destino */
 (dependencia,nivel,grado,materia,num_grupos,num_horas_semana,fecha_inicio,fecha_fin,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

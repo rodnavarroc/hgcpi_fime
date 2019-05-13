@@ -19,7 +19,8 @@ $numero_estudiantes = $_POST["no_alumno_tutoria_grupal_prodep"];
 $fecha_de_inicio = $_POST["fecha_ini_tutoria_grupal"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_tutoria 

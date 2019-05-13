@@ -20,7 +20,8 @@ $area_evaluaciones_conacyt = $_POST["area_evaluaciones_conacyt"];
 $campo_evaluaciones_conacyt = $_POST["campo_evaluaciones_conacyt"];
 $disciplina_evaluaciones_conacyt = $_POST["disciplina_evaluaciones_conacyt"];
 $subdisciplina_evaluaciones_conacyt = $_POST["subdisciplina_evaluaciones_conacyt"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_evaluaciones_conacyt SET nombre_del_fondo='$nom_fondo',fecha_asignacion='$fecha_asignacion',fecha_aceptacion='$fecha_aceptacion',fecha_evaluacion='$fecha_evaluacion',dictamen='$dictamen_conacyt',descripcion='$descripcion_conacyt',area_conocimiento_ev='$area_evaluaciones_conacyt',campo_ev='$campo_evaluaciones_conacyt',disciplina_ev='$disciplina_evaluaciones_conacyt',subdisciplina_ev='$subdisciplina_evaluaciones_conacyt' WHERE id='$ident' AND usuario_idusuario='$idusuario'";

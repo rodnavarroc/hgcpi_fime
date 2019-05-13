@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
 /* comprobar la conexión */
@@ -11,7 +11,7 @@ if (mysqli_connect_errno()) {
 /* RECIBIR LAS VARIABLES DESDE EL FORMULARIO */ 
 $titulo = $_POST["titulo_libro"];
 $tipo_participacion = $_POST["tipo_autor"];
-$idusuario = "1815906";
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_produccion_libros /* tabla de destino */
 (titulo,tipo_participacion,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

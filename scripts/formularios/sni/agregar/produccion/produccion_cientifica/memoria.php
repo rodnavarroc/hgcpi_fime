@@ -25,7 +25,8 @@ $idthomson_mem = $_POST["idthomson_mem"];
 $idarxiv_mem = $_POST["idarxiv_mem"];
 $idpubmed_mem = $_POST["idpubmed_mem"];
 $idopen_mem = $_POST["idopen_mem"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_memorias /* tabla de destino */
 (

@@ -1,8 +1,22 @@
 <?php
 
+  /*scripts de sesion*/
+
+  session_start();
+
+  if(!isset($_SESSION['usuario'])) { header("Location: index.php"); }
+  
+  $usuario = $_SESSION['usuario'];
+
+  $sql="SELECT * FROM usuario WHERE idusuario='$usuario'";
+  $result=mysqli_query($conexion,$sql);
+  $mostrar=mysqli_fetch_array($result);
+
+  /*scripts de sesion*/
+
 if(!isset($_GET["user"]))
 {
-    echo 'Error. Debe <a href="index.php">iniciar sesión</a> primero.'; exit;
+    header("Location: ../index.php");
 }
 else
 {

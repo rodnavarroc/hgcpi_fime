@@ -14,7 +14,8 @@ $nom_fondo = $_POST["nom_fondo"];
 $insti_otorgo = $_POST["insti_otorgo"];
 $ano_no_distinciones = $_POST["ano_no_distinciones"];
 $pais_no_distinciones = $_POST["pais_no_distinciones"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_distinciones_no_conacyt SET nombre_dist='$nom_fondo',institucion_otorga='$insti_otorgo',ano='$ano_no_distinciones',pais='$pais_no_distinciones' WHERE id='$ident' AND usuario_idusuario='$idusuario'";

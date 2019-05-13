@@ -17,7 +17,8 @@ $actividades_que_realiza = $_POST["actividades_lgac"];
 $horas_semana_dedicadas = $_POST["horas_semana_lgac"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_lgac 

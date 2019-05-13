@@ -21,7 +21,8 @@ $pais_inst_prem_dist = $_POST["pais_inst_prem_dist"];
 $fecha = $_POST["fecha"];
 $ano_prem_dist = $_POST["ano_prem_dist"];
 $monto_mensual = $_POST["monto_mensual"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_premios_y_distinciones /* tabla de destino */
 (tipo_distincion,nivel,nombre_distincion,institucion_que_otorga,tipo_institucion,institucion_publica_privada,motivo,institucion_otorgante_no_considerada,pais_institucion,fecha,ano,monto_mensual,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

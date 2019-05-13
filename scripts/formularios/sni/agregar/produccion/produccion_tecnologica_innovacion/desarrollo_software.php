@@ -25,7 +25,8 @@ $gen_valor = $_POST["gen_valor"];
 $form_recur = $_POST["form_recur"];
 $ayuda_innova = $_POST["ayuda_innova"];
 $logros = $_POST["logros"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_desarrollo_software /* tabla de destino */
 (

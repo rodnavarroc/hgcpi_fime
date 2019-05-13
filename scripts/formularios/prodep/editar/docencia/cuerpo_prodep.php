@@ -17,7 +17,8 @@ $nombre_cuerpo_academico = $_POST["nombre_cuerpo_prodep"];
 $grado_consolacion = $_POST["grado_cuerpo_prodep"];
 $linea_cultiva_cuerpo_academico = $_POST["linea_cuerpo_prodep"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_cuerpo_academico 

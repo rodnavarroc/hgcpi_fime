@@ -30,7 +30,8 @@ $nom_curso_asig = $_POST["nom_curso_asig"];
 $ano_diplo = $_POST["ano_diplo"];
 $horas_tot_diplomado = $_POST["horas_tot_diplomado"];
 $area_diplo = $_POST["area_diplo"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_tesis_diplomados /* tabla de destino */
 (institucion,tipo_institucion,institucion_publica_privada,pais_institucion,clasificacion_institucion,programa_pnpc,titulo_tesis,estado_tesis,fecha_aprobacion_tesis,fecha_obtencion_grado,area_conocimiento_tesis,campo_conocimiento_tesis,disciplina_conocimiento_tesis,subdisciplina_conocimiento_tesis,pais_tesis,grado_academico_tesis,nombre_diplomado,nombre_curso_asignatura,ano_diplomado,horas_diplomado,area_conocimiento_diplomado,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

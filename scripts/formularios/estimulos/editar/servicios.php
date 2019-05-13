@@ -15,7 +15,8 @@ $fecha = $_POST["fecha_servicio"];
 $insti = $_POST["institucion_solicitante"];
 $tipo_servicio = $_POST["tipo_servicio"];
 $tipo_prestado = $_POST["servicio_prestado"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_servicios_prestados 

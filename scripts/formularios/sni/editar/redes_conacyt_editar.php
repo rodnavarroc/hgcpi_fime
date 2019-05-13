@@ -12,7 +12,8 @@ if (mysqli_connect_errno()) {
 $ident = $_GET['ident'];
 $red_conacyt = $_POST["red_conacyt"];
 $fecha_ingreso = $_POST["fecha_ingreso"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_redes_tematicas_conacyt SET red_tematica_conacyt='$red_conacyt',fecha_ingreso='$fecha_ingreso' WHERE id='$ident' AND usuario_idusuario='$idusuario'";

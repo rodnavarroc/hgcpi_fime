@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
 /* comprobar la conexión */
@@ -13,7 +13,7 @@ $fecha = $_POST["fecha_servicio"];
 $insti = $_POST["institucion_solicitante"];
 $tipo_servicio = $_POST["tipo_servicio"];
 $tipo_prestado = $_POST["servicio_prestado"];
-$idusuario = "1815906";
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_servicios_prestados /* tabla de destino */
 (tipo_servicio,servicio_prestado,institucion_solicitante,fecha_servicio,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

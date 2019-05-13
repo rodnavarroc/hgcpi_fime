@@ -13,7 +13,8 @@ $cuerpo_academico_clave = $_POST["clave_cuerpo_prodep"];
 $nombre_cuerpo_academico = $_POST["nombre_cuerpo_prodep"];
 $grado_consolacion = $_POST["grado_cuerpo_prodep"];
 $linea_cultiva_cuerpo_academico = $_POST["linea_cuerpo_prodep"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_cuerpo_academico /* tabla de destino */
 (cuerpo_academico_clave,nombre_cuerpo_academico,grado_consolacion,linea_cultiva_cuerpo_academico,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

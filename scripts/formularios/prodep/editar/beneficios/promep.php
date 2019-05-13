@@ -17,7 +17,8 @@ $vigencia = $_POST["vigencia_promep_prodep"];
 $estado = $_POST["estado_promep_prodep"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_beneficios_promep 

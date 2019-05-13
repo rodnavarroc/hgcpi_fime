@@ -19,7 +19,9 @@ $numgrupos = $_POST["num_grupos"];
 $horas_semana = $_POST["horas_semana"];
 $fecha_inicio = $_POST["fecha_inicio"];
 $fecha_fin = $_POST["fecha_fin"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
+
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_carga_academica 

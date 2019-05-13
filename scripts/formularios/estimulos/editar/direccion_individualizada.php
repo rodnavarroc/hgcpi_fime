@@ -20,7 +20,9 @@ $estado = $_POST["estado_direccion"];
 $cv = $_POST["considera_cv_ca"];
 $nivel = $_POST["nivel_acad"];
 $grado = $_POST["grado_acad"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
+
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_direccion_individualizada 

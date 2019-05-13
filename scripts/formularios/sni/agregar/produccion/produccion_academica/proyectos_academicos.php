@@ -18,7 +18,8 @@ $area_proy = $_POST["area_proy"];
 $campo_proy = $_POST["campo_proy"];
 $disciplina_proy = $_POST["disciplina_proy"];
 $subdisciplina_proy = $_POST["subdisciplina_proy"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_prod_proyectos_academicos /* tabla de destino */
 (

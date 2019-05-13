@@ -27,7 +27,8 @@ $autores = $_POST["autores_articulo_prodep"];
 $lgacs = $_POST["LGAC_articulos_prodep"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_prod_articulos 

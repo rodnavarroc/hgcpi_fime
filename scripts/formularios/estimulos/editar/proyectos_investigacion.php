@@ -19,7 +19,8 @@ $tipo = $_POST["tipo_proyecto"];
 $nombre = $_POST["nombre_patrocinador"];
 $investigadores = $_POST["investigadores_participantes"];
 $patro = $_POST["tipo_patrocinador"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_proyectos_investigacion 

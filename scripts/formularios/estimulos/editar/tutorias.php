@@ -18,7 +18,8 @@ $tipo_tutoria = $_POST["tipo_tutoria"];
 $programa_edu = $_POST["pe_que_participa"];
 $fecha_inicio = $_POST["fecha_inicio"];
 $fecha_fin = $_POST["fecha_fin"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_tutoria 

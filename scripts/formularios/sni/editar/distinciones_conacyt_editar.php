@@ -12,7 +12,8 @@ if (mysqli_connect_errno()) {
 $ident = $_GET['ident'];
 $nom_fondo = $_POST["nom_fondo"];
 $ano_distinciones = $_POST["ano_distinciones"]; 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_distinciones_conacyt SET nombre_dist='$nom_fondo',ano='$ano_distinciones' WHERE id='$ident' AND usuario_idusuario='$idusuario'";

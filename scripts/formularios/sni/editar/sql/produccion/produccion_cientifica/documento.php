@@ -28,7 +28,8 @@ $idthomson_doc = $_POST["idthomson_doc"];
 $idarxiv_doc = $_POST["idarxiv_doc"];
 $idpubmed_doc = $_POST["idpubmed_doc"];
 $idopen_doc = $_POST["idopen_doc"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_documentos_de_trabajo SET 

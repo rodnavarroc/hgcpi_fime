@@ -30,7 +30,8 @@ $idthomson_cap = $_POST["idthomson_cap"];
 $idarxiv_cap = $_POST["idarxiv_cap"];
 $idpubmed_cap = $_POST["idpubmed_cap"];
 $idopen_cap = $_POST["idopen_cap"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
 $sql="UPDATE detalle_usuario_produccion_capitulos SET 

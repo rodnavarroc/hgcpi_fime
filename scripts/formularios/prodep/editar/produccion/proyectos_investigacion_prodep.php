@@ -23,7 +23,8 @@ $fecha_fin = $_POST["fecha_fin"];
 $tipo_patrocinador = $_POST["tipo_patrocinador_proyecto_investigacion_prodep"];
 $investigadores_participantes = $_POST["investigadores_proyecto_investigacion_prodep"];
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_proyectos_investigacion 

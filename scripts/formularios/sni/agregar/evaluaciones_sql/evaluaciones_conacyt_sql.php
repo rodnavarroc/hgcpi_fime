@@ -19,7 +19,8 @@ $area_evaluaciones_conacyt = $_POST["area_evaluaciones_conacyt"];
 $campo_evaluaciones_conacyt = $_POST["campo_evaluaciones_conacyt"];
 $disciplina_evaluaciones_conacyt = $_POST["disciplina_evaluaciones_conacyt"];
 $subdisciplina_evaluaciones_conacyt = $_POST["subdisciplina_evaluaciones_conacyt"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_evaluaciones_conacyt /* tabla de destino */
 (nombre_del_fondo,fecha_asignacion,fecha_aceptacion,fecha_evaluacion,dictamen,descripcion,area_conocimiento_ev,campo_ev,disciplina_ev,subdisciplina_ev,usuario_idusuario) /* campos de destino, en el MISMO ORDEN que aparecen en la base de datos */

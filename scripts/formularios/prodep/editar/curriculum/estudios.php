@@ -21,7 +21,8 @@ $pais_institucion = $_POST["pais_estudios"];
 $disciplina = $_POST["area"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_grados_acad 

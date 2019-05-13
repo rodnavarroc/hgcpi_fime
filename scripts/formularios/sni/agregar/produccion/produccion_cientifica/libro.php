@@ -30,7 +30,8 @@ $idthomson_lib = $_POST["idthomson_lib"];
 $idarxiv_lib = $_POST["idarxiv_lib"];
 $idpubmed_lib = $_POST["idpubmed_lib"];
 $idopen_lib = $_POST["idopen_lib"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_produccion_libros /* tabla de destino */
 (

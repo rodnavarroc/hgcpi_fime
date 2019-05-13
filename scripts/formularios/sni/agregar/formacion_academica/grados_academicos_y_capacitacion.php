@@ -26,7 +26,8 @@ $ano_for = $_POST["ano_for"];
 $inst_form_conti = $_POST["inst_form_conti"];
 $horas_tot = $_POST["horas_tot"];
 $area_conti = $_POST["area_conti"];
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 $consulta = "INSERT INTO detalle_usuario_grados_acad /* tabla de destino */
 (

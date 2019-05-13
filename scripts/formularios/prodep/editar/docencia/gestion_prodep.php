@@ -25,7 +25,8 @@ $horas_dedicadas_semana = $_POST["horas_semana_gestion_prodep"];
 $estado_gestion = $_POST["estado_gestion_prodep"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_gestion_academica 

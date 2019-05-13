@@ -28,7 +28,8 @@ $autores = $_POST["autores_libro_prodep"];
 $lgacs = $_POST["LGAC_libros_prodep"];
 
 
-$idusuario = "1815906";
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 
 $sql="UPDATE detalle_usuario_produccion_libros 
