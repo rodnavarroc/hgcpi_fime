@@ -109,7 +109,7 @@
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">Estímulos UANL</a></td>
                 <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b> | <i>Cierra: <?php echo $mostrar['fecha_cierre']?></a></td>
                 <td class="bg-success"><a href="estimulos.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
-                <td class="bg-secondary"><a href="" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
+                <td class="bg-secondary"><a href="pdfs_estimulos.php" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
             </tbody>
           </table><br>
@@ -143,7 +143,7 @@
             <table class="table">
           <tbody>
             <?php 
-            $sql="SELECT * FROM usuario WHERE idusuario='1815906'";
+            $sql="SELECT * FROM usuario WHERE idusuario='$usuario'";
             $result=mysqli_query($conexion,$sql);
             $contador = 0;
             while($mostrar=mysqli_fetch_array($result)){
@@ -176,7 +176,7 @@
             <table class="table">
           <tbody class="">
             <?php 
-            $sql="SELECT * FROM usuario WHERE idusuario='1815906'";
+            $sql="SELECT * FROM usuario WHERE idusuario='$usuario'";
             $result=mysqli_query($conexion,$sql);
             $contador = 0;
             while($mostrar=mysqli_fetch_array($result)){

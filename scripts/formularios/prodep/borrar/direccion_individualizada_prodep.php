@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
 }
 /* RECIBIR LAS VARIABLES DESDE EL FORMULARIO */ 
 $id = $_POST['id'];
-$consulta = "DELETE FROM detalle_usuario_prod_articulos WHERE id='$id'"; //borrar el registro en la tabla
+$consulta = "DELETE FROM detalle_usuario_direccion_individualizada WHERE id='$id'"; //borrar el registro en la tabla
 if ($resultado = $mysqli->query($consulta)) { //borrado exitoso
 }
 else

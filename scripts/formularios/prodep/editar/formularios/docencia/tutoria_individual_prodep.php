@@ -7,15 +7,17 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_tutoria WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_tutoria WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
 
     <div class="modal-header">
-    <h4 class="modal-title">Tutoria individual</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -24,10 +26,7 @@ $mostrar=mysqli_fetch_array($result);
     <form enctype="multipart/form-data" action="scripts/formularios/prodep/editar/docencia/tutoria_individual_prodep.php?ident=<?php echo($ident)?>" method="POST">
                                                                       
                                                                         
-   <div class="form-group">
-   <label for="descripcion" required>(Mayúsculas) <br>Alumno:</label>
-   <input type="text" class="form-control inst_certi" value="PENDIENTE"  name="alumno_tutoria_individual_prodep" placeholder="" required>
-   </div>
+   
 
 <div class="form-group">
     
@@ -36,7 +35,7 @@ $mostrar=mysqli_fetch_array($result);
    </div>                                                               
 
  <div class="form-group">
-   <label for="descripcion" required>(Mayúsculas) <br> Programa educativo:</label>
+   <label for="descripcion" required>Programa educativo:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['programa_educativo']?>"  name="programa_educativo" placeholder="" required>
    </div>
 
@@ -56,7 +55,7 @@ $mostrar=mysqli_fetch_array($result);
 </div>                                                                
 
 <div class="form-group">
-   <label for="descripcion"> (Puede ir vacio) <br> Tipo de tutelaje: </label>
+   <label for="descripcion">Tipo de tutelaje: <em>(El campo puede quedarse vacío)</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['tipo_de_tutelaje']?>"  name="tipo_tutelaje" placeholder="">
    </div>
 
@@ -66,7 +65,7 @@ $mostrar=mysqli_fetch_array($result);
    </div>                                                     
 
                                                                     <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Actualizar"></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
 <br>
 </form>
 </div>

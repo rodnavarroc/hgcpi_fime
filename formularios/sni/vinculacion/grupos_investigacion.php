@@ -83,7 +83,7 @@
                                                                             <label for="subdisciplina_grupo" required>Subdisciplina:</label>
                                                                             <input type="text" class="form-control subdisciplina_grupo" name="subdisciplina_grupo" placeholder="" required>
                                                                     </div>
-
+<!--
                                                                     <hr>
                                                                     INVESTIGADORES PARTICIPANTES <br>
                                                                     <em>(Los siguientes datos van en mayúsculas y si existe más de uno separarlos con una coma ",").</em>
@@ -202,7 +202,7 @@
                                                                           <label for="correo" required>Correo:</label>
                                                                           <input type="text" class="form-control correo" name="correo" placeholder="" required>
                                                                     </div>
-
+-->
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>
                                                                         <br>

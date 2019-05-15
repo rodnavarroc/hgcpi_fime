@@ -480,7 +480,7 @@
                                                                 <th>Nombre del artículo</th>
                                                                 <th></th>
                                                                 <th></th>
-                                                                <th><i><center>Colaboradores</center></i></th>
+                                                                <!--<th><i><center>Colaboradores</center></i></th>-->
                                                             </tr>
                                                         </thead>
                                                             <?php 
@@ -495,7 +495,7 @@
                                                                 <!-- BOTONES EDITAR Y BORRAR -->
                                                                 <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario31" onclick="editarRegistroArticulo(<?php echo $mostrar['id']?>)">Editar</button></center></td>
                                                                 <td><center><button class="btn btn-danger" onclick="borrarRegistroProdArticulo(<?php echo $mostrar['id']?>)">Eliminar</button></center></td>
-                                                                <td><center><button class="btn btn-secondary" data-toggle="modal" data-target="#ventanaFormulario31" onclick="validarColabProdArt()">Agregar/Ver</button></center></td>
+                                                                <!--<td><center><button class="btn btn-secondary" data-toggle="modal" data-target="#ventanaFormulario31" onclick="validarColabProdArt()">Agregar/Ver</button></center></td>-->
                                                               </tr>
                                                             <?php
                                                             }
@@ -543,7 +543,7 @@
                                                                 <th>ISBN</th>
                                                                 <th>Título del libro</th>
                                                                 <th>Año de edición</th>
-                                                                <th>Título del capitulo</th>
+                                                                <th>Título del capítulo</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -602,7 +602,7 @@
                                                     <table class="table table-success m-2">
                                                         <thead>
                                                             <tr>
-                                                                <th>Titulo de la memoria</th>
+                                                                <th>Título de la memoria</th>
                                                                 <th>Título de la obra</th>
                                                                 <th>Título de la publicación</th>
                                                                 <th>Año de publicación</th>
@@ -1667,6 +1667,10 @@
             </div>
           </div>
         </div>
+
+        <br>
+        <center><h6><b>* NOTA: </b>Si encuentra registros con campos vacíos, se puede deber a que ese registro en concreto fue llenado en otra convocatoria y falta llenar unos pocos datos en esta.</h6></center>
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>

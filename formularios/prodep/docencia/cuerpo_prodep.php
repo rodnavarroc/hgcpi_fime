@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Cuerpo Académico</h4>
+    <h4 class="modal-title">Nuevo cuerpo académico</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -25,7 +25,7 @@
    </div>
 
  <div class="form-group">
-   <label for="descripcion" >Lineas que cautiva el cuerpo académico:</label>
+   <label for="descripcion" >Líneas que cautiva el cuerpo académico:</label>
    <input type="text" class="form-control inst_certi" name="linea_cuerpo_prodep" placeholder="">
    </div>
 

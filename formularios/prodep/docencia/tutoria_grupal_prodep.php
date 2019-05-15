@@ -1,5 +1,5 @@
     <div class="modal-header">
-    <h4 class="modal-title">Tutoria grupal</h4>
+    <h4 class="modal-title">Nueva tutoría grupal</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -9,7 +9,7 @@
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required> Numero de alumnos:</label>
+   <label for="descripcion" required> Número de alumnos:</label>
    <input type="text" class="form-control inst_certi" name="no_alumno_tutoria_grupal_prodep" placeholder="" required>
    </div>
 
@@ -20,7 +20,7 @@
    </div>                                                               
 
  <div class="form-group">
-   <label for="descripcion" required>(Mayúsculas) <br> Programa educativo:</label>
+   <label for="descripcion" required>Programa educativo:</label>
    <input type="text" class="form-control inst_certi" name="programa_tutoria_grupal_prodep" placeholder="" required>
    </div>
 

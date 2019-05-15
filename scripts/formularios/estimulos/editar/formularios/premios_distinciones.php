@@ -10,55 +10,57 @@ if (mysqli_connect_errno()) {
 }
 
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_premios_y_distinciones  WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_premios_y_distinciones  WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 
 ?>
 <div class="modal-header">
-                                                                        <h4 class="modal-title">Editar premio o distinción</h4>
+                                                                        <h4 class="modal-title">Editar registro</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_premios_distinciones.php" method="POST">
+                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/editar/premios_distinciones.php?ident=<?php echo($ident)?>" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="tipo_reconocimiento">Tipo de reconocimiento</label>
+                                                                          <label for="tipo_reconocimiento">Tipo de reconocimiento:</label>
                                                                           <select name="tipo_reconocimiento" class="form-control custom-select" required>
                                                                             <option value="<?php echo $mostrar['tipo_distincion']?>">"<?php echo $mostrar['tipo_distincion']?>"</option>
-                                                                            <option>Seleccione...</option>
-                                                                            <option value="">Sistema Nacional de Creadores</option>
-                                                                            <option value="">ESDEPED</option>
-                                                                            <option value="">Programa Repartición CONACYT</option>
-                                                                            <option value="">Cátedras Patrimoniales CONACYT</option>
-                                                                            <option value="">Otro</option>
-                                                                            <option value="">Solicitud PRODEP</option>
-                                                                            <option value="">Sistema Nacional de Investigadores</option>
-                                                                            <option value="">Miembro de la Academia Nacional Acreditada</option>
-                                                                            <option value="">Cuerpo Académico</option>
-                                                                            <option value="">Miembro de la Academia Mexicana de Ciencias</option>
-                                                                            <option value="">CERTIDENMS</option>
+                                                                            
+                                                                            <option value="Sistema Nacional de Creadores">Sistema Nacional de Creadores</option>
+                                                                            <option value="ESDEPED">ESDEPED</option>
+                                                                            <option value="Programa Repartición CONACYT">Programa Repartición CONACYT</option>
+                                                                            <option value="Cátedras Patrimoniales CONACYT">Cátedras Patrimoniales CONACYT</option>
+                                                                            
+                                                                            <option value="Solicitud PRODEP">Solicitud PRODEP</option>
+                                                                            <option value="Sistema Nacional de Investigadores">Sistema Nacional de Investigadores</option>
+                                                                            <option value="Miembro de la Academia Nacional Acreditada">Miembro de la Academia Nacional Acreditada</option>
+                                                                            <option value="Cuerpo Académico">Cuerpo Académico</option>
+                                                                            <option value="Miembro de la Academia Mexicana de Ciencias">Miembro de la Academia Mexicana de Ciencias</option>
+                                                                            <option value="CERTIDENMS">CERTIDENMS</option>
+                                                                            <option value="Otro">Otro</option>
 																		  </select>
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                          <label for="nivel">Nivel</label>
+                                                                          <label for="nivel">Nivel:</label>
                                                                           <select name="nivel" class="form-control custom-select" required>
-                                                                            <option value="<?php echo $mostrar['nivel']?>">"<?php echo $mostrar['nivel']?>"</option>
-                                                                            <option>Seleccione...</option>
-                                                                            <option value="">Sistema Nacional de Creadores</option>
+                                                                            <option value="<?php echo $mostrar['nivel']?>">"<?php echo $mostrar['nivel']?>"</option> 
+                                                                            <option value="Sistema Nacional de Creadores">Sistema Nacional de Creadores</option>
 																		  </select>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                          <label for="ano">Año</label>
+                                                                          <label for="ano">Año:</label>
                                                                           <input type="text" class="form-control" name="ano" required value="<?php echo $mostrar['ano'] ?>">
                                                                         </div>
                                                                          <div class="form-group">
-                                                                          <label for="monto_mensual">Monto mensual</label>
+                                                                          <label for="monto_mensual">Monto mensual:</label>
                                                                           <input type="text" class="form-control" name="monto_mensual" required value="<?php echo $mostrar['monto_mensual'] ?>">
                                                                         </div>
 

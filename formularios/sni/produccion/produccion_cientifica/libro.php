@@ -258,7 +258,7 @@
                                                                              </select>
                                                                      </div>
 
-                                                                     <!--<div class="form-group">
+                                                                     <div class="form-group">
                                                                           <label for="idioma_lib">Idioma:</label>
                                                                           <select name="idioma_lib" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
@@ -272,7 +272,7 @@
                                                                             <option value="Ruso">Ruso</option>
                                                                             <option value="Italiano">Italiano</option>
                                                                            </select>
-                                                                    </div>-->
+                                                                    </div>
 
                                                                     <div class="form-group">
                                                                           <label for="ano_publi_lib">Año de publicación:</label>
@@ -498,7 +498,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

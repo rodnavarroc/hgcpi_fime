@@ -1,5 +1,5 @@
 	<div class="modal-header">
-    <h4 class="modal-title">Docencia</h4>
+    <h4 class="modal-title">Nueva docencia</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -20,12 +20,12 @@
    </div>                                                               
 
  <div class="form-group">
-   <label for="descripcion" required>(Mayúsculas) <br> Dependencia de educación superior</label>
+   <label for="descripcion" required>Dependencia de educación superior:</label>
    <input type="text" class="form-control inst_certi" name="dependencia_docencia_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> (Mayúsculas) <br> Programa educativo </label>
+   <label for="descripcion" required>Programa educativo:</label>
    <input type="text" class="form-control inst_certi" name="programa_educativo_docencia_prodep" placeholder="" required>
    </div>                                                           
 
@@ -54,7 +54,7 @@
    </div>
 
   <div class="form-group">
-   <label for="descripcion" required> Horas de asesoria al mes: </label>
+   <label for="descripcion" required> Horas de asesoría al mes: </label>
    <input type="text" class="form-control inst_certi" name="horas_docencia_mes_prodep"placeholder="" required>
    </div>
 

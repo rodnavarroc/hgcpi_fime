@@ -12,6 +12,7 @@ if (mysqli_connect_errno()) {
 $isbn_lib = $_POST["isbn_lib"];
 $titulo_lib = $_POST["titulo_lib"];
 $pais_lib = $_POST["pais_lib"];
+$idioma_lib = $_POST["idioma_lib"];
 $ano_publi_lib = $_POST["ano_publi_lib"];
 $volumen = $_POST["volumen"];
 $tomo = $_POST["tomo"];
@@ -38,6 +39,7 @@ $consulta = "INSERT INTO detalle_usuario_produccion_libros /* tabla de destino *
     isbn,
     titulo,
     pais,
+    idioma,
     ano_publicacion,
     volumen,
     tomo,
@@ -65,6 +67,7 @@ VALUES
     '$isbn_lib',
     '$titulo_lib',
     '$pais_lib',
+    '$idioma_lib',
     '$ano_publi_lib',
     '$volumen',
     '$tomo',

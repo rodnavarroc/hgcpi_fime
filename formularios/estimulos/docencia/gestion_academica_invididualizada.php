@@ -10,11 +10,11 @@
                                                                           <label for="tipo_gest_aca">Tipo de Gestión Académica:</label>
                                                                           <select id="tipo_gest_aca" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="dimension_social ">Dimensión social</option>
-                                                                            <option value="dimension_politico-institucional">Dimensión político-institucional</option>
-                                                                            <option value="dimension_administrativa">Dimensión administrativa</option>
-                                                                            <option value="dimension_tecnico-pedagogica">Dimensión técnico-pedagógica</option>
-                                                                            <option value="dimension_directiva">Dimensión directiva</option>
+                                                                            <option value="Dimensión social">Dimensión social</option>
+                                                                            <option value="Dimensión político-institucional">Dimensión político-institucional</option>
+                                                                            <option value="Dimensión administrativa">Dimensión administrativa</option>
+                                                                            <option value="Dimensión técnico-pedagógica">Dimensión técnico-pedagógica</option>
+                                                                            <option value="Dimensión directiva">Dimensión directiva</option>
                                                                           </select>
                                                                         </div>
                                                                         <div class="form-group">
@@ -101,7 +101,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

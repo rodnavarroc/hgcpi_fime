@@ -12,6 +12,7 @@ if (mysqli_connect_errno()) {
 $ident = $_GET['ident'];
 $issn = $_POST["issn"];
 $nombre_art = $_POST["titulo_art"];
+$estado_act = $_POST["estado_act"];
 $pais = $_POST["pais"];
 $nombre_revista = $_POST["nom_rev"];
 $pag_ini = $_POST["pag_ini"];
@@ -21,7 +22,7 @@ $idusuario = $_SESSION['usuario'];
 
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="UPDATE detalle_usuario_prod_articulos SET issn='$issn',nombre_art='$nombre_art',pais='$pais',nombre_revista='$nombre_revista',pagina_inicial='$pag_ini',pagina_final='$pag_fin' WHERE id='$ident' AND usuario_idusuario='$idusuario'";
+$sql="UPDATE detalle_usuario_prod_articulos SET issn='$issn',nombre_art='$nombre_art',estado_art='$estado_act',pais='$pais',nombre_revista='$nombre_revista',pagina_inicial='$pag_ini',pagina_final='$pag_fin' WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 
 if($result=mysqli_query($mysqli,$sql))
 {

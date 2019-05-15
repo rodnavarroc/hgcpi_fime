@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Línea de generación y aplicación del conocimiento</h4>
+    <h4 class="modal-title">Nueva línea de generación y aplicación del conocimiento</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -9,13 +9,13 @@
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>Linea:</label>
+   <label for="descripcion" required>Línea:</label>
    <input type="text" class="form-control inst_certi" name="linea_lgac" placeholder="" required>
    </div>
 
 <div class="form-group">
     
-   <label for="descripcion" required>(Separadas por coma) <br> Actividades que realiza: </label>
+   <label for="descripcion" required>Actividades que realiza: <em>(Si existe más de una, separlas por ";")</em></label>
    <input type="text" class="form-control inst_certi" name="actividades_lgac" placeholder="" required>
    </div>                                                               
 

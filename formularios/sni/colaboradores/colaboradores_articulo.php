@@ -1,3 +1,5 @@
+<!-- TODAVIA NO FUNCIONA A 100%-->
+
 <?php 
 
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
@@ -12,7 +14,7 @@ if (mysqli_connect_errno()) {
 $ident = $_GET['ident'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM colaboradores_prod_articulos WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM colaboradores_prod_articulos WHERE id='$ident' AND usuario_idusuario='$usuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 

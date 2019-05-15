@@ -1,5 +1,5 @@
 																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Nueva capacitacion y actualizacion academica</h4>
+                                                                        <h4 class="modal-title">Nueva capacitación y actualización académica</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -10,20 +10,20 @@
                                                                           <label for="tipo_cap">Tipo:</label>
                                                                           <select id="tipo_cap" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="Curso de actualizacion disciplinaria">Curso de actualizacion disciplinaria</option>
-                                                                            <option value="Curso de actualizacion pedagogica">Curso de actualizacion pedagogica</option>
-                                                                            <option value="Diplomado de actualizcion disciplinaria">Diplomado de actualizcion disciplinaria</option>
-                                                                            <option value="Diplomado de actualizcion pedagogica">Diplomado de actualizcion pedagogica</option>
-                                                                            <option value="Diplomado en formacion basica de tutores">Diplomado en formacion basica de tutores</option>
-                                                                            <option value="Diplomado basico en docencia universitaria">Diplomado basico en docencia universitaria</option>
-                                                                            <option value="Curso en area administrativa">Curso en area administrativa</option>
-                                                                            <option value="Diplomado en area administrativa">Diplomado en area administrativa</option>
+                                                                            <option value="Curso de actualización disciplinaria">Curso de actualización disciplinaria</option>
+                                                                            <option value="Curso de actualización pedagógica">Curso de actualización pedagógica</option>
+                                                                            <option value="Diplomado de actualizción disciplinaria">Diplomado de actualizción disciplinaria</option>
+                                                                            <option value="Diplomado de actualización pedagógica">Diplomado de actualización pedagógica</option>
+                                                                            <option value="Diplomado en formación básica de tutores">Diplomado en formación básica de tutores</option>
+                                                                            <option value="Diplomado básico en docencia universitaria">Diplomado básico en docencia universitaria</option>
+                                                                            <option value="Curso en área administrativa">Curso en área administrativa</option>
+                                                                            <option value="Diplomado en área administrativa">Diplomado en área administrativa</option>
 
                                                                            </select>
                                                                         </div>
                                                                         
                                                                           <div class="form-group">
-                                                                          <label for="descripcion" required>Descripcion:</label>
+                                                                          <label for="descripcion" required>Descripción:</label>
                                                                           <input type="text" class="form-control inst_certi" id="descripcion" placeholder="" required>
                                                                         </div>
                                                                         
@@ -44,12 +44,12 @@
                                                                             </div>
                                                                             
                                                                         <div class="form-group">
-                                                                          <label for="nom_inst" required>Nombre de la institucion:</label>
+                                                                          <label for="nom_inst" required>Nombre de la institución:</label>
                                                                           <input type="text" class="form-control num_hrs" id="nom_inst" placeholder="" required>
                                                                         </div>
                                                                         
                                                                         <div class="form-group">
-                                                                          <label for="num_hrs" required>Numero de horas:</label>
+                                                                          <label for="num_hrs" required>Número de horas:</label>
                                                                           <input type="text" class="form-control num_hrs" id="num_hrs" placeholder="" required>
                                                                         </div>
 

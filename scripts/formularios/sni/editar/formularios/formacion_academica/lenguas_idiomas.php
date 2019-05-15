@@ -9,15 +9,17 @@ if (mysqli_connect_errno()) {
 }
 
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_lenguas_e_idiomas WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_lenguas_e_idiomas WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 
 ?>  																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Editar lengua o idioma</h4>
+                                                                        <h4 class="modal-title">Editar registro</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -44,7 +46,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="form-group">
                                                                           <label for="grad_domin">Grado de dominio:</label>
                                                                           <select name="grad_domin" class="form-control custom-select" required>
-                                                                            <option value="<?php echo $mostrar['grado_de_dominio']?>"><?php echo $mostrar['grado_de_dominio']?></option>
+                                                                            <option value="<?php echo $mostrar['grado_de_dominio']?>">"<?php echo $mostrar['grado_de_dominio']?>"</option>
                                                                             <option value="Principiante">Principiante</option>
                                                                             <option value="Intermedio">Intermedio</option>
                                                                             <option value="Avanzado">Avanzado</option>
@@ -54,7 +56,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="form-group">
                                                                           <label for="niv_conf">Nivel conferido:</label>
                                                                           <select name="niv_conf" class="form-control custom-select" required>
-                                                                            <option value="<?php echo $mostrar['nivel_conferido']?>"><?php echo $mostrar['nivel_conferido']?>
+                                                                            <option value="<?php echo $mostrar['nivel_conferido']?>">"<?php echo $mostrar['nivel_conferido']?>"</option>
                                                                             <option value="Principiante">Principiante</option>
                                                                             <option value="Intermedio">Intermedio</option>
                                                                             <option value="Avanzado">Avanzado</option>
@@ -64,7 +66,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="form-group">
                                                                           <label for="niv_lect">Nivel de lectura:</label>
                                                                           <select name="niv_lect" class="form-control custom-select" required>
-                                                                            <option value="<?php echo $mostrar['nivel_lectura']?>"><?php echo $mostrar['nivel_lectura']?>
+                                                                            <option value="<?php echo $mostrar['nivel_lectura']?>">"<?php echo $mostrar['nivel_lectura']?>"</option>
                                                                             <option value="Principiante">Principiante</option>
                                                                             <option value="Intermedio">Intermedio</option>
                                                                             <option value="Avanzado">Avanzado</option>
@@ -77,10 +79,10 @@ $mostrar=mysqli_fetch_array($result);
                                                                         </div>
 
 
-                                                                    <div class="form-group">
+                                                                    <!--<div class="form-group">
                                                                             <label for="doc_prob" required>Documento probatorio:</label>
                                                                             <input type="file" name="adjunto" class="form-control doc_prob" name="doc_prob" placeholder="" accept=".pdf">
-                                                                    </div>
+                                                                    </div>-->
 
                                                                     <div class="form-group">
                                                                           <label for="puntos">Puntos / porcentaje:</label>
@@ -217,7 +219,7 @@ $mostrar=mysqli_fetch_array($result);
 
 
                                                                         <br>
-                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Guardar Cambios"></center>
+                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
                                                                         <br>
                                                                     </form>
                                                                     </div>

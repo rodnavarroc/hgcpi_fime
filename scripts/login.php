@@ -20,7 +20,10 @@ if ($resultado = $mysqli->query($consulta)) {
 $row_cnt = $resultado->num_rows;
 if($row_cnt == 0) {
 
-    echo 'El usuario no existe.'; header('Location: ../index.php'); exit;
+    echo "<script>
+            alert('Cuenta no existente o datos incorrectos.');
+            window.location= '../index.php'
+    </script>";
     $resultado->close();
 }
 }
@@ -34,29 +37,18 @@ $row_cnt = $resultado->num_rows;
 if($row_cnt == 0) {echo '<script type="text/javascript"> alert("Usuario no existe."); </script>';}
  
  while ($fila = $resultado->fetch_row()) {
-        if($fila[0] == 0)
+        if($fila[0] == 0 || $fila[0] == NULL)
         {
+            $_SESSION['usuario'] = $user; 
             header("Location: ../datos_personales.php?user=$user");
         }
         else
         {
-            $consulta = "SELECT tipo_usuario FROM usuario WHERE idusuario='$user' AND clave='$passw'";
-            if ($resultado = $mysqli->query($consulta)) {               
-                
-                $row_cnt = $resultado->num_rows;
-                 while ($fila = $resultado->fetch_row()) {
-                 if($fila[0] == "admin") 
-                 {
-                    $_SESSION['usuario'] = $user; 
-                    header('Location: ../admin.php');
-                 }
-                 else
-                 {
-                    $_SESSION['usuario'] = $user; 
-                    header('Location: ../perfil.php');
-                 }
-                 }
-            }
+                   $_SESSION['usuario'] = $user; 
+                    echo "<script>
+                            alert('Identificado correctamente.');
+                            window.location= '../perfil.php'
+                    </script>";
         }
     }
      $resultado->close();

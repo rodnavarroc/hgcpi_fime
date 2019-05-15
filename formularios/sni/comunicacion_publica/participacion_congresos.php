@@ -293,7 +293,7 @@
                                                                           <label for="palab_clave" required>Palabras clave:</label>
                                                                           <input type="text" class="form-control palab_clave" name="palab_clave" placeholder="" required>
                                                                     </div>
-
+<!--
                                                                     <hr>
                                                                     INVESTIGADORES PARTICIPANTES <br>
                                                                     <em>(Los siguientes datos van en mayúsculas y si existe más de uno separarlos con una coma ",").</em>
@@ -414,7 +414,7 @@
                                                                           <label for="correo" required>Correo:</label>
                                                                           <input type="text" class="form-control correo" name="correo" placeholder="" required>
                                                                     </div>
-
+-->
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>
                                                                         <br>

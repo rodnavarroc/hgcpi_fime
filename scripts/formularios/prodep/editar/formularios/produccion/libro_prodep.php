@@ -6,16 +6,18 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_produccion_libros WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_produccion_libros WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
 
 
  <div class="modal-header">
-    <h4 class="modal-title">Producción de libros.</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -25,7 +27,7 @@ $mostrar=mysqli_fetch_array($result);
                                                              
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>(Separados por punto y coma)<br>Autores:</label>
+   <label for="descripcion" required>Autores: <em>(Si existe más de una, separlos por ";")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['autores']?>" name="autores_libro_prodep" placeholder="" required>
    </div>
 
@@ -46,7 +48,7 @@ $mostrar=mysqli_fetch_array($result);
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> Pais: </label>
+   <label for="descripcion" required> País: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['pais']?>" name="pais_libro_prodep" placeholder="" required>
    </div>          
    
@@ -72,7 +74,7 @@ $mostrar=mysqli_fetch_array($result);
    </div>       
 
     <div class="form-group">
-   <label for="descripcion" required> (9999) <br> Año de publicación: </label>
+   <label for="descripcion" required>Año de publicación: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['ano_publicacion']?>" name="ano_libro_prodep" placeholder="" required>
    </div>       
 
@@ -84,26 +86,26 @@ $mostrar=mysqli_fetch_array($result);
 <div class="form-group">
   <label for="cuerpo_libro_prodep" required>Para considerar en el curriculum de cuerpo académico:</label>
   <select name="cuerpo_libro_prodep" class="form-control custom-select" required>
-  <option value="<?php echo $mostrar['considerar_curriculum']?>"><?php echo $mostrar['considerar_curriculum']?></option>
-  <option value="Si">Si</option>
+  <option value="<?php echo $mostrar['considerar_curriculum']?>">"<?php echo $mostrar['considerar_curriculum']?>"</option>
+  <option value="Sí">Sí</option>
   <option value="No">No</option>
   </select>
 </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (En caso de no haber escribir 0) <br> Miembros: </label>
+   <label for="descripcion" >Miembros: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['miembros']?>" name="miembros_libros_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
-   <label for="descripcion" >  (En caso de no haber escribir 0) <br> LGACs: </label>
+   <label for="descripcion" >LGACs: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['lgacs']?>" name="LGAC_libros_prodep"placeholder="">
    </div>
 
 <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Actualizar"></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
 <br>
 </form>
 </div>

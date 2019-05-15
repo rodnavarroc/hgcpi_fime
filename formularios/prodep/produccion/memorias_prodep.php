@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Producción de memorias en extenso.</h4>
+    <h4 class="modal-title">Nueva memoria en extenso</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -9,7 +9,7 @@
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>(Separados por punto y coma)<br>Autores:</label>
+   <label for="descripcion" required>Autores: <em>(Si existe más de una, separlas por ";")</em></label>
    <input type="text" class="form-control inst_certi" name="autores_memorias_prodep" placeholder="" required>
    </div>
 
@@ -20,13 +20,13 @@
    </div>     
 
 <div class="form-group">
-    <label for="descripcion" > Nombre del congreso donde se presento: </label>
+    <label for="descripcion" > Nombre del congreso donde se presentó: </label>
    <input type="text" class="form-control inst_certi" name="congreso_memorias_prodep" placeholder="" >
    </div>                                                            
 
 
  <div class="form-group">
-   <label for="descripcion" required>Pais:</label>
+   <label for="descripcion" required>País:</label>
    <input type="text" class="form-control inst_certi" name="pais_memorias_prodep" placeholder="" required>
    </div>
 
@@ -36,32 +36,32 @@
    </div>
 
  <div class="form-group">
-   <label for="descripcion" >Ciudad:</label>
+   <label for="descripcion">Ciudad:</label>
    <input type="text" class="form-control inst_certi" name="ciudad_memorias_prodep" placeholder="" >
    </div>
 
 
     <div class="form-group">
-   <label for="descripcion" required> (9999) <br> Año de publicación: </label>
+   <label for="descripcion" required>Año de publicación: </label>
    <input type="text" class="form-control inst_certi" name="año_memorias_prodep" placeholder="" required>
    </div>       
 
    <div class="form-group">
-   <label for="descripcion" > De la pagina: </label>
+   <label for="descripcion" > De la página: </label>
    <input type="text" class="form-control inst_certi" name="de_memorias_prodep" placeholder="" >
    </div>  
 
      <div class="form-group">
-   <label for="descripcion" > A la pagina: </label>
+   <label for="descripcion" > A la página: </label>
    <input type="text" class="form-control inst_certi" name="a_memorias_prodep" placeholder="" >
    </div>  
 
 
-    <div class="form-group">
+   <!-- <div class="form-group">
    <label for="descripcion" > Archivo PDF: </label>
    <form name="PDF_memorias_prodep" method="post" action="http://pagina.com/send.php" enctype="multipart/form-data" rowspan="2">
     <input type="file" name="PDF_adjunto" class="form-control PDF_adjunto_memorias_prodep" name="archivo_memorias_prodep placeholder""  accept=".pdf">
-   </div>  
+   </div> --> 
 
    <div class="form-group">
    <label for="descripcion" required>Estado Actual:</label>
@@ -74,23 +74,23 @@
    </div>
 
 <div class="form-group">
-  <label for="cuerpo_memorias_prodep" required>Para considerar en el curriculum de cuerpo académico:</label>
+  <label for="cuerpo_memorias_prodep" required>Para considerar en el currículum de cuerpo académico:</label>
   <select name="cuerpo_memorias_prodep" class="form-control custom-select" required>
   <option selected value="seleccione">Seleccione...</option>
-  <option value="si">Si</option>
-  <option value="si">No</option>
+  <option value="Sí">Sí</option>
+  <option value="No">No</option>
   </select>
 </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (En caso de no haber escribir 0) <br> Miembros: </label>
+   <label for="descripcion">Miembros: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" name="miembros_memorias_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
-   <label for="descripcion" >  (En caso de no haber escribir 0) <br> LGACs: </label>
+   <label for="descripcion">LGACs: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" name="LGAC_memorias_prodep"placeholder="">
    </div>
 

@@ -79,14 +79,14 @@
                           <div id="subaccordion">
                               <div class="card">
                                   <div class="btn btn-secondary border-light" id="subheader1">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1" aria-expanded="true" aria-controls="subcollapse1">Estudios Realizados</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1" aria-expanded="true" aria-controls="subcollapse1">Estudios realizados</a>
                                   </div>
                                   <div id="subcollapse1" class="collapse" aria-labelledby="subheader1" data-parent="#subaccordion">
                                       <div class="card-body">
                                               <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Estudios Realizados</h4>
+                                                          <h4>Estudios realizados</h4>
                                                       </div>
                                                   </div>
                                               </div>
@@ -109,8 +109,8 @@
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Nivel de Estudios</th>
-                                                      <th>Estudios en:</th>
+                                                      <th>Nivel de estudios</th>
+                                                      <th>Estudios en</th>
                                                       <th>Área -> Disciplina</th>   <!-- Creo que el llenado debe ser Enfoque → Ciencias -->
                                                       <th>Institución otorgante</th>
                                                       <!--Instirución otorgante no considerada en el catálogo-->
@@ -147,14 +147,14 @@
                                   </div>
 
                                   <div class="btn btn-secondary border-light" id="subheader2">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2" aria-expanded="true" aria-controls="subcollapse2">Datos Laborales</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2" aria-expanded="true" aria-controls="subcollapse2">Datos laborales</a>
                                   </div>
                                   <div id="subcollapse2" class="collapse" aria-labelledby="subheader2" data-parent="#subaccordion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Datos Laborales</h4>
+                                                          <h4>Datos laborales</h4>
                                                       </div>
                                                       </div>
                                               </div>
@@ -179,8 +179,8 @@
                                               <thead>
                                                   <tr>
                                                       <th>Dedicación</th>
-                                                      <th>Institución de Educación Superior</th>
-                                                      <th>Dependencia de Educación Superior</th>
+                                                      <th>Institución de educación superior</th>
+                                                      <th>Dependencia de educación superior</th>
                                                       <th>Cronología</th>
                                                       
                                                        <!--Unidad académica
@@ -218,7 +218,7 @@
 
 
                                   <div class="btn btn-secondary border-light" id="subheader3">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse2">Premios y Distinciones</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse2">Premios y distinciones</a>
                                   </div>
                                   <div id="subcollapse3" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion">
                                       <div class="card-body">
@@ -251,8 +251,8 @@
                                                   <tr>
                                                       <th>Nombre</th> 
                                                       <th>Motivo</th>
-                                                      <th>FECHA</th> <!--Formato 31-12-9999 -->
-                                                      <th>Institución Otorgante</th>
+                                                      <th>Fecha</th> <!--Formato 31-12-9999 -->
+                                                      <th>Institución otorgante</th>
                                                       <!--
                                                       Institución Otrogante no considerada en el Catálogo
                                                     -->
@@ -287,12 +287,6 @@
                                       </div>
                                   </div>
 
-
-
-
-                                  
-
-                                  
                               </div>
                           </div>
                       </div>
@@ -380,20 +374,20 @@
                                   
 
                                      <div class="btn btn-secondary border-light" id="subheader_docencia">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_docencia" aria-expanded="true" aria-controls="subcollapse2_docencia">Tutoria</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_docencia" aria-expanded="true" aria-controls="subcollapse2_docencia">Tutoría</a>
                                   </div>
                                  <div id="subcollapse2_docencia" class="collapse" aria-labelledby="subheader2_docencia" data-parent="#subaccordion_docencia">
                                       <div class="card-body">
                                           <div class="form-group">
                                               <div class="row">
                                                   <div class="col-9">
-                                                      <h4>Tutoria</h4>
+                                                      <h4>Tutoría</h4>
                                                   </div>
                                            <div class="col-3">
                                               <h5><right>Tipo de tutoria:</right></h5>
                                               <select name="seleccion_tipo_tutoria" id="tipo_tutoria" class="custom-select">
                                               <option value="seleccion">Seleccione...</option>
-                                              <option value="individual">Tutoria individual</option>
+                                              <option value="individual">Tutoría individual</option>
                                               <option value="grupal">Tutoria grupal</option>
                                               </select>
                                           </div>
@@ -416,11 +410,45 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus tutorias Grupales</h5></center><br>
+                                          
+
+                                          <hr><br><center><h5>Sus tutorías individuales</h5></center><br>
+                                          <table class="table table-success m-2">
+                                              <thead>
+                                                      
+                                                      <th>Nivel</th>
+                                                      <th>Programa educativo</th>
+                                                      <th>Fecha de inicio</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <?php 
+                                                  $sql="SELECT * FROM detalle_usuario_tutoria WHERE usuario_idusuario='$usuario' AND tipo_tutoria='individual'";
+                                                  $result=mysqli_query($conexion,$sql);
+                                                  while($mostrar=mysqli_fetch_array($result)){
+                                                   ?> <!--ies_solicitud,solicitud,vigencia,estado-->
+                                                  <tr>
+                                                    
+                                                    <td><?php echo $mostrar['nivel_academico'] ?></td>
+                                                    <td><?php echo $mostrar['programa_educativo'] ?></td>
+                                                    <td><?php echo $mostrar['fecha_de_inicio'] ?></td>
+                                                
+                                                    <!-- BOTONES EDITAR Y BORRAR -->
+                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario5" onclick="editarIndividual(<?php echo $mostrar['id']?>)">Editar</button></center></td>
+                                                    <td><center><button class="btn btn-danger" onclick="borrarIndividual(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td></td>
+                                                  </tr>
+                                                <?php 
+                                                }
+                                                ?>
+                                              </tbody>
+                                          </table>
+
+                                          <br>
+                                          <hr><br><center><h5>Sus tutorías grupales</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Numero de Alumnos</th>
+                                                      <th>Número de Alumnos</th>
                                                       <th>Nivel</th>
                                                       <th>Programa educativo</th>
                                                       <th>Fecha de inicio</th>
@@ -446,38 +474,6 @@
                                                 }
                                                 ?>
                                                     
-                                              </tbody>
-                                          </table>
-                                          <br>
-
-                                          <hr><br><center><h5>Sus tutorias Individuales</h5></center><br>
-                                          <table class="table table-success m-2">
-                                              <thead>
-                                                      <th>Alumno:</th>
-                                                      <th>Nivel:</th>
-                                                      <th>Programa educativo:</th>
-                                                      <th>Fecha de inicio:</th>
-                                                  </tr>
-                                              </thead>
-                                              <tbody>
-                                                  <?php 
-                                                  $sql="SELECT * FROM detalle_usuario_tutoria WHERE usuario_idusuario='$usuario' AND tipo_tutoria='individual'";
-                                                  $result=mysqli_query($conexion,$sql);
-                                                  while($mostrar=mysqli_fetch_array($result)){
-                                                   ?> <!--ies_solicitud,solicitud,vigencia,estado-->
-                                                  <tr>
-                                                    <td>PENDIENTE</td>
-                                                    <td><?php echo $mostrar['nivel_academico'] ?></td>
-                                                    <td><?php echo $mostrar['programa_educativo'] ?></td>
-                                                    <td><?php echo $mostrar['fecha_de_inicio'] ?></td>
-                                                
-                                                    <!-- BOTONES EDITAR Y BORRAR -->
-                                                    <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario5" onclick="editarIndividual(<?php echo $mostrar['id']?>)">Editar</button></center></td>
-                                                    <td><center><button class="btn btn-danger" onclick="borrarIndividual(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td></td>
-                                                  </tr>
-                                                <?php 
-                                                }
-                                                ?>
                                               </tbody>
                                           </table>
                                           <br><hr><br>
@@ -524,7 +520,7 @@
                                                       <th>Grado Académico</th>
                                                       <th>Fecha inicio</th>
                                                       <th>Fecha fin</th>
-                                                      <th>No. Alumnos</th>
+                                                      
                                                       <!--Estado de la dirección individualizada:
                                                           Para considerar en curriculum de cuerpo academico? Y/N
                                                           Miembros:
@@ -545,7 +541,7 @@
                                                     <td><?php echo $mostrar['grado_academico'] ?></td>
                                                     <td><?php echo $mostrar['fecha_de_inicio'] ?></td>
                                                     <td><?php echo $mostrar['fecha_de_fin'] ?></td>
-                                                    <td><?php echo $mostrar['numero_estudiantes'] ?></td>
+                                                   
                                                  
                                                     <!-- BOTONES EDITAR Y BORRAR -->
                                                     <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaDireccion" onclick="editarDireccion(<?php echo $mostrar['id']?>)">Editar</button></center></td>
@@ -602,7 +598,7 @@
                                                       <th>Cargo dentro de la comisión</th>
                                                       <th>Función</th>
                                                       <th>Órgano colegiado</th>
-                                                      <th>Aprobado</th><!-- (Y/N) -->
+                                                      <th>¿Aprobado?</th><!-- (Y/N) -->
                                                      
                                                       <!--
                                                       Resultados obtenidos (Puede ir vacio)
@@ -677,7 +673,7 @@
                                           <table class="table table-success m-2"
                                               <thead>
                                                   <tr>
-                                                      <th>Linea</th>
+                                                      <th>Línea</th>
                                                       <th>Actividades que realiza</th>
                                                       <th>Horas de la semana dedicades a LGAC</th>
  
@@ -739,14 +735,14 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Cuerpo Académico</h5></center><br>
+                                          <hr><br><center><h5>Cuerpo académico</h5></center><br>
                                           <table class="table table-success m-2"
                                               <thead>
                                                   <tr>
-                                                      <th>Nombre del Cuerpo Académico</th>
+                                                      <th>Nombre del cuerpo académico</th>
                                                       <th>Clave</th>
                                                       <th>Grado de consolación</th>
-                                                       <th>Línea(s) que cultiva el cuerpo académico</th> <!-- Como no tuvo entonces se pone la estructura, pero no se llena*
+                                                      <th>Línea(s) que cultiva el cuerpo académico</th> <!-- Como no tuvo entonces se pone la estructura, pero no se llena*
  -->
  
                                                       
@@ -780,14 +776,14 @@
 
 
                             <div class="btn btn-secondary border-light" id="subheader_docencia">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse7_docencia" aria-expanded="true" aria-controls="subcollapse7_docencia">Actualización de Programas Educativos</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse7_docencia" aria-expanded="true" aria-controls="subcollapse7_docencia">Actualización de programas educativos</a>
                                   </div>
                                   <div id="subcollapse7_docencia" class="collapse" aria-labelledby="subheader7_docencia" data-parent="#subaccordion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Programas Educativos Actualizados</h4>
+                                                          <h4>Programas educativos actualizados</h4>
                                                       </div>
                                                       </div>
                                               </div>
@@ -808,13 +804,13 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Programas Educativos Actualizados</h5></center><br>
+                                          <hr><br><center><h5>Programas educativos actualizados</h5></center><br>
                                           <table class="table table-success m-2"
                                               <thead>
                                                   <tr>
-                                                      <th>Programa Educativo</th>
+                                                      <th>Programa educativo</th>
                                                       <th>Fecha</th>
-                                                      <th>Tipo de Actualización</th>
+                                                      <th>Tipo de actualización</th>
                                                    
                                                       
                                                   </tr>
@@ -896,7 +892,7 @@
                                           </div>
 
                                           <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Producción de articulos</h5></center><br>
+                                          <hr><br><center><h5>Producción de artículos</h5></center><br>
                                           <table class="table table-success m-2"
                                               <thead>
                                                   <tr>
@@ -1074,7 +1070,6 @@
                                                       <th>Título</th>                                                      
                                                       <th>Congreso</th>
                                                       <th>Pais</th>
-                                                      <th>PDF</th> <!--AQUI LITERALMENTE TIENE QUE SUBIR EL PDF-->
                                                      
                                                      
                                                       <!--
@@ -1102,7 +1097,6 @@
                                                     <td><?php echo $mostrar['titulo_de_obra'] ?></td>
                                                     <td><?php echo $mostrar['congreso_donde_se_presento'] ?></td>
                                                      <td><?php echo $mostrar['pais'] ?></td>
-                                                    <td>PENDIENTE!!</td>
                                                  
                                                     <!-- BOTONES EDITAR Y BORRAR -->
                                                     <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaMemorias" onclick="editarMemorias(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
@@ -1201,20 +1195,6 @@
                                 </div>
                           </div>
 
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
                       </div>
                   </div>
               </div>
@@ -1233,14 +1213,14 @@
                                   
 
                                   <div class="btn btn-secondary border-light" id="subheader_beneficios">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_beneficios" aria-expanded="true" aria-controls="subcollapse1_beneficios">Promep</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_beneficios" aria-expanded="true" aria-controls="subcollapse1_beneficios">PROMEP</a>
                                   </div>
                                   <div id="subcollapse1_beneficios" class="collapse" aria-labelledby="subheader1_beneficios" data-parent="#subaccordion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Promep</h4>
+                                                          <h4>PROMEP</h4>
                                                       </div>
                                                       </div>
                                               </div>
@@ -1266,7 +1246,7 @@
                                               <thead>
                                                   <tr>
                                                       <th>IES de la solicitud  </th>                                                      
-                                                      <th> Solicitud</th>
+                                                      <th>Solicitud</th>
                                                       <th>Vigencia</th>
                                                       <th>Estado</th>
                                                      
@@ -1310,14 +1290,14 @@
 
 
                                     <div class="btn btn-secondary border-light" id="subheader_beneficios">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_beneficios" aria-expanded="true" aria-controls="subcollapse2_beneficios">Externo a Promep</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_beneficios" aria-expanded="true" aria-controls="subcollapse2_beneficios">Externo a PROMEP</a>
                                   </div>
                                   <div id="subcollapse2_beneficios" class="collapse" aria-labelledby="subheader2_beneficios" data-parent="#subaccordion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Externo a Promep</h4>
+                                                          <h4>Externo a PROMEP</h4>
                                                       </div>
                                                       </div>
                                               </div>
@@ -1352,10 +1332,7 @@
                                                       <th>Fecha inicial</th>
                                                       <th>Fecha final</th>
                                                       <th>Monto</th>
-                                                     
-                                                     
-                                                     
-                                                      
+
                                                   </tr>
                                               </thead>
                                               <tbody>
@@ -1390,6 +1367,9 @@
             </div>
         </div>
 
+            <br>
+            <center><h6><b>* NOTA: </b>Si encuentra registros con campos vacíos, se puede deber a que ese registro en concreto fue llenado en otra convocatoria y falta llenar unos pocos datos en esta.</h6></center>
+
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -1398,7 +1378,7 @@
     <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

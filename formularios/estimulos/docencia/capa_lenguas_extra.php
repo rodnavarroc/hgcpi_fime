@@ -7,7 +7,7 @@
                                                                     <div class="modal-body">
                                                                     <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_capa_lenguas_extra.php" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="idioma">Idioma</label>
+                                                                          <label for="idioma">Idioma:</label>
                                                                           <select name="idioma" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Español">Español</option>
@@ -24,7 +24,7 @@
                                                                         </div>
                                                                         
                                                                           <div class="form-group">
-                                                                          <label for="inst_certi" required>Institución que certifica</label>
+                                                                          <label for="inst_certi" required>Institución que certifica:</label>
                                                                           <input type="text" class="form-control inst_certi" name="inst_certi" placeholder="" required>
                                                                         </div>
 

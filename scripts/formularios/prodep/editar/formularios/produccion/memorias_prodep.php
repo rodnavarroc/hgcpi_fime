@@ -6,15 +6,17 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_memorias WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_memorias WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
 
  <div class="modal-header">
-    <h4 class="modal-title">Producción de memorias en extenso.</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -24,7 +26,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>(Separados por punto y coma)<br>Autores:</label>
+   <label for="descripcion" required>Autores: <em>(Si existe más de una, separlos por ";")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['autores_colaboradores']?>" name="autores_memorias_prodep" placeholder="" required>
    </div>
 
@@ -35,13 +37,13 @@ $mostrar=mysqli_fetch_array($result);
    </div>     
 
 <div class="form-group">
-    <label for="descripcion" > Nombre del congreso donde se presento: </label>
+    <label for="descripcion" > Nombre del congreso donde se presentó: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['congreso_donde_se_presento']?>" name="congreso_memorias_prodep" placeholder="" >
    </div>                                                            
 
 
  <div class="form-group">
-   <label for="descripcion" required>Pais:</label>
+   <label for="descripcion" required>País:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['pais']?>" name="pais_memorias_prodep" placeholder="" required>
    </div>
 
@@ -57,29 +59,29 @@ $mostrar=mysqli_fetch_array($result);
 
 
     <div class="form-group">
-   <label for="descripcion" required> (9999) <br> Año de publicación: </label>
+   <label for="descripcion" required>Año de publicación: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['ano_publicacion']?>" name="año_memorias_prodep" placeholder="" required>
    </div>       
 
    <div class="form-group">
-   <label for="descripcion" > De la pagina: </label>
+   <label for="descripcion" > De la página: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['de_pagina']?>" name="de_memorias_prodep" placeholder="" >
    </div>  
 
      <div class="form-group">
-   <label for="descripcion" > A la pagina: </label>
+   <label for="descripcion" > A la página: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['a_pagina']?>" name="a_memorias_prodep" placeholder="" >
    </div>  
 
 
-    <div class="form-group">
+   <!-- <div class="form-group">
    <label for="descripcion" > Archivo PDF: </label>
    <form name="PDF_memorias_prodep" method="post" action="http://pagina.com/send.php" enctype="multipart/form-data" rowspan="2">
-    <input type="file" name="PDF_adjunto" class="form-control PDF_adjunto_memorias_prodep" name="archivo_memorias_prodep placeholder""  accept=".pdf">
-   </div>  
+    <input type="file" name="PDF_adjunto" class="form-control PDF_adjunto_memorias_prodep" name="archivo_memorias_prodep placeholder"  accept=".pdf">
+   </div>  -->
 
    <div class="form-group">
-   <label for="descripcion" required>Estado Actual:</label>
+   <label for="descripcion" required>Estado actual:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['estado_actual']?>" name="estado_actual_memorias_prodep" placeholder="" required>
    </div>
 
@@ -91,26 +93,26 @@ $mostrar=mysqli_fetch_array($result);
 <div class="form-group">
   <label for="cuerpo_memorias_prodep" required>Para considerar en el curriculum de cuerpo académico:</label>
   <select name="cuerpo_memorias_prodep" class="form-control custom-select" required>
-  <option value="<?php echo $mostrar['considerar_curriculum']?>"><?php echo $mostrar['considerar_curriculum']?></option>
-  <option value="Si">Si</option>
+  <option value="<?php echo $mostrar['considerar_curriculum']?>">"<?php echo $mostrar['considerar_curriculum']?>"</option>
+  <option value="Sí">Sí</option>
   <option value="No">No</option>
   </select>
 </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (En caso de no haber escribir 0) <br> Miembros: </label>
+   <label for="descripcion" >Miembros: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['miembros']?>"  name="miembros_memoriass_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
-   <label for="descripcion" >  (En caso de no haber escribir 0) <br> LGACs: </label>
+   <label for="descripcion" >LGACs: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['lgacs']?>" name="LGAC_memoriass_prodep"placeholder="">
    </div>
 
 <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Actualizar "></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios "></center>
 <br>
 </form>
 </div>

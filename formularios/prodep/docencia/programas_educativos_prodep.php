@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Actualización de programas educativos:</h4>
+    <h4 class="modal-title">Nueva actualización de programas educativos:</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>

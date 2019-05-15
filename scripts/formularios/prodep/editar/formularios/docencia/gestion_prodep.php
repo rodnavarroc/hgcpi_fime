@@ -6,15 +6,17 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_gestion_academica WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_gestion_academica WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
 
  <div class="modal-header">
-    <h4 class="modal-title">Gestion académica</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -24,7 +26,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>Tipo de gestion:</label>
+   <label for="descripcion" required>Tipo de gestión:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['tipo_gestion']?>" name="tipo_gestion_prodep" placeholder="" required>
    </div>
 
@@ -40,30 +42,30 @@ $mostrar=mysqli_fetch_array($result);
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> (Mayúsculas) <br> Órgano colegiado al que fue presentado: </label>
+   <label for="descripcion" required>Órgano colegiado al que fue presentado: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['organo_colegiado']?>" name="organo_gestion_prodep" placeholder="" required>
    </div>                                                           
 
 
 
 <div class="form-group">
-  <label for="aprobado_gestion_prodep" required>Aprobado:</label>
+  <label for="aprobado_gestion_prodep" required>¿Aprobado?:</label>
   <select name="aprobado_gestion_prodep" class="form-control custom-select" required>
-  <option value="<?php echo $mostrar['aprobado']?>"><?php echo $mostrar['aprobado']?></option>
-   <option value="Si">Si</option>
+  <option value="<?php echo $mostrar['aprobado']?>">"<?php echo $mostrar['aprobado']?>"</option>
+   <option value="Sí">Sí</option>
   <option value="No">No</option>
   </select>
 </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (Puede ir vacio) <br> Resultados obtenidos: </label>
+   <label for="descripcion" >Resultados obtenidos: <em>(El campo puede quedarse vacío)</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['resultados_obtenidos']?>" name="resultados_gestion_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (Puede ir vacio) <br> Estado: </label>
+   <label for="descripcion" >Estado: <em>(El campo puede quedarse vacío)</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['estado_gestion']?>" name="estado_gestion_prodep"placeholder="">
    </div>
 <div class="form-group">
@@ -88,12 +90,12 @@ $mostrar=mysqli_fetch_array($result);
 </div>
 
 <div class="form-group">
-   <label for="descripcion" required> Horas dedicadas a la semana a la gestion: </label>
+   <label for="descripcion" required> Horas dedicadas a la semana a la gestión: </label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['horas_dedicadas_semana']?>" name="horas_semana_gestion_prodep"placeholder="" required>
    </div>
 
 <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Actualizar"></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
 <br>
 </form>
 </div>

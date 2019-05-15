@@ -7,36 +7,37 @@
                                                                     <div class="modal-body">
                                                                     <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_premios_distinciones.php" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="tipo_reconocimiento">Tipo de reconocimiento</label>
+                                                                          <label for="tipo_reconocimiento">Tipo de reconocimiento:</label>
                                                                           <select name="tipo_reconocimiento" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="">Sistema Nacional de Creadores</option>
-                                                                            <option value="">ESDEPED</option>
-                                                                            <option value="">Programa Repartición CONACYT</option>
-                                                                            <option value="">Cátedras Patrimoniales CONACYT</option>
-                                                                            <option value="">Otro</option>
-                                                                            <option value="">Solicitud PRODEP</option>
-                                                                            <option value="">Sistema Nacional de Investigadores</option>
-                                                                            <option value="">Miembro de la Academia Nacional Acreditada</option>
-                                                                            <option value="">Cuerpo Académico</option>
-                                                                            <option value="">Miembro de la Academia Mexicana de Ciencias</option>
-                                                                            <option value="">CERTIDENMS</option>
+                                                                            <option value="Sistema Nacional de Creadores">Sistema Nacional de Creadores</option>
+                                                                            <option value="ESDEPED">ESDEPED</option>
+                                                                            <option value="Programa Repartición CONACYT">Programa Repartición CONACYT</option>
+                                                                            <option value="Cátedras Patrimoniales CONACYT">Cátedras Patrimoniales CONACYT</option>
+                                                                            
+                                                                            <option value="Solicitud PRODEP">Solicitud PRODEP</option>
+                                                                            <option value="Sistema Nacional de Investigadores">Sistema Nacional de Investigadores</option>
+                                                                            <option value="Miembro de la Academia Nacional Acreditada">Miembro de la Academia Nacional Acreditada</option>
+                                                                            <option value="Cuerpo Académico">Cuerpo Académico</option>
+                                                                            <option value="Miembro de la Academia Mexicana de Ciencias">Miembro de la Academia Mexicana de Ciencias</option>
+                                                                            <option value="CERTIDENMS">CERTIDENMS</option>
+                                                                            <option value="Otro">Otro</option>
 																		  </select>
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                          <label for="nivel">Nivel</label>
+                                                                          <label for="nivel">Nivel:</label>
                                                                           <select name="nivel" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
-                                                                            <option value="">Sistema Nacional de Creadores</option>
+                                                                            <option value="Sistema Nacional de Creadores">Sistema Nacional de Creadores</option>
 																		  </select>
                                                                         </div>
                                                                         <div class="form-group">
-                                                                          <label for="ano">Año</label>
+                                                                          <label for="ano">Año:</label>
                                                                           <input type="text" class="form-control" name="ano" required>
                                                                         </div>
                                                                          <div class="form-group">
-                                                                          <label for="monto_mensual">Monto mensual</label>
+                                                                          <label for="monto_mensual">Monto mensual:</label>
                                                                           <input type="text" class="form-control" name="monto_mensual" required>
                                                                         </div>
 

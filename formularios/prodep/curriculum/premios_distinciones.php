@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h4 class="modal-title">Premios y distinciones</h4>
+    <h4 class="modal-title">Nuevo premio o distinción</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -9,13 +9,13 @@
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required> Nombre del premio o distinción:</label>
+   <label for="descripcion" required>Nombre del premio o distinción:</label>
    <input type="text" class="form-control inst_certi" name="premio_distincion_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
     
-   <label for="descripcion" required> Motivo: </label>
+   <label for="descripcion" required>Motivo:</label>
    <input type="text" class="form-control inst_certi" name="motivo_premio" placeholder="" required>
    </div>                                                               
 
@@ -27,14 +27,14 @@
 </div>
              
 <div class="form-group">
-   <label for="descripcion" required> Institución otorgante:</label>
+   <label for="descripcion" required>Institución otorgante:</label>
    <input type="text" class="form-control inst_certi" name="institucion_premio" placeholder="" required>
    </div>                                                           
 
 
 <div class="form-group">
-   <label for="descripcion"> (Puede ir vacío.) <br> Institución otorgante no considerada en el catálogo: </label>
-   <input type="text" class="form-control inst_certi" name="institucion_no_catalogo_premio"placeholder="">
+   <label for="descripcion">Institución otorgante no considerada en el catálogo: <em>(El campo puede quedarse vacío)</em></label>
+   <input type="text" class="form-control inst_certi" name="institucion_no_catalogo_premio" placeholder="">
    </div>    
 
    

@@ -117,12 +117,12 @@
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                        <label for="empleados_directos_anual" required>No. De empleados directos anuales:</label>
+                                                                        <label for="empleados_directos_anual" required>Número de empleados directos anuales:</label>
                                                                         <input type="text" class="form-control empleados_directos_anual" name="empleados_directos_anual" placeholder="" required>
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                        <label for="empleados_indirectos_anual" required>No. De empleados indirectos anuales:</label>
+                                                                        <label for="empleados_indirectos_anual" required>Número de empleados indirectos anuales:</label>
                                                                         <input type="text" class="form-control empleados_indirectos_anual" name="empleados_indirectos_anual" placeholder="" required>
                                                                     </div>
 
@@ -134,7 +134,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

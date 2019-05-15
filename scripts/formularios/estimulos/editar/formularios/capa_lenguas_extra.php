@@ -10,16 +10,18 @@ if (mysqli_connect_errno()) {
 }
 
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_lenguas_e_idiomas WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_lenguas_e_idiomas WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 
 ?>
 																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Editar lengua o idioma</h4>
+                                                                        <h4 class="modal-title">Editar registro</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -27,10 +29,10 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="modal-body">
                                                                     <form enctype="multipart/form-data" action="scripts/formularios/estimulos/editar/capa_lenguas_extra.php?ident=<?php echo($ident)?>" method="POST">
                                                                         <div class="form-group">
-                                                                          <label for="idioma">Idioma</label>
+                                                                          <label for="idioma">Idioma:</label>
                                                                           <select name="idioma" class="form-control custom-select" required>
                                                                             <option value="<?php echo $mostrar['idioma']?>">"<?php echo $mostrar['idioma']?>"</option>
-                                                                            <option>Seleccione...</option>
+                                                                            
                                                                             <option value="Español">Español</option>
                                                                             <option value="Inglés">Inglés</option>
                                                                             <option value="Francés">Francés</option>
@@ -45,7 +47,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                         </div>
                                                                         
                                                                           <div class="form-group">
-                                                                          <label for="inst_certi" required>Institución que certifica</label>
+                                                                          <label for="inst_certi" required>Institución que certifica:</label>
                                                                           <input type="text" class="form-control inst_certi" name="inst_certi" placeholder="" required value="<?php echo $mostrar['institucion_que_otorga'] ?>">
                                                                         </div>
 

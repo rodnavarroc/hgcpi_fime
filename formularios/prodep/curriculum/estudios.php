@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h4 class="modal-title">Estudios Realizados</h4>
+    <h4 class="modal-title">Nuevo estudio realizado</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -15,7 +15,7 @@
 
 <div class="form-group">
     
-   <label for="descripcion" required>(Mayúsculas) <br> Estudios en:</label>
+   <label for="descripcion" required>Estudios en:</label>
    <input type="text" class="form-control inst_certi" name="estudios_en" placeholder="" required>
    </div>                                                               
 
@@ -25,15 +25,15 @@
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> Institución Otorgante:</label>
+   <label for="descripcion" required>Institución otorgante:</label>
    <input type="text" class="form-control inst_certi" name="institucion_otorgante" placeholder="" required>
    </div>                                                           
 
 
 
 <div class="form-group">
-   <label for="descripcion" required> País:</label>
-   <input type="text" class="form-control inst_certi" name="pais_estudios"placeholder="" required>
+   <label for="descripcion" required>País:</label>
+   <input type="text" class="form-control inst_certi" name="pais_estudios" placeholder="" required>
    </div>    
 
 <div class="form-group">

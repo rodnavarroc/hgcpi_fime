@@ -38,9 +38,9 @@
             return true;
         };
 
-        function validarDirIndividualizada() //direccion individualizada
+        function validarDirIndividualizada() //gestion individualizada
         {
-            $('#ventanaFormularioDivIndiv').load('formularios/estimulos/docencia/direccion_individualizada.php');
+            $('#ventanaFormularioDivIndiv').load('formularios/estimulos/docencia/gestion_academica_individualizada.php');
             return true;
         }
 

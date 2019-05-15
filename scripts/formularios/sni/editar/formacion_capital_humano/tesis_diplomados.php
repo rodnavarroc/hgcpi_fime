@@ -9,10 +9,12 @@ if (mysqli_connect_errno()) {
 }
 
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_tesis_diplomados WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_tesis_diplomados WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 
@@ -318,7 +320,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="tit_tesis" required>Titulo de la tesis:</label>
+                                                                          <label for="tit_tesis" required>Título de la tesis:</label>
                                                                           <input type="text" class="form-control tit_tesis" name="tit_tesis" placeholder="" value="<?php echo $mostrar['titulo_tesis'] ?>" required>
                                                                     </div>
 

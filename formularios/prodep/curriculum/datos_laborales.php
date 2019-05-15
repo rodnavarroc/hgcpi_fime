@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h4 class="modal-title">Datos laborales</h4>
+    <h4 class="modal-title">Nuevos datos laborales</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -9,7 +9,7 @@
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>(Mayúsculas) <br> Asociado a:</label>
+   <label for="descripcion" required>Asociado a:</label>
    <input type="text" class="form-control inst_certi" name="asociado" placeholder="" required>
    </div>
 
@@ -20,12 +20,12 @@
    </div>                                                               
 
  <div class="form-group">
-   <label for="descripcion" required>Dedicación</label>
+   <label for="descripcion" required>Dedicación:</label>
    <input type="text" class="form-control inst_certi" name="dedicacion" placeholder="" required>
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> Institución de educación superior:</label>
+   <label for="descripcion" required>Institución de educación superior:</label>
    <input type="text" class="form-control inst_certi" name="institucion_edu_superior" placeholder="" required>
    </div>                                                           
 
@@ -36,7 +36,7 @@
    </div>    
 
 <div class="form-group">
-   <label for="descripcion"> (Puede ir vacio)<br>  Unidad Académica: </label>
+   <label for="descripcion">Unidad Académica: <em>(El campo puede quedarse vacío)</em> </label>
    <input type="text" class="form-control inst_certi" name="unidad_academica" placeholder="">
    </div>                                                    
 

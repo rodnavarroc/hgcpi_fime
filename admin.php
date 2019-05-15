@@ -52,8 +52,8 @@ $conexion=mysqli_connect('localhost','root','','hgcpi');
                         <a class="nav-link dropdown-toggle" href="#" name="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convocatorias</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="estimulos.php">Estímulos UANL</a>
-                          <a class="dropdown-item" href="#">PRODEP</a>
-                          <a class="dropdown-item" href="#">Sistema Nacional de Investigadores</a>
+                          <a class="dropdown-item" href="prodep.php">PRODEP</a>
+                          <a class="dropdown-item" href="sni.php">Sistema Nacional de Investigadores</a>
                         </div>
                       </li>
                       <li class="nav-item">

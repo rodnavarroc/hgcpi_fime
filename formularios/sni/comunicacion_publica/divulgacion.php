@@ -446,7 +446,7 @@
                                                                           <label for="clase_ocde" required>Clase del OCDE:</label>
                                                                           <input type="text" class="form-control clase_ocde" name="clase_ocde" placeholder="" required>
                                                                     </div>
-
+<!--
                                                                     <hr>
                                                                     INVESTIGADORES PARTICIPANTES <br>
                                                                     <em>(Los siguientes datos van en mayúsculas y si existe más de uno separarlos con una coma ",").</em>
@@ -465,7 +465,7 @@
                                                                           <label for="seg_ap_div" required>Segundo apellido:</label>
                                                                           <input type="text" class="form-control seg_ap_div" name="seg_ap_div" placeholder="" required>
                                                                     </div>
-
+-->
                                                                         <br>
                                                                         <center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>
                                                                         <br>

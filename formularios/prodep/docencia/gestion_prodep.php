@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Gestion académica</h4>
+    <h4 class="modal-title">Nueva gestion académica</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -25,30 +25,30 @@
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> (Mayúsculas) <br> Órgano colegiado al que fue presentado: </label>
+   <label for="descripcion" required>Órgano colegiado al que fue presentado:</label>
    <input type="text" class="form-control inst_certi" name="organo_gestion_prodep" placeholder="" required>
    </div>                                                           
 
 
 
 <div class="form-group">
-  <label for="aprobado_gestion_prodep" required>Aprobado:</label>
+  <label for="aprobado_gestion_prodep" required>¿Aprobado?:</label>
   <select name="aprobado_gestion_prodep" class="form-control custom-select" required>
   <option selected value="seleccione">Seleccione...</option>
-  <option value="si">Si</option>
-  <option value="si">No</option>
+  <option value="Sí">Sí</option>
+  <option value="No">No</option>
   </select>
 </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (Puede ir vacio) <br> Resultados obtenidos: </label>
+   <label for="descripcion">Resultados obtenidos: <em>(El campo puede quedarse vacío)</em></label>
    <input type="text" class="form-control inst_certi" name="resultados_gestion_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (Puede ir vacio) <br> Estado: </label>
+   <label for="descripcion">Estado: <em>(El campo puede quedarse vacío)</em></label>
    <input type="text" class="form-control inst_certi" name="estado_gestion_prodep"placeholder="">
    </div>
 <div class="form-group">
@@ -73,7 +73,7 @@
 </div>
 
 <div class="form-group">
-   <label for="descripcion" required> Horas dedicadas a la semana a la gestion: </label>
+   <label for="descripcion" required>Horas dedicadas a la semana a la gestión:</label>
    <input type="text" class="form-control inst_certi" name="horas_semana_gestion_prodep"placeholder="" required>
    </div>
 

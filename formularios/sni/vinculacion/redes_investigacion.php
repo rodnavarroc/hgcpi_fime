@@ -74,7 +74,7 @@
                                                                     </div>
 
 
-
+<!--
 
                                                                     <hr>
                                                                     INVESTIGADORES PARTICIPANTES <br>
@@ -195,7 +195,7 @@
                                                                           <input type="text" class="form-control correo" name="correo" placeholder="" required>
                                                                     </div>
 
-
+-->
 
 
 

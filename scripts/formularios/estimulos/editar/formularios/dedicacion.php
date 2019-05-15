@@ -10,16 +10,18 @@ if (mysqli_connect_errno()) {
 }
 
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_carga_academica  WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_carga_academica  WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 
 ?>
 <div class="modal-header">
-                                                                        <h4 class="modal-title">Editar carga</h4>
+                                                                        <h4 class="modal-title">Editar registro</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -27,38 +29,38 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="modal-body">
 	                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/editar/dedicacion.php?ident=<?php echo($ident)?>" method="POST">
 	                                                                    	 <div class="form-group">
-	                                                                          <label for="dependencia">Dependencia</label>
+	                                                                          <label for="dependencia">Dependencia:</label>
 	                                                                          <input type="text" class="form-control" name="dependencia" required value="<?php echo $mostrar['dependencia'] ?>">
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="nivel">Nivel</label>
+	                                                                          <label for="nivel">Nivel:</label>
 	                                                                          <input type="text" class="form-control" name="nivel" required value="<?php echo $mostrar['nivel'] ?>">
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="grado">Grado</label>
+	                                                                          <label for="grado">Grado:</label>
 	                                                                          <input type="text" class="form-control" name="grado" required value="<?php echo $mostrar['grado'] ?>">
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="materia">Materia</label>
+	                                                                          <label for="materia">Materia:</label>
 	                                                                          <input type="text" class="form-control" name="materia" required value="<?php echo $mostrar['materia'] ?>">
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="num_grupos">Número de grupos</label>
+	                                                                          <label for="num_grupos">Número de grupos:</label>
 	                                                                          <input type="text" class="form-control" name="num_grupos" required value="<?php echo $mostrar['num_grupos'] ?>">
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="horas_semana">Número de horas a la semana</label>
+	                                                                          <label for="horas_semana">Número de horas a la semana:</label>
 	                                                                          <input type="text" class="form-control" name="horas_semana" required value="<?php echo $mostrar['num_horas_semana'] ?>">
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                            <label for="datepicker" class="control-label">Fecha de inicio</label>
+	                                                                            <label for="datepicker" class="control-label">Fecha de inicio:</label>
 	                                                                            <div class="controls">
 	                                                                                <input type="text" name="fecha_inicio" class="tuiker form-control" required value="<?php echo $mostrar['fecha_inicio'] ?>">
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                            <label for="datepicker" class="control-label">Fecha de fin</label>
+	                                                                            <label for="datepicker" class="control-label">Fecha de fin:</label>
 	                                                                            <div class="controls">
 	                                                                                <input type="text" name="fecha_fin" class="tuiker form-control" required value="<?php echo $mostrar['fecha_fin'] ?>">
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    

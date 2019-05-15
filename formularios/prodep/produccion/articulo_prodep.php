@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Producción de artículos.</h4>
+    <h4 class="modal-title">Nuevo artículo</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -9,13 +9,13 @@
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>(Separados por punto y coma)<br>Autores:</label>
+   <label for="descripcion" required>Autores: <em>(Si existe más de una, separlos por ";")</em></label>
    <input type="text" class="form-control inst_certi" name="autores_articulo_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
     
-   <label for="descripcion" required> Título: </label>
+   <label for="descripcion" required>Título:</label>
    <input type="text" class="form-control inst_certi" name="título_articulo_prodep" placeholder="" required>
    </div>                                                               
 
@@ -25,12 +25,12 @@
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> Pais: </label>
+   <label for="descripcion" required>País:</label>
    <input type="text" class="form-control inst_certi" name="pais_articulo_prodep" placeholder="" required>
    </div>          
 
    <div class="form-group">
-   <label for="descripcion" required> Nombre de la revista: </label>
+   <label for="descripcion" required>Nombre de la revista:</label>
    <input type="text" class="form-control inst_certi" name="revista_articulo_prodep" placeholder="" required>
    </div>   
 
@@ -50,7 +50,7 @@
    </div>       
 
     <div class="form-group">
-   <label for="descripcion" required> (9999) <br>  Año de publicación: </label>
+   <label for="descripcion" required>Año de publicación: </label>
    <input type="text" class="form-control inst_certi" name="año_articulo_prodep" placeholder="" required>
    </div>       
 
@@ -60,23 +60,23 @@
    </div>  
 
 <div class="form-group">
-  <label for="cuerpo_articulo_prodep" required>Para considerar en el curriculum de cuerpo académico:</label>
+  <label for="cuerpo_articulo_prodep" required>Para considerar en el currículum de cuerpo académico:</label>
   <select name="cuerpo_articulo_prodep" class="form-control custom-select" required>
   <option selected value="seleccione">Seleccione...</option>
-  <option value="si">Si</option>
-  <option value="si">No</option>
+  <option value="Sí">Sí</option>
+  <option value="No">No</option>
   </select>
 </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (En caso de no haber escribir 0) <br> Miembros: </label>
+   <label for="descripcion">Miembros: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" name="miembros_articulos_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
-   <label for="descripcion" >  (En caso de no haber escribir 0) <br> LGACs: </label>
+   <label for="descripcion">LGACs: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" name="LGAC_articulos_prodep"placeholder="">
    </div>
 

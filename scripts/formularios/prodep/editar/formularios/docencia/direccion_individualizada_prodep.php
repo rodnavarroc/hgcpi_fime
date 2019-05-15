@@ -6,15 +6,17 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_direccion_individualizada WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_direccion_individualizada WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
 
     <div class="modal-header">
-    <h4 class="modal-title">Dirección Individualizada</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -35,7 +37,7 @@ $mostrar=mysqli_fetch_array($result);
    </div>                                                               
 
  <div class="form-group">
-   <label for="descripcion" required>(Mayúsculas) <br> Dependencia de educación superior</label>
+   <label for="descripcion" required>Dependencia de educación superior:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['ies_realiza_gestion']?>" name="dependencia_docencia_prodep" placeholder="" required>
    </div>
 
@@ -67,7 +69,7 @@ $mostrar=mysqli_fetch_array($result);
 <div class="form-group">
   <label for="cuerpo_direccion_prodep" required>Para considerar en el curriculum de cuerpo académico:</label>
   <select name="curriculum_direccion_prodep"   class="form-control custom-select" required>
-  <option value="<?php echo $mostrar['considerar_curriculum']?>"><?php echo $mostrar['considerar_curriculum']?></option>
+  <option value="<?php echo $mostrar['considerar_curriculum']?>">"<?php echo $mostrar['considerar_curriculum']?>"</option>
   <option value="Si">Si</option>
   <option value="No">No</option>
   </select>
@@ -75,17 +77,17 @@ $mostrar=mysqli_fetch_array($result);
 
 
 <div class="form-group">
-   <label for="descripcion" required> (En caso de que no existan escribir 0) <br> Miembros: </label>
+   <label for="descripcion" required>Miembros: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['miembros']?>" name="miembros_direccion_prodep"placeholder="" required>
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> (En caso de que no existan escribir 0) <br> LGAC: </label>
+   <label for="descripcion" required>LGAC: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi"  value="<?php echo $mostrar['lgacs']?>" name="LGAC_direccion_prodep"placeholder="" required>
    </div> 
 
                                                                     <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Actualizar"></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
 <br>
 </form>
 </div>

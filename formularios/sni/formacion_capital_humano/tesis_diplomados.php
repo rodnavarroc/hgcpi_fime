@@ -9,13 +9,13 @@
 
                                                                     
                                                                     <div class="form-group">
-                                                                          <label for="institucion" required>Institución:</label>
-                                                                          <input type="text" class="form-control institucion" name="institucion" placeholder="" required>
+                                                                          <label for="institucion"  >Institución:</label>
+                                                                          <input type="text" class="form-control institucion" name="institucion" placeholder=""  >
                                                                     </div>
 
                                                                     <div class="form-group">
                                                                           <label for="tip_inst">Tipo de institución:</label>
-                                                                          <select name="tip_inst" class="form-control custom-select" required>
+                                                                          <select name="tip_inst" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Nacional">Nacional</option>
                                                                             <option value="Extranjera">Extranjera</option>
@@ -26,7 +26,7 @@
                                                                     
                                                                     <div class="form-group">
                                                                           <label for="pub_priv">Pública / Privada:</label>
-                                                                          <select name="pub_priv" class="form-control custom-select" required>
+                                                                          <select name="pub_priv" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Pública">Pública</option>
                                                                             <option value="Privada">Privada</option>
@@ -36,7 +36,7 @@
 
                                                                     <div class="form-group">
                                                                           <label for="pais_inst">País donde reside la institución:</label>
-                                                                          <select name="pais_inst" class="form-control custom-select" required>
+                                                                          <select name="pais_inst" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Afganistán">Afganistán</option>
                                                                             <option value="Albania">Albania</option>
@@ -278,7 +278,7 @@
 
                                                                      <div class="form-group">
                                                                           <label for="clasificacion">Clasificación de la institución:</label>
-                                                                          <select name="clasificacion" class="form-control custom-select" required>
+                                                                          <select name="clasificacion" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Centro de Investigación Privado">Centro de Investigación Privado</option>
                                                                             <option value="Empresa">Empresa</option>
@@ -290,7 +290,7 @@
 
                                                                     <div class="form-group">
                                                                           <label for="ayuda_innova">¿Programa PNPC?:</label>
-                                                                          <select name="ayuda_innova" class="form-control custom-select" required>
+                                                                          <select name="ayuda_innova" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Sí">Sí</option>
                                                                             <option value="No">No</option>
@@ -298,21 +298,21 @@
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="tit_tesis" required>Titulo de la tesis:</label>
-                                                                          <input type="text" class="form-control tit_tesis" name="tit_tesis" placeholder="" required>
+                                                                          <label for="tit_tesis"  >Título de la tesis:</label>
+                                                                          <input type="text" class="form-control tit_tesis" name="tit_tesis" placeholder=""  >
                                                                     </div>
 
                                                                     <div class="form-group">
                                                                             <label for="datepicker" class="control-label">Fecha de aprobación de la tesis:</label>
                                                                             <div class="controls">
-                                                                                <input type="text" name="fecha_aproba_tesis" class="tuiker form-control" required>
+                                                                                <input type="text" name="fecha_aproba_tesis" class="tuiker form-control"  >
                                                                                 <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
                                                                             </div>
                                                                     </div>
 
                                                                     <div class="form-group">
                                                                           <label for="estado_tesis">Estado de la tesis</label>
-                                                                          <select name="estado_tesis" class="form-control custom-select" required>
+                                                                          <select name="estado_tesis" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="En proceso">En proceso</option>
                                                                             <option value="Terminada">Terminada</option>
@@ -321,28 +321,28 @@
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="area_tesis" required>Área de conocimiento de la tesis:</label>
-                                                                          <input type="text" class="form-control area_tesis" name="area_tesis" placeholder="" required>
+                                                                          <label for="area_tesis"  >Área de conocimiento de la tesis:</label>
+                                                                          <input type="text" class="form-control area_tesis" name="area_tesis" placeholder=""  >
                                                                          </div>
 
                                                                         <div class="form-group">
-                                                                            <label for="campo_tesis" required>Campo de la tesis:</label>
-                                                                            <input type="text_art" class="form-control campo_tesis" name="campo_tesis" placeholder="" required>
+                                                                            <label for="campo_tesis"  >Campo de la tesis:</label>
+                                                                            <input type="text_art" class="form-control campo_tesis" name="campo_tesis" placeholder=""  >
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                            <label for="disciplina_tesis" required>Disciplina de la tesis:</label>
-                                                                            <input type="text" class="form-control disciplina_tesis" name="disciplina_tesis" placeholder="" required>
+                                                                            <label for="disciplina_tesis"  >Disciplina de la tesis:</label>
+                                                                            <input type="text" class="form-control disciplina_tesis" name="disciplina_tesis" placeholder=""  >
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                            <label for="subdisciplina_tesis" required>Subdisciplina de la tesis:</label>
-                                                                            <input type="text" class="form-control subdisciplina_tesis" name="subdisciplina_tesis" placeholder="" required>
+                                                                            <label for="subdisciplina_tesis"  >Subdisciplina de la tesis:</label>
+                                                                            <input type="text" class="form-control subdisciplina_tesis" name="subdisciplina_tesis" placeholder=""  >
                                                                     </div>
 
                                                                     <div class="form-group">
                                                                           <label for="pais_tesis">País donde se realizó la tesis:</label>
-                                                                          <select name="pais_tesis" class="form-control custom-select" required>
+                                                                          <select name="pais_tesis" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="Afganistán">Afganistán</option>
                                                                             <option value="Albania">Albania</option>
@@ -583,31 +583,31 @@
                                                                      </div>
 
                                                                      <div class="form-group">
-                                                                          <label for="grado_tesis" required>Grado académico de la tesis:</label>
-                                                                          <input type="text" class="form-control grado_tesis" name="grado_tesis" placeholder="" required>
+                                                                          <label for="grado_tesis"  >Grado académico de la tesis:</label>
+                                                                          <input type="text" class="form-control grado_tesis" name="grado_tesis" placeholder=""  >
                                                                     </div>
 
                                                                     <div class="form-group">
                                                                             <label for="datepicker" class="control-label">Fecha de obtención de grado:</label>
                                                                             <div class="controls">
-                                                                                <input type="text" name="fecha_obten_grado" class="tuiker form-control" required>
+                                                                                <input type="text" name="fecha_obten_grado" class="tuiker form-control"  >
                                                                                 <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
                                                                             </div>
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="nom_diplomado" required>Nombre del diplomado:</label>
-                                                                          <input type="text" class="form-control nom_diplomado" name="nom_diplomado" placeholder="" required>
+                                                                          <label for="nom_diplomado"  >Nombre del diplomado:</label>
+                                                                          <input type="text" class="form-control nom_diplomado" name="nom_diplomado" placeholder=""  >
                                                                     </div>
 
                                                                     <div class="form-group">
-                                                                          <label for="nom_curso_asig" required>Nombre del curso o asignatura:</label>
-                                                                          <input type="text" class="form-control nom_curso_asig" name="nom_curso_asig" placeholder="" required>
+                                                                          <label for="nom_curso_asig"  >Nombre del curso o asignatura:</label>
+                                                                          <input type="text" class="form-control nom_curso_asig" name="nom_curso_asig" placeholder=""  >
                                                                     </div>
 
                                                                     <div class="form-group">
                                                                           <label for="ano_diplo">Año del diplomado:</label>
-                                                                          <select name="ano_diplo" class="form-control custom-select" required>
+                                                                          <select name="ano_diplo" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="2019">2019</option>
                                                                             <option value="2018">2018</option>
@@ -675,7 +675,7 @@
 
                                                                         <div class="form-group">
                                                                           <label for="horas_tot_diplomado">Horas totales del diplomado:</label>
-                                                                          <select name="horas_tot_diplomado" class="form-control custom-select" required>
+                                                                          <select name="horas_tot_diplomado" class="form-control custom-select"  >
                                                                             <option selected>Seleccione...</option>
                                                                             <option value="1">1</option>
                                                                             <option value="2">2</option>
@@ -780,8 +780,8 @@
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                          <label for="area_diplo" required>Área de conocimiento del diplomado:</label>
-                                                                          <input type="text" class="form-control area_diplo" name="area_diplo" placeholder="" required>
+                                                                          <label for="area_diplo">Área de conocimiento del diplomado:</label>
+                                                                          <input type="text" class="form-control area_diplo" name="area_diplo" placeholder="">
                                                                          </div>
 
                                                                         <br>

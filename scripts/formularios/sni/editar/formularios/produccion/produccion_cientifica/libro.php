@@ -9,15 +9,17 @@ if (mysqli_connect_errno()) {
 }
 
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_produccion_libros WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_produccion_libros WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 
 ?>      															<div class="modal-header">
-                                                                        <h4 class="modal-title">Editar libro</h4>
+                                                                        <h4 class="modal-title">Editar registro</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -276,7 +278,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                              </select>
                                                                      </div>
 
-                                                                     <!--<div class="form-group">
+                                                                     <div class="form-group">
                                                                           <label for="idioma_lib">Idioma:</label>
                                                                           <select name="idioma_lib" class="form-control custom-select" required>
                                                                             <option selected>Seleccione...</option>
@@ -290,7 +292,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                             <option value="Ruso">Ruso</option>
                                                                             <option value="Italiano">Italiano</option>
                                                                            </select>
-                                                                    </div>-->
+                                                                    </div>
 
                                                                     <div class="form-group">
                                                                           <label for="ano_publi_lib">Año de publicación:</label>
@@ -509,7 +511,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                         
 
                                                                         <br>
-                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Guardar Cambios"></center>
+                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
                                                                         <br>
                                                                     </form>
                                                                     </div>

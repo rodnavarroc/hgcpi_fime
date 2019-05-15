@@ -69,10 +69,10 @@
                                                                         </div>
 
 
-                                                                    <div class="form-group">
+                                                                    <!--<div class="form-group">
                                                                             <label for="doc_prob" required>Documento probatorio:</label>
                                                                             <input type="file" name="adjunto" class="form-control doc_prob" name="doc_prob" placeholder="" accept=".pdf">
-                                                                    </div>
+                                                                    </div>-->
 
                                                                     <div class="form-group">
                                                                           <label for="puntos">Puntos / porcentaje:</label>
@@ -216,7 +216,7 @@
 <script type="text/javascript">
         $('.tuiker').datepicker({
             //adecuando formato de fecha
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy/mm/dd",
             //primer dia sea lunes
             firstDay: 1,
             //Nombres de los dias

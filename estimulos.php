@@ -150,7 +150,7 @@
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Titulo del libro</th>
+                                                      <th>TÍtulo del libro</th>
                                                       <th>Tipo de autor</th>
                                                   </tr>
                                               </thead>
@@ -214,8 +214,8 @@
                                                       <th>Descripción</th>
                                                       <th>Fecha inicio</th>
                                                       <th>Fecha fin</th>
-                                                      <th>Numero de horas</th>
-                                                      <th>Nombre de la Institucion</th>
+                                                      <th>Número de horas</th>
+                                                      <th>Nombre de la institución</th>
                                                   </tr>
                                               </thead>
                                               <tbody>
@@ -306,24 +306,24 @@
                                       </div>
                                   </div>
 
-                                  <div class="btn btn-secondary border-white" id="subheader4">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Gestion Académica Individualizada</a>
+                                  <!--<div class="btn btn-secondary border-white" id="subheader4">
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4" aria-expanded="true" aria-controls="subcollapse4">Gestión Académica Individualizada</a>
                                   </div>
                                   <div id="subcollapse4" class="collapse" aria-labelledby="subheader4" data-parent="#subaccordion">
                                       <div class="card-body">
                                           <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Gestion Académica Individualizada</h4>
+                                                          <h4>Gestión Académica Individualizada</h4>
                                                       </div>
                                                   </div>
                                               </div>
                                           <div class="col-2">
 
-                                              <!-- BOTON AGREGAR -->
+
                                               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ventanaFormulario4" onclick="validarDirIndividualizada()">Agregar nuevo</button><br><br>
 
-                                              <!-- VENTANA PARA LOS FORMULARIOS -->
+
                                               <div class="modal fade" id="ventanaFormulario4" tabindex="-1" role="dialog" aria-labelledby="ventanaFormulario4">
                                                   <div class="modal-dialog">
                                                       <div class="modal-content" id="ventanaFormularioDivIndiv">
@@ -333,19 +333,19 @@
 
                                           </div>
 
-                                          <!-- TABLAS DONDE APARECEN LOS REGISTROS YA AGREGADOS -->
-                                          <hr><br><center><h5>Sus direcciones</h5></center><br>
+
+                                          <hr><br><center><h5>Sus gestiones</h5></center><br>
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Fecha de termino</th>
+                                                      <th>Fecha de fin</th>
                                                       <th>Evento</th>
                                                       <th>Tipo de participación</th>
                                                       <th>Alcance</th>
                                                   </tr>
                                               </thead>
                                               <tbody>
-                                                  <<?php 
+                                                  <?php 
                                                   $sql="SELECT * FROM detalle_usuario_direccion_individualizada WHERE usuario_idusuario='$usuario'";
                                                   $result=mysqli_query($conexion,$sql);
                                                   while($mostrar=mysqli_fetch_array($result)){
@@ -355,7 +355,7 @@
                                                     <td><?php echo $mostrar['institucion_que_otorga'] ?></td>
                                                     <td><?php echo $mostrar['idioma'] ?></td>
                                                     <td><?php echo $mostrar['institucion_que_otorga'] ?></td>
-                                                    <!-- BOTONES EDITAR Y BORRAR -->
+
                                                     <td><center><button class="btn btn-warning" data-toggle="modal" data-target="#ventanaFormulario4" onclick="editarRegistroDireccionInvi(<?php echo $mostrar['id'] ?>)">Editar</button></center></td>
                                                     <td><center><button class="btn btn-danger" onclick="borrarRegistroDireccionInvi(<?php echo $mostrar['id'] ?>)">Eliminar</button></center></td>
                                                   </tr>
@@ -368,7 +368,7 @@
 
 
                                       </div>
-                                  </div>
+                                  </div>-->
 
                                   <div class="btn btn-secondary border-light" id="subheader5">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse5" aria-expanded="true" aria-controls="subcollapse5">Premios y distinciones</a>
@@ -482,7 +482,7 @@
                                                   <tr>
                                                       <th>Fecha de inicio</th>
                                                       <th>Fecha de fin</th>
-                                                      <th>Titulo</th>
+                                                      <th>Título</th>
                                                       <th>Participación</th>
                                                       <th>Monto</th>
                                                   </tr>
@@ -623,8 +623,8 @@
                                                                                   <tr>
                                                                                     <th>Fecha inicio</th>
                                                                                     <th>Fecha fin</th>
-                                                                                    <th>Tipo Dirección Individualizada</th>
-                                                                                    <th>Titulo de Proyecto Dirigido</th>
+                                                                                    <th>Tipo dirección individualizada</th>
+                                                                                    <th>Título de proyecto dirigido</th>
                                                                                   </tr>
                                                                                 </thead>
                                                                               <tbody>
@@ -715,14 +715,14 @@
                   </div>
                                     <!-- CUARTA SECCIÓN CUERPOS COLEGIADOS -->
                                     <div class="btn btn-dark border-light" id="header4">
-                      <a class="btn" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Cuerpos Colegiados</a>
+                      <a class="btn" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Cuerpos colegiados</a>
                   </div>
                   <div id="collapse4" class="collapse" aria-labelledby="header4" data-parent="#accordion">
                       <div class="card-body">
                           <div id="subaccordion_cuerposcolegialos">
                               <div class="card">
                                   <div class="btn btn-secondary border-light" id="subheader1_cuerposcolegialos">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_cuerposcolegialos" aria-expanded="true" aria-controls="subcollapse1_cuerposcolegialos">Gestión Académica de Cuerpos Colegiados</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_cuerposcolegialos" aria-expanded="true" aria-controls="subcollapse1_cuerposcolegialos">Gestión académica de cuerpos colegiados</a>
                                   </div>
 
                                   <div id="subcollapse1_cuerposcolegialos" class="collapse" aria-labelledby="subheader1_cuerposcolegialos" data-parent="#subaccordion_cuerposcolegialos">
@@ -730,7 +730,7 @@
                                               <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Gestión Académica de Cuerpos Colegiados</h4>
+                                                          <h4>Gestión académica de cuerpos colegiados</h4>
                                                       </div>
                                                   </div>
                                               </div>
@@ -754,7 +754,7 @@
                                           <table class="table table-success m-2">
                                               <thead>
                                                   <tr>
-                                                      <th>Fecha de ultimo reporte</th>
+                                                      <th>Fecha de último reporte</th>
                                                       <th>Tipo de gestión</th>
                                                       <th>Clasificación</th>
                                                       <th>Función encomendada</th>
@@ -787,14 +787,14 @@
                                   </div>
 
                             <div class="btn btn-secondary border-light" id="subheader2_cuerposcolegialos">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_cuerposcolegialos" aria-expanded="true" aria-controls="subcollapse2_cuerposcolegialos">Gestión Académica</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_cuerposcolegialos" aria-expanded="true" aria-controls="subcollapse2_cuerposcolegialos">Gestión académica</a>
                                   </div>
                                 <div id="subcollapse2_cuerposcolegialos" class="collapse" aria-labelledby="subheader2_cuerposcolegialos" data-parent="#subaccordion_cuerposcolegialos">
                                       <div class="card-body">
                                               <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Gestión Académica</h4>
+                                                          <h4>Gestión académica</h4>
                                                       </div>
                                                   </div>
                                               </div>
@@ -865,7 +865,7 @@
                           <div id="subaccordion_dedicacion">
                               <div class="card">
                                   <div class="btn btn-secondary border-light" id="subheader1_dedicacion">
-                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_dedicacion" aria-expanded="true" aria-controls="subcollapse1_dedicacion">Carga Académica</a>
+                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_dedicacion" aria-expanded="true" aria-controls="subcollapse1_dedicacion">Carga académica</a>
                                   </div>
                                   <div id="subcollapse1_dedicacion" class="collapse" aria-labelledby="subheader1_dedicacion" data-parent="#subaccordion_dedicacion">
                                     <div class="card-body">
@@ -873,7 +873,7 @@
                                         <div class="form-group">
                                                   <div class="row">
                                                       <div class="col-9">
-                                                          <h4>Carga Académica</h4>
+                                                          <h4>Carga académica</h4>
                                                       </div>
                                                   </div>
                                               </div>
@@ -898,10 +898,9 @@
                                                   <tr>
                                                       <th>Dependencia</th>
                                                       <th>Nivel</th>
-                                                      <th>Grado</th>
+                                                      
                                                       <th>Materia</th>
-                                                      <th>No. grupos</th>
-                                                      <th>No. horas por semana</th>
+                                                      
                                                       <th>Fecha de inicio</th>
                                                       <th>Fecha de térmnino</th>
                                                   </tr>
@@ -915,10 +914,9 @@
                                                   <tr>
                                                     <td><?php echo $mostrar['dependencia'] ?></td>
                                                     <td><?php echo $mostrar['nivel'] ?></td>
-                                                    <td><?php echo $mostrar['grado'] ?></td>
+                                                    
                                                     <td><?php echo $mostrar['materia'] ?></td>
-                                                    <td><?php echo $mostrar['num_grupos'] ?></td>
-                                                    <td><?php echo $mostrar['num_horas_semana'] ?></td>
+                                                    
                                                     <td><?php echo $mostrar['fecha_inicio'] ?></td>
                                                     <td><?php echo $mostrar['fecha_fin'] ?></td>
                                                     <!-- BOTONES EDITAR Y BORRAR -->
@@ -944,6 +942,10 @@
                 </div>
             </div>
         </div>
+
+        <br>
+        <center><h6><b>* NOTA: </b>Si encuentra registros con campos vacíos, se puede deber a que ese registro en concreto fue llenado en otra convocatoria y falta llenar unos pocos datos en esta.</h6></center>
+        
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>

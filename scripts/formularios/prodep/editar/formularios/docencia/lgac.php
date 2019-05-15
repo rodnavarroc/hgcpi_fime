@@ -6,14 +6,16 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_lgac WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_lgac WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
  <div class="modal-header">
-    <h4 class="modal-title">Línea de generación y aplicación del conocimiento</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -23,13 +25,13 @@ $mostrar=mysqli_fetch_array($result);
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion" required>Linea:</label>
+   <label for="descripcion" required>Línea:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['linea']?>" name="linea_lgac" placeholder="" required>
    </div>
 
 <div class="form-group">
     
-   <label for="descripcion" required>(Separadas por coma) <br> Actividades que realiza: </label>
+   <label for="descripcion" required>Actividades que realiza: <em>(Si existe más de una, separlas por ";")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['actividades_que_realiza']?>" name="actividades_lgac" placeholder="" required>
    </div>                                                               
 
@@ -40,7 +42,7 @@ $mostrar=mysqli_fetch_array($result);
 
 
 <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Agregar"></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
 <br>
 </form>
 </div>

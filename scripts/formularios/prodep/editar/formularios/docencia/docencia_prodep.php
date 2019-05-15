@@ -6,15 +6,17 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_docencia WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_docencia WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
 
 <div class="modal-header">
-    <h4 class="modal-title">Docencia</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -34,12 +36,12 @@ $mostrar=mysqli_fetch_array($result);
    </div>                                                               
 
  <div class="form-group">
-   <label for="descripcion" required>(Mayúsculas) <br> Dependencia de educación superior</label>
+   <label for="descripcion" required>Dependencia de educación superior:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['dependencia']?>" name="dependencia_docencia_prodep" placeholder="" required>
    </div>
 
 <div class="form-group">
-   <label for="descripcion" required> (Mayúsculas) <br> Programa educativo </label>
+   <label for="descripcion" required>Programa educativo:</label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['nombre_programa_educativo']?>" name="programa_educativo_docencia_prodep" placeholder="" required>
    </div>                                                           
 
@@ -78,7 +80,7 @@ $mostrar=mysqli_fetch_array($result);
    </div> 
 
    <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Actualizar"></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
 <br>
 </form>
 </div>

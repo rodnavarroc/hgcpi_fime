@@ -1,5 +1,5 @@
 																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Nuevo proyecto</h4>
+                                                                        <h4 class="modal-title">Nuevo proyecto académico</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>

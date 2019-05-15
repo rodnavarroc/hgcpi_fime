@@ -1,5 +1,5 @@
 																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Tutoría nueva</h4>
+                                                                        <h4 class="modal-title">Nueva tutoría</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -7,41 +7,41 @@
                                                                     <div class="modal-body">
 	                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/tutorias/produccion_academica_tutorias_tutorias.php" method="POST">
 	                                                                    	 <div class="form-group">
-	                                                                          <label for="">Nivel</label>
+	                                                                          <label for="">Nivel:</label>
 	                                                                          <input type="text" class="form-control" name="nivel" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Tipo de tutoría</label>
+	                                                                          <label for="">Tipo de tutoría:</label>
 	                                                                          <input type="text" class="form-control" name="tipo_tutoria" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Programa educativo en el que participa</label>
+	                                                                          <label for="">Programa educativo en el que participa:</label>
 	                                                                          <input type="text" class="form-control" name="pe_que_participa" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Tipo de periodo escolar</label>
+	                                                                          <label for="">Tipo de periodo escolar:</label>
 	                                                                          <input type="text" class="form-control" name="tipo_periodo_escolar" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Periodo escolar</label>
+	                                                                          <label for="">Periodo escolar:</label>
 	                                                                          <input type="text" class="form-control" name="periodo_escolar" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                            <label for="datepicker" class="control-label">Fecha de inicio</label>
+	                                                                            <label for="datepicker" class="control-label">Fecha de inicio:</label>
 	                                                                            <div class="controls">
 	                                                                                <input type="text" name="fecha_inicio" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                            <label for="datepicker" class="control-label">Fecha de fin</label>
+	                                                                            <label for="datepicker" class="control-label">Fecha de fin:</label>
 	                                                                            <div class="controls">
 	                                                                                <input type="text" name="fecha_fin" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Area del conocimiento de la tutoría</label>
+	                                                                          <label for="">Área del conocimiento de la tutoría:</label>
 	                                                                          <input type="text" class="form-control" name="area_conocimiento_tutoria" required>
 	                                                                        </div>
 	                                                                    	<br>

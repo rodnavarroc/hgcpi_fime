@@ -6,15 +6,17 @@ if (mysqli_connect_errno()) {
     exit();
 }
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_proyectos_investigacion WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_proyectos_investigacion WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 ?> 
 
  <div class="modal-header">
-    <h4 class="modal-title">Producción de proyectos de investigación.</h4>
+    <h4 class="modal-title">Editar registro</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -36,8 +38,8 @@ $mostrar=mysqli_fetch_array($result);
    </div>                  
 
    <div class="form-group">
-   <label for="descripcion" required>(Separados por punto y coma)<br>Alumnos participantes:</label>
-   <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['nombre_alumnos_participantes']?>" name="alumnos_proyecto_investigacion_prodep" placeholder="" required>
+   <label for="descripcion">Alumnos participantes: <em>(Si existe más de una, separlas por ";" y el campo puede quedarse vacío)</em></label>
+   <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['nombre_alumnos_participantes']?>" name="alumnos_proyecto_investigacion_prodep" placeholder="">
    </div>                                          
 
  <div class="form-group">
@@ -48,23 +50,23 @@ $mostrar=mysqli_fetch_array($result);
 
 
 <div class="form-group">
-  <label for="cuerpo_proyecto_investigacion_prodep" required>Para considerar en el curriculum de cuerpo académico:</label>
+  <label for="cuerpo_proyecto_investigacion_prodep" required>Para considerar en el currículum de cuerpo académico:</label>
   <select name="cuerpo_proyecto_investigacion_prodep" class="form-control custom-select" required>
-  <option value="<?php echo $mostrar['considerar_curriculum']?>"><?php echo $mostrar['considerar_curriculum']?></option>
-  <option value="Si">Si</option>
+  <option value="<?php echo $mostrar['considerar_curriculum']?>">"<?php echo $mostrar['considerar_curriculum']?>"</option>
+  <option value="Sí">Sí</option>
   <option value="No">No</option>
   </select>
 </div>
 
 
 <div class="form-group">
-   <label for="descripcion" > (En caso de no haber escribir 0) <br> Miembros: </label>
+   <label for="descripcion" >Miembros: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['miembros']?>" name="miembros_proyecto_investigacions_prodep"placeholder="">
    </div>
 
 
 <div class="form-group">
-   <label for="descripcion" >  (En caso de no haber escribir 0) <br> LGACs: </label>
+   <label for="descripcion" >LGACs: <em>(En caso de no existir se escribe "0")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['lgacs']?>" name="LGAC_proyecto_investigacion_prodep"placeholder="">
    </div>
 
@@ -91,13 +93,13 @@ $mostrar=mysqli_fetch_array($result);
 
 
     <div class="form-group">
-   <label for="descripcion" required>(Separados por punto y coma)<br>Investigadores participantes:</label>
+   <label for="descripcion" required>Investigadores participantes: <em>(Si existe más de una, separlos por ";")</em></label>
    <input type="text" class="form-control inst_certi" value="<?php echo $mostrar['investigadores_participantes']?>" name="investigadores_proyecto_investigacion_prodep" placeholder="" required>
    </div>        
 
 
 <br>
-<center><input class="btn btn-dark btn-lg" type="submit" value="Actualizar"></center>
+<center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
 <br>
 </form>
 </div>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
@@ -10,11 +10,7 @@ if (mysqli_connect_errno()) {
 
 /* RECIBIR LAS VARIABLES DESDE EL FORMULARIO */ 
 $red_conacyt = $_POST["red_conacyt"];
-$nom_congre = $_POST["nom_congre"];
-$tit_trab = $_POST["tit_trab"];
-$pais_congre = $_POST["pais_congre"];
-$fecha = $_POST["fecha"];
-$palab_clave = $_POST["palab_clave"];
+$fecha_ingreso = $_POST["fecha_ingreso"];
 session_start();
 $idusuario = $_SESSION['usuario'];
 

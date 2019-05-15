@@ -9,16 +9,18 @@ if (mysqli_connect_errno()) {
 }
 
 /* RECIBIR EL ID DEL REGISTRO DESDE EL BOTON */ 
-$ident = $_GET['ident'];
+$ident = $_GET['ident']; 
+session_start();
+$idusuario = $_SESSION['usuario'];
 
 /* OBTENER LOS DATOS YA INGRESADOS DEL REGISTRO */
-$sql="SELECT * FROM detalle_usuario_grados_acad WHERE id='$ident' AND usuario_idusuario='1815906'";
+$sql="SELECT * FROM detalle_usuario_grados_acad WHERE id='$ident' AND usuario_idusuario='$idusuario'";
 $result=mysqli_query($mysqli,$sql);
 $mostrar=mysqli_fetch_array($result);
 
 ?>  
                                                                     <div class="modal-header">
-                                                                        <h4 class="modal-title">Editar grado académico y capacitación</h4>
+                                                                        <h4 class="modal-title">Editar registro</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -58,7 +60,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="form-group">
                                                                           <label for="tip_inst">Tipo de institución:</label>
                                                                           <select name="tip_inst" class="form-control custom-select" required>
-                                                                            <option selected>Seleccione...</option>
+                                                                            <option value="<?php echo $mostrar['tipo_institucion']?>">"<?php echo $mostrar['tipo_institucion']?>"</option>
                                                                             <option value="Nacional">Nacional</option>
                                                                             <option value="Extranjera">Extranjera</option>
                                                                            
@@ -69,7 +71,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="form-group">
                                                                           <label for="pub_priv">Pública / Privada:</label>
                                                                           <select name="pub_priv" class="form-control custom-select" required>
-                                                                            <option selected>Seleccione...</option>
+                                                                            <option value="<?php echo $mostrar['institucion_publica_privada']?>">"<?php echo $mostrar['institucion_publica_privada']?>"</option>
                                                                             <option value="Pública">Pública</option>
                                                                             <option value="Privada">Privada</option>
                                                                            
@@ -80,7 +82,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                     <div class="form-group">
                                                                           <label for="clasificacion">Clasificación:</label>
                                                                           <select name="clasificacion" class="form-control custom-select" required>
-                                                                            <option selected>Seleccione...</option>
+                                                                            <option value="<?php echo $mostrar['clasificacion_institucion']?>">"<?php echo $mostrar['clasificacion_institucion']?>"</option>
                                                                             <option value="Centro de Investigación Privado">Centro de Investigación Privado</option>
                                                                             <option value="Empresa">Empresa</option>
                                                                             <option value="Institución de Educación Superior Privada">Institución de Educación Superior Privada</option>
@@ -556,7 +558,7 @@ $mostrar=mysqli_fetch_array($result);
                                                                         </div>
 
                                                                         <br>
-                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Guardar Cambios"></center>
+                                                                        <center><input class="btn btn-dark btn-lg" type="submit" value="Guardar cambios"></center>
                                                                         <br>
                                                                     </form>
                                                                     </div>

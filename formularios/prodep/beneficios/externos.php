@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Beneficios externos de PROMEP.</h4>
+    <h4 class="modal-title">Nuevo beneficio externo de PROMEP</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -15,7 +15,7 @@
 
 <div class="form-group">
     
-   <label for="descripcion"> Nivel: </label>
+   <label for="descripcion">Nivel:</label>
    <input type="text" class="form-control inst_certi" name="nivel_externo_promep_prodep" placeholder="">
    </div>     
 

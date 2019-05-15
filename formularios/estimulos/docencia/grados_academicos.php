@@ -1,5 +1,5 @@
 																	<div class="modal-header">
-                                                                        <h4 class="modal-title">Grado nuevo</h4>
+                                                                        <h4 class="modal-title">Nuevo grado académico</h4>
                                                                         <button class="close" data-dismiss="modal" aria-label="Cerrar">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -7,33 +7,33 @@
                                                                     <div class="modal-body">
 	                                                                    <form enctype="multipart/form-data" action="scripts/formularios/estimulos/agregar/docencia/produccion_academica_docencia_grados_academicos.php" method="POST">
 	                                                                    	 <div class="form-group">
-	                                                                          <label for="">Tipo de capacitación</label>
+	                                                                          <label for="">Tipo de capacitación:</label>
 	                                                                          <input type="text" class="form-control" name="tipo_capac" required>
 	                                                                        </div>	
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Descripción</label>
+	                                                                          <label for="">Descripción:</label>
 	                                                                          <textarea class="form-control" name="descripcion" rows="3" required></textarea>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                            <label for="datepicker" class="control-label">Fecha de inicio</label>
+	                                                                            <label for="datepicker" class="control-label">Fecha de inicio:</label>
 	                                                                            <div class="controls">
 	                                                                                <input type="text" name="fecha_inicio" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                            <label for="datepicker" class="control-label">Fecha de fin</label>
+	                                                                            <label for="datepicker" class="control-label">Fecha de fin:</label>
 	                                                                            <div class="controls">
 	                                                                                <input type="text" name="fecha_fin" class="tuiker form-control" required>
 	                                                                                <label for="datepicker" class="input-group-addon generic_btn"><i class="fa fa-calendar" aria-hidden="true"></i></label>    
 	                                                                            </div>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Número de horas</label>
+	                                                                          <label for="">Número de horas:</label>
 	                                                                          <input type="text" class="form-control" name="num_horas" required>
 	                                                                        </div>
 	                                                                        <div class="form-group">
-	                                                                          <label for="">Nombre de la institución</label>
+	                                                                          <label for="">Nombre de la institución:</label>
 	                                                                          <input type="text" class="form-control" name="nom_institucion" required>
 	                                                                        </div>
 	                                                                    	<br>

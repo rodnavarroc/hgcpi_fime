@@ -1,5 +1,5 @@
  <div class="modal-header">
-    <h4 class="modal-title">Beneficios de PROMEP.</h4>
+    <h4 class="modal-title">Nuevo beneficio de PROMEP</h4>
    <button class="close" data-dismiss="modal" aria-label="Cerrar">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -9,13 +9,13 @@
                                                                       
                                                                         
    <div class="form-group">
-   <label for="descripcion">IES de la solicitud</label>
+   <label for="descripcion">IES de la solicitud:</label>
    <input type="text" class="form-control inst_certi" name="ies_promep_prodep" placeholder="">
    </div>
 
 <div class="form-group">
     
-   <label for="descripcion"> Solicitud: </label>
+   <label for="descripcion"> Solicitud:</label>
    <input type="text" class="form-control inst_certi" name="solicitud_promep_prodep" placeholder="">
    </div>     
 
