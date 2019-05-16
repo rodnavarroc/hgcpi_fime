@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2019 a las 07:28:23
--- Versión del servidor: 10.1.28-MariaDB
--- Versión de PHP: 5.6.32
+-- Tiempo de generaci�n: 15-05-2019 a las 07:28:23
+-- Versi�n del servidor: 10.1.28-MariaDB
+-- Versi�n de PHP: 5.6.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -268,7 +268,7 @@ CREATE TABLE `detalle_usuario_carga_academica` (
 --
 
 INSERT INTO `detalle_usuario_carga_academica` (`dependencia`, `nivel`, `grado`, `materia`, `num_grupos`, `num_horas_semana`, `fecha_inicio`, `fecha_fin`, `usuario_idusuario`, `id`) VALUES
-('FIME', 'Profesional', 'Licenciatura', 'ProgramaciÃ³n Orientada a Objetos', '6', '3', '2019-05-30', '2019-05-24', 1815906, 1);
+('FIME', 'Profesional', 'Licenciatura', 'Programacion Orientada a Objetos', '6', '3', '2019-05-30', '2019-05-24', 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -373,7 +373,7 @@ CREATE TABLE `detalle_usuario_direccion_individualizada` (
 --
 
 INSERT INTO `detalle_usuario_direccion_individualizada` (`tipo_de_direccion`, `titulo_proyecto_dirigido`, `estado_de_direccion`, `fecha_de_inicio`, `fecha_de_fin`, `nivel_academico`, `grado_academico`, `considera_cv_ca`, `numero_estudiantes`, `ies_realiza_gestion`, `considerar_curriculum`, `miembros`, `lgacs`, `usuario_idusuario`, `id`) VALUES
-('DirecciÃ³n estratÃ©gica', 'Proyecto de investigaciÃ³n', 'Concluida', '2019-05-10', '2019-05-24', 'Profesional', 'Licenciatura', 'SÃ­', '36', 'FIME', NULL, NULL, NULL, 1815906, 1);
+('Direccion estrategica', 'Proyecto de investigacion', 'Concluida', '2019-05-10', '2019-05-24', 'Profesional', 'Licenciatura', 'Si', '36', 'FIME', NULL, NULL, NULL, 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -618,7 +618,7 @@ CREATE TABLE `detalle_usuario_gestion_academica` (
 --
 
 INSERT INTO `detalle_usuario_gestion_academica` (`tipo_gestion`, `cargo_comision`, `funcion_encomendada`, `organo_colegiado`, `resultados_obtenidos`, `aprobado`, `calificacion`, `evento`, `tipo_evento`, `tipo_participacion`, `tipo_alcance`, `fecha_inicio`, `fecha_fin`, `fecha_ultimo_informe`, `horas_dedicadas_semana`, `estado_gestion`, `ies_realiza_gestion`, `usuario_idusuario`, `id`) VALUES
-('GestiÃ³n acadÃ©mica', NULL, NULL, NULL, NULL, NULL, '100', 'Coloquio', 'VinculaciÃ³n', 'Expositor', 'Largo', '2019-05-17', '2019-05-17', NULL, NULL, 'Finalizada', 'FIME', 1815906, 1);
+('Gestion academica', NULL, NULL, NULL, NULL, NULL, '100', 'Coloquio', 'Vinculacion', 'Expositor', 'Largo', '2019-05-17', '2019-05-17', NULL, NULL, 'Finalizada', 'FIME', 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -648,7 +648,7 @@ CREATE TABLE `detalle_usuario_gestion_cuerpos_colegiados` (
 --
 
 INSERT INTO `detalle_usuario_gestion_cuerpos_colegiados` (`tipo_gestion`, `clasificacion`, `funcion_encomendada`, `organo_colegiado`, `fecha_inicio`, `fecha_fin`, `fecha_ultimo_reporte`, `aprobado`, `horas_semana`, `resultado_obtenido`, `estado_gestion`, `ies_realiza_gestion`, `usuario_idusuario`, `id`) VALUES
-('GestiÃ³n acadÃ©mica', 'Proyecto', 'Creador', 'Ninguno', '2019-05-11', '2019-05-11', '2019-05-17', 'SÃ­', '12', 'Resultado exitoso', 'Terminada', 'FIME', 1815906, 1);
+('Gestion academica', 'Proyecto', 'Creador', 'Ninguno', '2019-05-11', '2019-05-11', '2019-05-17', 'Si', '12', 'Resultado exitoso', 'Terminada', 'FIME', 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -688,7 +688,7 @@ CREATE TABLE `detalle_usuario_grados_acad` (
 --
 
 INSERT INTO `detalle_usuario_grados_acad` (`tipo_capacitacion`, `nivel_estudios`, `titulo`, `descripcion`, `estatus`, `fecha_inicio`, `fecha_fin`, `numero_de_horas`, `opciones_de_titulacion`, `fecha_obtencion_titulo`, `nombre_institucion`, `tipo_institucion`, `institucion_publica_privada`, `pais_institucion`, `clasificacion_institucion`, `tipo_formacion_continua`, `nombre_formacion_continua`, `ano_formacion_continua`, `institucion_formacion_continua`, `horas_totales_formacion_continua`, `disciplina`, `area_de_conocimiento_formacion_continua`, `usuario_idusuario`, `id`) VALUES
-('CapacitaciÃ³n', NULL, '2', 'CapacitaciÃ³n de ejemplo para el sistema', 'CrÃ©ditos terminados', '2019-05-17', '2019-05-10', '1', '2', '2019-05-09', 'FIME', 'Nacional', 'PÃºblica', 'Austria', 'Centro de InvestigaciÃ³n Privado', '1', '1', '1999', '1', '18', NULL, '1', 1815906, 1);
+('Capacitacion', NULL, '2', 'Capacitacion de ejemplo para el sistema', 'Creditos terminados', '2019-05-17', '2019-05-10', '1', '2', '2019-05-09', 'FIME', 'Nacional', 'Pública', 'Austria', 'Centro de Investigacion Privado', '1', '1', '1999', '1', '18', NULL, '1', 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -777,7 +777,7 @@ CREATE TABLE `detalle_usuario_lenguas_e_idiomas` (
 --
 
 INSERT INTO `detalle_usuario_lenguas_e_idiomas` (`idioma`, `institucion_que_otorga`, `grado_de_dominio`, `nivel_de_escritura`, `documento_probatorio`, `puntos`, `certificacion`, `nivel_conferido`, `nivel_lectura`, `fecha_evaluacion`, `vigencia_de`, `vigencia_a`, `usuario_idusuario`, `id`) VALUES
-('FrancÃ©s', 'Centro de Idiomas UANL', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1815906, 1);
+('Frances', 'Centro de Idiomas UANL', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -898,7 +898,7 @@ CREATE TABLE `detalle_usuario_premios_y_distinciones` (
 --
 
 INSERT INTO `detalle_usuario_premios_y_distinciones` (`tipo_distincion`, `nivel`, `nombre_distincion`, `institucion_que_otorga`, `tipo_institucion`, `institucion_publica_privada`, `motivo`, `institucion_otorgante_no_considerada`, `pais_institucion`, `fecha`, `ano`, `monto_mensual`, `usuario_idusuario`, `id`) VALUES
-('Programa ReparticiÃ³n CONACYT', 'Sistema Nacional de Creadores', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009', '17500', 1815906, 1);
+('Programa Reparticion CONACYT', 'Sistema Nacional de Creadores', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009', '17500', 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -1018,7 +1018,7 @@ CREATE TABLE `detalle_usuario_prod_articulos` (
 --
 
 INSERT INTO `detalle_usuario_prod_articulos` (`proposito`, `issn`, `nombre_art`, `estado_art`, `pais`, `nombre_revista`, `numero_revista`, `editorial`, `volumen_revista`, `ano_edicion`, `ano_publicacion`, `pagina_inicial`, `pagina_final`, `palabras_clave`, `apoyo_conacyt`, `fondo`, `considerar_curriculum`, `miembros`, `autores`, `lgacs`, `researcher_id_autor`, `arxiv_id_autor`, `pubmed_id_autor`, `open_id_autor`, `usuario_idusuario`, `id`) VALUES
-(NULL, '1234-1234-1234-1234', 'Estudio del agua', 'Terminado', 'MÃ©xico', 'Revista UANL', NULL, NULL, NULL, NULL, NULL, '120', '134', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1815906, 1);
+(NULL, '1234-1234-1234-1234', 'Estudio del agua', 'Terminado', 'Mexico', 'Revista UANL', NULL, NULL, NULL, NULL, NULL, '120', '134', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -1071,7 +1071,7 @@ CREATE TABLE `detalle_usuario_proyectos_investigacion` (
 --
 
 INSERT INTO `detalle_usuario_proyectos_investigacion` (`titulo`, `nombre_patrocinador`, `nombre_alumnos_participantes`, `actividades_realizadas`, `considerar_curriculum`, `miembros`, `lgacs`, `fecha_inicio`, `fecha_fin`, `tipo_patrocinador`, `investigadores_participantes`, `tipo_proyecto`, `tipo_participacion`, `monto_apoyo`, `considera_cv_ca`, `usuario_idusuario`, `id`) VALUES
-('Proyecto HGCPI', 'Juan Dominguez', NULL, NULL, NULL, NULL, NULL, '2019/05/02', '2019/05/11', 'Completo', 'JosÃ© Flores, Rodolfo Navarro', 'Administrativo', 'Creador', '200000', NULL, 1815906, 1);
+('Proyecto HGCPI', 'Juan Dominguez', NULL, NULL, NULL, NULL, NULL, '2019/05/02', '2019/05/11', 'Completo', 'Jose Flores, Rodolfo Navarro', 'Administrativo', 'Creador', '200000', NULL, 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -1217,7 +1217,7 @@ CREATE TABLE `detalle_usuario_tutoria` (
 --
 
 INSERT INTO `detalle_usuario_tutoria` (`tipo_tutoria`, `nivel_academico`, `programa_educativo`, `tipo_periodo_escolar`, `periodo_escolar`, `numero_estudiantes`, `fecha_de_inicio`, `fecha_de_fin`, `tipo_de_tutelaje`, `estado_tutoria`, `area_conocimiento`, `usuario_idusuario`, `id`) VALUES
-('Grupal', 'Licenciatura', 'ITS', 'Regular', 'Enero Junio 2019', NULL, '2019-05-01', '2019-05-24', NULL, NULL, 'TecnologÃ­a', 1815906, 1);
+('Grupal', 'Licenciatura', 'ITS', 'Regular', 'Enero Junio 2019', NULL, '2019-05-01', '2019-05-24', NULL, NULL, 'Tecnologia', 1815906, 1);
 
 -- --------------------------------------------------------
 
@@ -1264,10 +1264,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `nombre`, `ap_paterno`, `ap_materno`, `titulo`, `curp`, `rfc`, `numero_cvu`, `orcid`, `fecha_nacimiento`, `sexo`, `nacionalidad`, `ciudad_nacimiento`, `estado_civil`, `telefono_particular`, `telefono_movil`, `correo_electronico_personal`, `correo_instititucional`, `num_emp`, `calle_dom`, `numero_exterior_dom`, `numero_interior_dom`, `colonia_residencia`, `pais_residencia`, `estado_residencia`, `codigo_postal_dom`, `ciudad_residencia`, `ies_adscripcion`, `cantidad_de_ingresos`, `clave`, `tipo_usuario`) VALUES
-(1815906, 'Rodolfo', 'Navarro', 'CalderÃ³n', 'Ingeniero en TecnologÃ­a de Software', 'NACR990926HNLVLD02', 'NACR990926HNLVLD02', 'NACR990926HNLVLD02', 'NACR990926HNLVLD02', '1999-09-26', 'Masculino', 'Mexicana', 'Santa Catarina', 'soltero', '80447649', '8117466362', 'rodolfo.0926@hotmail.com', 'rodolfo.navarrocldrn@uanl.edu.mx', '1815906', 'Golfo de Tehuantepec', '316', '0', 'Mision de las Villas', 'Mexico', 'Nuevo Leon', '66369', 'Santa Catarina', 'Facultad de Ingenieria Mecanica y Electrica', 2, 'aa', 'admin');
+(1815906, 'Rodolfo', 'Navarro', 'Calderon', 'Ingeniero en Tecnologia de Software', 'NACR990926HNLVLD02', 'NACR990926HNLVLD02', 'NACR990926HNLVLD02', 'NACR990926HNLVLD02', '1999-09-26', 'Masculino', 'Mexicana', 'Santa Catarina', 'soltero', '80447649', '8117466362', 'rodolfo.0926@hotmail.com', 'rodolfo.navarrocldrn@uanl.edu.mx', '1815906', 'Golfo de Tehuantepec', '316', '0', 'Mision de las Villas', 'Mexico', 'Nuevo Leon', '66369', 'Santa Catarina', 'Facultad de Ingenieria Mecanica y Electrica', 2, 'aa', 'admin');
 
 --
--- Índices para tablas volcadas
+-- �ndices para tablas volcadas
 --
 
 --
