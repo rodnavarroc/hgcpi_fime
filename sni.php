@@ -1,6 +1,6 @@
 <?php 
 
-  $conexion=mysqli_connect('localhost','root','','hgcpi');
+  $conexion=mysqli_connect("localhost", "root", "", "hgcpi");
   
   /*scripts de sesion*/
 

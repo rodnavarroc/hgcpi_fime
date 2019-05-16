@@ -8,7 +8,7 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-$conexion=mysqli_connect('localhost','root','','hgcpi');
+$conexion=mysqli_connect("localhost", "root", "", "hgcpi");
 
   /*scripts de sesion*/
 

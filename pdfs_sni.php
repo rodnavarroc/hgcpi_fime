@@ -1,6 +1,6 @@
 <?php
 
-  $conexion=mysqli_connect('localhost','root','','hgcpi');
+  $conexion=mysqli_connect("localhost", "root", "", "hgcpi");
 
   $mysqli = new mysqli("localhost", "root", "", "hgcpi");
 
@@ -325,7 +325,7 @@
                         <td class=""><?php echo $conteo; ?></td>
                       </tr>
                       <?php
-                  $sql="SELECT * FROM detalle_usuario_beneficios_externos_promep WHERE usuario_idusuario='$usuario'";
+                  $sql="SELECT * FROM detalle_usuario_redes_investigacion WHERE usuario_idusuario='$usuario'";
                   $result=mysqli_query($conexion,$sql);
                   $conteo = 0;
                   while($mostrar=mysqli_fetch_array($result)){     
@@ -1860,7 +1860,7 @@
                       </tr>
                       <tr>
                         <th class="">Fecha de solicitud</th>
-                        <td class=""><?php echo $mostrarfecha_solicitud ?></td>
+                        <td class=""><?php echo $mostrar['fecha_solicitud'] ?></td>
                       </tr>
                       <tr>
                         <th class="">Fecha de ingreso</th>
@@ -2110,7 +2110,7 @@
                     <thead class="thead-dark">
                       <tr>
                         <th class="">Redes de investigación #<?php echo $conteo; ?></td>
-                        <td class=""><?php echo $mostrar[''] ?></td>
+                        <td class=""></td>
                       </tr>
                     </thead>
                     <tbody>

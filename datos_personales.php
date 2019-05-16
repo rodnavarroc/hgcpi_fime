@@ -3,7 +3,7 @@
   /*scripts de sesion*/
 
   session_start();
-  $conexion=mysqli_connect('localhost','root','','hgcpi');
+  $conexion=mysqli_connect("localhost", "root", "", "hgcpi");
 
   if(!isset($_SESSION['usuario'])) { header("Location: index.php"); }
   

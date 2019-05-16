@@ -1,6 +1,6 @@
 <?php 
 
-  $conexion=mysqli_connect('localhost','root','','hgcpi');
+  $conexion=mysqli_connect("localhost", "root", "", "hgcpi");
 
   $mysqli = new mysqli("localhost", "root", "", "hgcpi"); //conectar a la base de datos
 
@@ -82,7 +82,7 @@
               <tr>
                 <td class="bg-dark"><a href="" style="display: block; color: #f2f2f2; text-decoration: none; text-align: center;">PRODEP</a></td>
                 <td class="bg-light"><a href="" style="display: block; color: #111; text-decoration: none; text-align: center;">Estatus de convocatoria: <b><font color="#101010"><?php echo $mostrar['estatus']?></font></b> | <i>Cierra: <?php echo $mostrar['fecha_cierre']?></i></a></td>
-                <td class="bg-success"><a href="estimulos.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
+                <td class="bg-success"><a href="prodep.php" style="display: block; color: white; text-decoration: none; text-align: center;">Ir al llenado</a></td>
                 <td class="bg-secondary"><a href="pdfs_prodep.php" style="display: block; color: white; text-decoration: none; text-align: center;">Imprimir formato</a></td>
               </tr>
 

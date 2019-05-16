@@ -1,6 +1,6 @@
 <?php
 
-  $conexion=mysqli_connect('localhost','root','','hgcpi');
+  $conexion=mysqli_connect("localhost", "root", "", "hgcpi");
 
   $mysqli = new mysqli("localhost", "root", "", "hgcpi");
 
@@ -493,11 +493,11 @@
                       </tr>
                       <tr>
                         <th class="">Nivel</th>
-                        <td class=""><?php echo $mostrar['']?></td>
+                        <td class=""><?php echo $mostrar['nivel']?></td>
                       </tr>
                       <tr>
                         <th class="">Fecha de inicio de estudios</th>
-                        <td class=""><?php echo $mostrar['nivel']?></td>
+                        <td class=""><?php echo $mostrar['fecha_inicio']?></td>
                       </tr>
                       <tr>
                         <th class="">Número de alumnos</th>
