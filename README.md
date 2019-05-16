@@ -51,4 +51,6 @@ v7.1.1 RC
 - Corregido formato general y otografía
 - Corregidos bugs menores de funcionamiento
 
+v1.8.0 RC Correción de errores menores
+
 #
