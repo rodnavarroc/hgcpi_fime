@@ -45,4 +45,10 @@ v1.6
 
 v1.6.1 Cambiadas todas las variables estáticas por variables de PHP SESSION.
 
+v7.1.1 RC
+
+- Agregados archivos de impresión en PDF para convocatorias
+- Corregido formato general y otografía
+- Corregidos bugs menores de funcionamiento
+
 #
