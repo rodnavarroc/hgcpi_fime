@@ -1,6 +1,6 @@
 <?php 
 
-  $conexion=mysqli_connect("localhost", "root", "", "hgcpi");
+  $conexion=mysqli_connect('localhost','root','','hgcpi');
   
   /*scripts de sesion*/
 
@@ -221,12 +221,12 @@
                             </div>
                             <div id="collapse2" class="collapse" aria-labelledby="header2" data-parent="#accordion">
                                 <div class="card-body">
-                                    <div id="subaccordion">
+                                    <div id="subaccordion_card2">
                                         <div class="card">
                                             <div class="btn btn-secondary border-light" id="subheader21">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse21" aria-expanded="true" aria-controls="subcollapse21">Experiencia laboral</a>
                                             </div>
-                                            <div id="subcollapse21" class="collapse" aria-labelledby="subheader21" data-parent="#subaccordion">
+                                            <div id="subcollapse21" class="collapse" aria-labelledby="subheader21" data-parent="#subaccordion_card2">
                                                 <div class="card-body">
                                                     <div class="form-group">
                                                             <div class="row">
@@ -289,7 +289,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader22">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse22" aria-expanded="true" aria-controls="subcollapse22">Estancias de investigación</a>
                                             </div>
-                                            <div id="subcollapse22" class="collapse" aria-labelledby="subheader22" data-parent="#subaccordion">
+                                            <div id="subcollapse22" class="collapse" aria-labelledby="subheader22" data-parent="#subaccordion_card2">
                                                 <div class="card-body">
                                                     <div class="form-group">
                                                             <div class="row">
@@ -354,7 +354,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader23">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse23" aria-expanded="true" aria-controls="subcollapse23">Docencia</a>
                                             </div>
-                                            <div id="subcollapse23" class="collapse" aria-labelledby="subheader23" data-parent="#subaccordion">
+                                            <div id="subcollapse23" class="collapse" aria-labelledby="subheader23" data-parent="#subaccordion_card2">
                                                 <div class="card-body">
                                                     <div class="form-group">
                                                             <div class="row">
@@ -429,12 +429,12 @@
                             </div>
                             <div id="collapse3" class="collapse" aria-labelledby="header3" data-parent="#accordion">
                                 <div class="card-body">
-                                    <div id="subaccordion">
+                                    <div id="subaccordion_card3">
                                         <div class="card">
                                             <div class="btn btn-secondary border-light" id="subheader31">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse31" aria-expanded="true" aria-controls="subcollapse31">Producción científica</a>
                                             </div>
-                                            <div id="subcollapse31" class="collapse" aria-labelledby="subheader31" data-parent="#subaccordion">
+                                            <div id="subcollapse31" class="collapse" aria-labelledby="subheader31" data-parent="#subaccordion_card3">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -671,7 +671,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader32">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse32" aria-expanded="true" aria-controls="subcollapse32">Producción tecnológica y de innovación</a>
                                             </div>
-                                            <div id="subcollapse32" class="collapse" aria-labelledby="subheader32" data-parent="#subaccordion">
+                                            <div id="subcollapse32" class="collapse" aria-labelledby="subheader32" data-parent="#subaccordion_card3">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -845,7 +845,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader33">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse33" aria-expanded="true" aria-controls="subcollapse33">Producción de proyectos académicos</a>
                                             </div>
-                                            <div id="subcollapse33" class="collapse" aria-labelledby="subheader33" data-parent="#subaccordion">
+                                            <div id="subcollapse33" class="collapse" aria-labelledby="subheader33" data-parent="#subaccordion_card3">
                                                 <div class="card-body">
                                                     <div class="form-group">
                                                             <div class="row">
@@ -920,12 +920,12 @@
                             </div>
                             <div id="collapse4" class="collapse" aria-labelledby="header4" data-parent="#accordion">
                                 <div class="card-body">
-                                    <div id="subaccordion">
+                                    <div id="subaccordion_card4">
                                         <div class="card">
                                             <div class="btn btn-secondary border-light" id="subheader41">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse41" aria-expanded="true" aria-controls="subcollapse41">Tesis y diplomados</a>
                                             </div>
-                                            <div id="subcollapse41" class="collapse" aria-labelledby="subheader41" data-parent="#subaccordion">
+                                            <div id="subcollapse41" class="collapse" aria-labelledby="subheader41" data-parent="#subaccordion_card4">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -997,12 +997,12 @@
                             </div>
                             <div id="collapse5" class="collapse" aria-labelledby="header5" data-parent="#accordion">
                                 <div class="card-body">
-                                    <div id="subaccordion">
+                                    <div id="subaccordion_card5">
                                         <div class="card">
                                             <div class="btn btn-secondary border-light" id="subheader51">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse51" aria-expanded="true" aria-controls="subcollapse51">Participación en congresos</a>
                                             </div>
-                                            <div id="subcollapse51" class="collapse" aria-labelledby="subheader51" data-parent="#subaccordion">
+                                            <div id="subcollapse51" class="collapse" aria-labelledby="subheader51" data-parent="#subaccordion_card5">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1066,7 +1066,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader52">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse52" aria-expanded="true" aria-controls="subcollapse52">Divulgación</a>
                                             </div>
-                                            <div id="subcollapse52" class="collapse" aria-labelledby="subheader52" data-parent="#subaccordion">
+                                            <div id="subcollapse52" class="collapse" aria-labelledby="subheader52" data-parent="#subaccordion_card5">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1137,12 +1137,12 @@
                             </div>
                             <div id="collapse6" class="collapse" aria-labelledby="header6" data-parent="#accordion">
                                 <div class="card-body">
-                                    <div id="subaccordion">
+                                    <div id="subaccordion_card6">
                                         <div class="card">
                                             <div class="btn btn-secondary border-light" id="subheader61">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse61" aria-expanded="true" aria-controls="subcollapse61">Redes temáticas CONACYT</a>
                                             </div>
-                                            <div id="subcollapse61" class="collapse" aria-labelledby="subheader61" data-parent="#subaccordion">
+                                            <div id="subcollapse61" class="collapse" aria-labelledby="subheader61" data-parent="#subaccordion_card6">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1201,7 +1201,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader62">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse62" aria-expanded="true" aria-controls="subcollapse62">Redes de investigación</a>
                                             </div>
-                                            <div id="subcollapse62" class="collapse" aria-labelledby="subheader62" data-parent="#subaccordion">
+                                            <div id="subcollapse62" class="collapse" aria-labelledby="subheader62" data-parent="#subaccordion_card6">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1264,7 +1264,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader63">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse63" aria-expanded="true" aria-controls="subcollapse63">Grupos de investigación</a>
                                             </div>
-                                            <div id="subcollapse63" class="collapse" aria-labelledby="subheader63" data-parent="#subaccordion">
+                                            <div id="subcollapse63" class="collapse" aria-labelledby="subheader63" data-parent="#subaccordion_card6">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1335,12 +1335,12 @@
                             </div>
                             <div id="collapse7" class="collapse" aria-labelledby="header7" data-parent="#accordion">
                                 <div class="card-body">
-                                    <div id="subaccordion">
+                                    <div id="subaccordion_card7">
                                         <div class="card">
                                             <div class="btn btn-secondary border-light" id="subheader71">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse71" aria-expanded="true" aria-controls="subcollapse71">Evaluaciones CONACYT</a>
                                             </div>
-                                            <div id="subcollapse71" class="collapse" aria-labelledby="subheader71" data-parent="#subaccordion">
+                                            <div id="subcollapse71" class="collapse" aria-labelledby="subheader71" data-parent="#subaccordion_card7">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1403,7 +1403,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader72">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse72" aria-expanded="true" aria-controls="subcollapse72">Evaluaciones no CONACYT</a>
                                             </div>
-                                            <div id="subcollapse72" class="collapse" aria-labelledby="subheader72" data-parent="#subaccordion">
+                                            <div id="subcollapse72" class="collapse" aria-labelledby="subheader72" data-parent="#subaccordion_card7">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1475,12 +1475,12 @@
                             </div>
                             <div id="collapse8" class="collapse" aria-labelledby="header8" data-parent="#accordion">
                                 <div class="card-body">
-                                    <div id="subaccordion">
+                                    <div id="subaccordion_card8">
                                         <div class="card">
                                             <div class="btn btn-secondary border-light" id="subheader81">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse81" aria-expanded="true" aria-controls="subcollapse81">Distinciones CONACYT</a>
                                             </div>
-                                            <div id="subcollapse81" class="collapse" aria-labelledby="subheader81" data-parent="#subaccordion">
+                                            <div id="subcollapse81" class="collapse" aria-labelledby="subheader81" data-parent="#subaccordion_card8">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1539,7 +1539,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader82">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse82" aria-expanded="true" aria-controls="subcollapse82">Distinciones no CONACYT</a>
                                             </div>
-                                            <div id="subcollapse82" class="collapse" aria-labelledby="subheader82" data-parent="#subaccordion">
+                                            <div id="subcollapse82" class="collapse" aria-labelledby="subheader82" data-parent="#subaccordion_card8">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">
@@ -1600,7 +1600,7 @@
                                             <div class="btn btn-secondary border-light" id="subheader83">
                                                 <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse83" aria-expanded="true" aria-controls="subcollapse83">Premios y distinciones</a>
                                             </div>
-                                            <div id="subcollapse83" class="collapse" aria-labelledby="subheader83" data-parent="#subaccordion">
+                                            <div id="subcollapse83" class="collapse" aria-labelledby="subheader83" data-parent="#subaccordion_card8">
                                                 <div class="card-body">
                                                         <div class="form-group">
                                                             <div class="row">

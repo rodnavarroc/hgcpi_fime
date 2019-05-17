@@ -1,6 +1,6 @@
 <?php 
   
-  $conexion=mysqli_connect("localhost", "root", "", "hgcpi");
+  $conexion=mysqli_connect('localhost','root','','hgcpi');
 
   /*scripts de sesion*/
 
@@ -303,7 +303,7 @@
                                   <div class="btn btn-secondary border-light" id="subheader3">
                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3" aria-expanded="true" aria-controls="subcollapse3">Clases docentes</a>
                                   </div>
-                                  <div id="subcollapse3" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion">
+                                  <div id="subcollapse3" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion_docencia">
                                       <div class="card-body">
                                           <div class="form-group">
                                                   <div class="row">
@@ -487,7 +487,7 @@
                                  <div class="btn btn-secondary border-light" id="subheader3">
                                      <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse_dir_ind" aria-expanded="true" aria-controls="subcollapse3">Dirección individualizada</a>
                                   </div>
-                                  <div id="subcollapse_dir_ind" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion">
+                                  <div id="subcollapse_dir_ind" class="collapse" aria-labelledby="subheader3" data-parent="#subaccordion_docencia">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -564,7 +564,7 @@
                                   <div class="btn btn-secondary border-light" id="subheader_docencia">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4_docencia" aria-expanded="true" aria-controls="subcollapse4_docencia">Gestión académica</a>
                                   </div>
-                                  <div id="subcollapse4_docencia" class="collapse" aria-labelledby="subheader4_docencia" data-parent="#subaccordion">
+                                  <div id="subcollapse4_docencia" class="collapse" aria-labelledby="subheader4_docencia" data-parent="#subaccordion_docencia">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -643,7 +643,7 @@
                           <div class="btn btn-secondary border-light" id="subheader_docencia">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse5_docencia" aria-expanded="true" aria-controls="subcollapse5_docencia">Línea de generación y aplicación del conocimiento (LGAC)</a>
                                   </div>
-                                  <div id="subcollapse5_docencia" class="collapse" aria-labelledby="subheader5_docencia" data-parent="#subaccordion">
+                                  <div id="subcollapse5_docencia" class="collapse" aria-labelledby="subheader5_docencia" data-parent="#subaccordion_docencia">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -709,7 +709,7 @@
                           <div class="btn btn-secondary border-light" id="subheader_docencia">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse6_docencia" aria-expanded="true" aria-controls="subcollapse6_docencia">Cuerpo académico</a>
                                   </div>
-                                  <div id="subcollapse6_docencia" class="collapse" aria-labelledby="subheader6_docencia" data-parent="#subaccordion">
+                                  <div id="subcollapse6_docencia" class="collapse" aria-labelledby="subheader6_docencia" data-parent="#subaccordion_docencia">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -778,7 +778,7 @@
                             <div class="btn btn-secondary border-light" id="subheader_docencia">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse7_docencia" aria-expanded="true" aria-controls="subcollapse7_docencia">Actualización de programas educativos</a>
                                   </div>
-                                  <div id="subcollapse7_docencia" class="collapse" aria-labelledby="subheader7_docencia" data-parent="#subaccordion">
+                                  <div id="subcollapse7_docencia" class="collapse" aria-labelledby="subheader7_docencia" data-parent="#subaccordion_docencia">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -866,7 +866,7 @@
                                   <div class="btn btn-secondary border-light" id="subheader_produccion">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_produccion" aria-expanded="true" aria-controls="subcollapse1_produccion">Artículo</a>
                                   </div>
-                                  <div id="subcollapse1_produccion" class="collapse" aria-labelledby="subheader1_produccion" data-parent="#subaccordion">
+                                  <div id="subcollapse1_produccion" class="collapse" aria-labelledby="subheader1_produccion" data-parent="#subaccordion_produccion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -952,7 +952,7 @@
                                   <div class="btn btn-secondary border-light" id="subheader_produccion">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_produccion" aria-expanded="true" aria-controls="subcollapse2_produccion">Libro</a>
                                   </div>
-                                  <div id="subcollapse2_produccion" class="collapse" aria-labelledby="subheader2_produccion" data-parent="#subaccordion">
+                                  <div id="subcollapse2_produccion" class="collapse" aria-labelledby="subheader2_produccion" data-parent="#subaccordion_produccion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -1036,7 +1036,7 @@
                           <div class="btn btn-secondary border-light" id="subheader_produccion">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse3_produccion" aria-expanded="true" aria-controls="subcollapse3_produccion">Memorias en extenso</a>
                                   </div>
-                                  <div id="subcollapse3_produccion" class="collapse" aria-labelledby="subheader3_produccion" data-parent="#subaccordion">
+                                  <div id="subcollapse3_produccion" class="collapse" aria-labelledby="subheader3_produccion" data-parent="#subaccordion_produccion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -1118,7 +1118,7 @@
                           <div class="btn btn-secondary border-light" id="subheader_produccion">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse4_produccion" aria-expanded="true" aria-controls="subcollapse4_produccion">Proyectos de investigación</a>
                                   </div>
-                                  <div id="subcollapse4_produccion" class="collapse" aria-labelledby="subheader4_produccion" data-parent="#subaccordion">
+                                  <div id="subcollapse4_produccion" class="collapse" aria-labelledby="subheader4_produccion" data-parent="#subaccordion_produccion">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -1215,7 +1215,7 @@
                                   <div class="btn btn-secondary border-light" id="subheader_beneficios">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse1_beneficios" aria-expanded="true" aria-controls="subcollapse1_beneficios">PROMEP</a>
                                   </div>
-                                  <div id="subcollapse1_beneficios" class="collapse" aria-labelledby="subheader1_beneficios" data-parent="#subaccordion">
+                                  <div id="subcollapse1_beneficios" class="collapse" aria-labelledby="subheader1_beneficios" data-parent="#subaccordion_beneficios">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
@@ -1292,7 +1292,7 @@
                                     <div class="btn btn-secondary border-light" id="subheader_beneficios">
                                       <a class="btn btn-block" data-toggle="collapse" data-target="#subcollapse2_beneficios" aria-expanded="true" aria-controls="subcollapse2_beneficios">Externo a PROMEP</a>
                                   </div>
-                                  <div id="subcollapse2_beneficios" class="collapse" aria-labelledby="subheader2_beneficios" data-parent="#subaccordion">
+                                  <div id="subcollapse2_beneficios" class="collapse" aria-labelledby="subheader2_beneficios" data-parent="#subaccordion_beneficios">
                                       <div class="card-body">
                                        <div class="form-group">
                                                   <div class="row">
